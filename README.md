@@ -1,7 +1,6 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
+# 🧗🏽 Your Tribe for Life - Squad Page
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+--Ontwerp en maak met een team een overzicht van jouw tribe met alle online visitekaartjes, op basis van een headless CMS en een framework.--
 
 ## Inhoudsopgave
 
