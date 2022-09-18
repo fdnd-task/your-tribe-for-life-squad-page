@@ -1,0 +1,97 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey: #999999;
+  --dark-grey: #666666;
+  --blue: #243075;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.75rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1.1875rem;
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+}
+
+iframe {
+  width: 85em;
+  height: 40em;
+}
+
+/* img {
+  width: 20em;
+  position: absolute;
+} */
+
+.remote-control {
+  padding: 4em 1em 1em 1em;
+  text-align: center;
+  background-color: var(--grey);
+  border: 3px solid var(--black);
+  box-shadow: 0 8px 0 0px var(--dark-grey), 0 8px 0 3px var(--black);
+  border-radius: 6em;
+  display: grid;
+  place-items: center;
+  width: min-content;
+}
+
+.remote-control__buttons {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  display: flex;
+  gap: 1em;
+}
+
+.btn {
+  padding: .5em;
+  font-size: 1.1875rem;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  gap: .25em;
+  cursor: pointer;
+}
+
+.btn--blue {
+  color: var(--white);
+  background-color: var(--blue);
+  border: 3px solid var(--black);
+}
+
+.btn--left::before {
+  content: url("/left-arrow.svg");
+  display: inline-block;
+  width: 1em; 
+}
+
+.btn--right::after {
+  content: url("/right-arrow.svg");
+  display: inline-block;
+  width: 1em; 
+}
+
+.remote-control__logo {
+  width: 6em;
+}
