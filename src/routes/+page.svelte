@@ -38,7 +38,7 @@
 	<section class="hero">
 		<h1>FDND Squadpage</h1>
 		{#each [images[currentSlideItem]] as item (currentSlideItem)}
-			<iframe src="{item.github.url}" title="{item.name}" frameBorder="0"></iframe>
+			<iframe src="{item.businesscard.url}" title="{item.name}" frameBorder="0"></iframe>
     	<!-- <img src={item.image.url} alt='' /> -->
 		{/each}
 	</section>
@@ -52,12 +52,26 @@
 			</div>
 			<img class="remote-control__logo" src="/philips-logo.svg" alt="">
 		</article>
+		<pre>{JSON.stringify(data.member, null, 2)}</pre>
+		<article>
+			<!-- <h2>{data.member.name}</h2> -->
+			<!-- <img src="{data.member.githubimage.url}" alt=""> -->
+			<!-- <p>{data.member.githubhandle}</p> -->
+			<!-- <a href="{data.member.businesscard.url}" target="_blank">Visitekaartje</a> -->
+		</article>
 
 		<article>
-			<!-- <pre>{JSON.stringify(data.member, null, 2)}</pre> -->
-			<!-- <h2>{data.member.name}</h2> -->
 			<!-- <h2>{data.memberTwo.name}</h2> -->
-			<!-- <img src="{data.member.image.url}" alt=""> -->
+			<!-- <img src="{data.memberTwo.githubimage.url}" alt=""> -->
+			<!-- <p>{data.memberTwo.githubhandle}</p> -->
+			<!-- <a href="{data.memberTwo.businesscard.url}" target="_blank">Visitekaartje</a> -->
+		</article>
+
+		<article>
+			<!-- <h2>{data.memberThree.name}</h2> -->
+			<!-- <img src="{data.memberThree.githubimage.url}" alt=""> -->
+			<!-- <p>{data.memberThree.githubhandle}</p> -->
+			<!-- <a href="{data.memberTwo.businesscard.url}" target="_blank">Visitekaartje</a> -->
 		</article>
 	</section>
 </main>
