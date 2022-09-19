@@ -52,7 +52,7 @@
 			</div>
 			<img class="remote-control__logo" src="/philips-logo.svg" alt="">
 		</article>
-		<pre>{JSON.stringify(data.member, null, 2)}</pre>
+		<!-- <pre>{JSON.stringify(data.member, null, 2)}</pre> -->
 		<article>
 			<!-- <h2>{data.member.name}</h2> -->
 			<!-- <img src="{data.member.githubimage.url}" alt=""> -->

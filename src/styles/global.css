@@ -6,7 +6,16 @@
   --blue: #243075;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
 body {
+  margin: 4em;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -18,6 +27,7 @@ p {
 }
 
 h1 {
+  margin-bottom: .5em;
   font-size: 3.75rem;
   text-align: center;
 }
@@ -36,7 +46,7 @@ p {
 }
 
 iframe {
-  width: 85em;
+  width: 100%;
   height: 40em;
 }
 
@@ -62,6 +72,10 @@ iframe {
   margin-bottom: 2em;
   display: flex;
   gap: 1em;
+}
+
+.remote-control__logo {
+  width: 6em;
 }
 
 .btn {
@@ -90,8 +104,4 @@ iframe {
   content: url("/right-arrow.svg");
   display: inline-block;
   width: 1em; 
-}
-
-.remote-control__logo {
-  width: 6em;
 }
