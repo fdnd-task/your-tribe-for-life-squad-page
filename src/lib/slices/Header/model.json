@@ -10,7 +10,26 @@
       "docURL": "...",
       "version": "initial",
       "description": "Default",
-      "imageUrl": ""
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "overons": {
+          "type": "Link",
+          "config": {
+            "label": "overOns",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
     }
   ]
 }

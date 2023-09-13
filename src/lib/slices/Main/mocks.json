@@ -3,6 +3,58 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "major",
+							"type": "Text"
+						}
+					],
+					[
+						"contentimg",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+								"width": 4172,
+								"height": 4000
+							},
+							"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+							"width": 4172,
+							"height": 4000,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"linksquads",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"id": "mock_Media_link",
+								"kind": "image/jpeg",
+								"name": "mock_name",
+								"url": "https://source.unsplash.com/daily",
+								"size": "0",
+								"__TYPE__": "FileLink"
+							}
+						}
+					]
+				]
+			}
+		]
 	}
 ]

@@ -3,6 +3,7 @@
 import Footer from "./Footer/index.svelte";
 import Header from "./Header/index.svelte";
 import Main from "./Main/index.svelte";
+import MainOverons from "./MainOverons/index.svelte";
 import SquadMembers from "./SquadMembers/index.svelte";
 import SquadSelection from "./SquadSelection/index.svelte";
 
@@ -10,6 +11,7 @@ export const components = {
   footer: Footer,
   header: Header,
   main: Main,
+  main_overons: MainOverons,
   squad_members: SquadMembers,
   squad_selection: SquadSelection,
 };
