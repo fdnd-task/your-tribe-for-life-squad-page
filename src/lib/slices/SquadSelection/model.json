@@ -1,0 +1,57 @@
+{
+  "id": "squad_selection",
+  "type": "SharedSlice",
+  "name": "SquadSelection",
+  "description": "SquadSelection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "subtitle",
+            "placeholder": ""
+          }
+        },
+        "squada": {
+          "type": "Link",
+          "config": {
+            "label": "squadA",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "squadb": {
+          "type": "Link",
+          "config": {
+            "label": "squadB",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "contentimg": {
+          "type": "Image",
+          "config": {
+            "label": "contentImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
