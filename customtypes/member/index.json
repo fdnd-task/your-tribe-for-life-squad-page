@@ -1,0 +1,41 @@
+{
+	"id": "member",
+	"label": "Member",
+	"format": "custom",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"uid": {
+				"config": {
+					"label": "UID"
+				},
+				"type": "UID"
+			},
+			"memberimg": {
+				"type": "Image",
+				"config": {
+					"label": "MemberImg",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"membername": {
+				"type": "Text",
+				"config": {
+					"label": "MemberName",
+					"placeholder": ""
+				}
+			},
+			"memberlink": {
+				"type": "Link",
+				"config": {
+					"label": "MemberLink",
+					"placeholder": "",
+					"allowTargetBlank": false,
+					"select": null
+				}
+			}
+		}
+	}
+}

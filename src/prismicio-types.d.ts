@@ -4,7 +4,60 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type MemberpageDocumentDataSlicesSlice = never;
+/**
+ * Content for Member documents
+ */
+interface MemberDocumentData {
+	/**
+	 * MemberImg field in *Member*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.memberimg
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	memberimg: prismic.ImageField<never>;
+
+	/**
+	 * MemberName field in *Member*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.membername
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	membername: prismic.KeyTextField;
+
+	/**
+	 * MemberLink field in *Member*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.memberlink
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	memberlink: prismic.LinkField;
+}
+
+/**
+ * Member document from Prismic
+ *
+ * - **API ID**: `member`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type MemberDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<MemberDocumentData>,
+	'member',
+	Lang
+>;
+
+type MemberpageDocumentDataSlicesSlice = MembersSlice;
 
 /**
  * Content for memberpage documents
@@ -69,12 +122,46 @@ export type MemberpageDocument<Lang extends string = string> = prismic.PrismicDo
 	Lang
 >;
 
-type SquadpageDocumentDataSlicesSlice = never;
+type SquadpageDocumentDataSlicesSlice = MembersSlice;
 
 /**
  * Content for squadpage documents
  */
 interface SquadpageDocumentData {
+	/**
+	 * Title field in *squadpage*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: squadpage.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+
+	/**
+	 * Introtext field in *squadpage*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: squadpage.introtext
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	introtext: prismic.RichTextField;
+
+	/**
+	 * Button field in *squadpage*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: squadpage.button
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	button: prismic.BooleanField;
+
 	/**
 	 * Slice Zone field in *squadpage*
 	 *
@@ -134,12 +221,34 @@ export type SquadpageDocument<Lang extends string = string> = prismic.PrismicDoc
 	Lang
 >;
 
-type TribepageDocumentDataSlicesSlice = never;
+type TribepageDocumentDataSlicesSlice = SquadSlice;
 
 /**
  * Content for tribepage documents
  */
 interface TribepageDocumentData {
+	/**
+	 * Title field in *tribepage*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tribepage.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * introtext field in *tribepage*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: tribepage.introtext
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	introtext: prismic.RichTextField;
+
 	/**
 	 * Slice Zone field in *tribepage*
 	 *
@@ -193,13 +302,96 @@ interface TribepageDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type TribepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+export type TribepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
 	Simplify<TribepageDocumentData>,
 	'tribepage',
 	Lang
 >;
 
-export type AllDocumentTypes = MemberpageDocument | SquadpageDocument | TribepageDocument;
+export type AllDocumentTypes =
+	| MemberDocument
+	| MemberpageDocument
+	| SquadpageDocument
+	| TribepageDocument;
+
+/**
+ * Default variation for Members Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Record<string, never>,
+	never
+>;
+
+/**
+ * Slice variation for *Members*
+ */
+type MembersSliceVariation = MembersSliceDefault;
+
+/**
+ * Members Shared Slice
+ *
+ * - **API ID**: `members`
+ * - **Description**: Members
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSlice = prismic.SharedSlice<'members', MembersSliceVariation>;
+
+/**
+ * Primary content in *Squad → Primary*
+ */
+export interface SquadSliceDefaultPrimary {
+	/**
+	 * SquadTitle field in *Squad → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: squad.primary.squadtitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	squadtitle: prismic.RichTextField;
+
+	/**
+	 * Squadlink field in *Squad → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: squad.primary.squadlink
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	squadlink: prismic.LinkField;
+}
+
+/**
+ * Default variation for Squad Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SquadSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SquadSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *Squad*
+ */
+type SquadSliceVariation = SquadSliceDefault;
+
+/**
+ * Squad Shared Slice
+ *
+ * - **API ID**: `squad`
+ * - **Description**: Squad
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SquadSlice = prismic.SharedSlice<'squad', SquadSliceVariation>;
 
 declare module '@prismicio/client' {
 	interface CreateClient {
@@ -211,6 +403,8 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			MemberDocument,
+			MemberDocumentData,
 			MemberpageDocument,
 			MemberpageDocumentData,
 			MemberpageDocumentDataSlicesSlice,
@@ -220,7 +414,14 @@ declare module '@prismicio/client' {
 			TribepageDocument,
 			TribepageDocumentData,
 			TribepageDocumentDataSlicesSlice,
-			AllDocumentTypes
+			AllDocumentTypes,
+			MembersSlice,
+			MembersSliceVariation,
+			MembersSliceDefault,
+			SquadSlice,
+			SquadSliceDefaultPrimary,
+			SquadSliceVariation,
+			SquadSliceDefault
 		};
 	}
 }

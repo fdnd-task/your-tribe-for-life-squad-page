@@ -1,0 +1,27 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"squadtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem cupidatat ad et aliquip culpa dolore. Non nulla ipsum reprehenderit occaecat cupidatat ex eu in. Voluptate ea ipsum veniam sit excepteur dolor reprehenderit cillum sunt non veniam laborum commodo proident."
+						}
+					}
+				]
+			},
+			"squadlink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			}
+		},
+		"items": []
+	}
+]
