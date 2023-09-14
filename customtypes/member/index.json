@@ -1,0 +1,32 @@
+{
+	"id": "member",
+	"label": "Member",
+	"format": "custom",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"uid": {
+				"config": {
+					"label": "UID"
+				},
+				"type": "UID"
+			},
+			"title": {
+				"type": "Text",
+				"config": {
+					"label": "title",
+					"placeholder": ""
+				}
+			},
+			"image": {
+				"type": "Image",
+				"config": {
+					"label": "image",
+					"constraint": {},
+					"thumbnails": []
+				}
+			}
+		}
+	}
+}

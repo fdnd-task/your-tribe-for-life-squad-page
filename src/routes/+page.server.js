@@ -7,7 +7,11 @@ export const prerender = true;
 export async function load() {
 	const client = createClient();
 
-	const page = await client.getByUID('page', 'home');
+	// page fetch
+	const page = await client.getByUID('page', 'home', {'fetchLinks': ['member.title', 'member.image']});
+
+	// members fetch
+	// const members = await client.getByType('members');
 
 	return page.data
 }
