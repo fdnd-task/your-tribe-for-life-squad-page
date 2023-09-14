@@ -1,3 +1,7 @@
+:root {
+  --text: #0000;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,4 +24,19 @@ body {
   animation: back 25s linear infinite;*/
 
 background-color: #C8C8C8;
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--text);
+}
+
+h2 {
+  font-size: 28px;
+  color: var(--text);
+}
+
+p {
+  font-size: 18px;
+  color: var(--text);
 }
