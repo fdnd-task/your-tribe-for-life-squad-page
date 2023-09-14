@@ -21,10 +21,10 @@ const routes = [
 		path: '/'
 	},
 	{
-		type: 'squad',
+		type: 'squadpage',
 		uid: 'squadpage',
 		path: '/:uid'
-	}
+	},
 	{
 		type: 'memberpage',
 		uid: 'memberpage',
