@@ -1,15 +1,10 @@
-import { createClient } from "$lib/prismicio"
-
- 
+import { createClient } from '$lib/prismicio';
 
 export async function load({ fetch, request }) {
-    const client = createClient({ fetch, request })
+	const client = createClient({ fetch, request });
+	const page = await client.getByUID('tribepage', 'tribepage');
 
- 
+	console.log(page);
 
-    const document = await client.getByUID("tribepage", "tribepage")
-
- 
-
-    return document.data
+	return page.data;
 }
