@@ -1,6 +1,7 @@
 <script>
   /** @type {import("@prismicio/client").Content.HeaderSlice} */
   export let slice;
+  console.log(slice.items[0])
 </script>
 
 <section
@@ -15,10 +16,10 @@
   <nav>
     <ul>
       <li>
-        <a href="/"> logo </a>
+        <a href="/"><img src={slice.items[0].logo.url}></a>
       </li>
       <li>
-        <a href="/">Over ons</a>
+        <a href={slice.items[0].overons.url}>hj</a>
       </li>
     </ul>
   </nav>
@@ -30,5 +31,9 @@
     background-color: #49297E;
     color: #fff;
     padding: 5em;
+  }
+
+  a{
+     color: #fff;
   }
 </style>

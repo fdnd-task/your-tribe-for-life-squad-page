@@ -17,11 +17,19 @@ export const repositoryName = config.repositoryName;
 const routes = [
 	{
 		type: 'homepage',
-		path: '/'
+		path: '/home'
 	},
 	{
-		type: 'page',
-		path: '/:uid'
+		type: 'squadmembers',
+		path: '/squad-leden'
+	},
+	{
+		type: 'overons',
+		path: '/over-ons'
+	},
+	{
+		type: 'squadselect',
+		path: '/squadselect'
 	}
 ];
 
