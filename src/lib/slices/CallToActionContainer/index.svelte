@@ -7,7 +7,19 @@
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<p>{slice.primary.websiteTitle}</p>
+	<img src={slice.primary.call_to_action_image.url}>
 </section>
 
 <style>
+	p{
+		font-size: 2.5em;
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	img{
+		width: 100%;
+		filter: saturate(0);
+		margin-top: 1em;
+	}
 </style>

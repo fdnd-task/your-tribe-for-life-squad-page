@@ -4,6 +4,72 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type FooterDocumentDataSlicesSlice = FooterContainerSlice;
+
+/**
+ * Content for footer documents
+ */
+interface FooterDocumentData {
+	/**
+	 * Slice Zone field in *footer*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+
+/**
+ * footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<FooterDocumentData>,
+	'footer',
+	Lang
+>;
+
+type HeaderDocumentDataSlicesSlice = HeaderContainerSlice;
+
+/**
+ * Content for header documents
+ */
+interface HeaderDocumentData {
+	/**
+	 * Slice Zone field in *header*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<HeaderDocumentDataSlicesSlice>;
+}
+
+/**
+ * header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<HeaderDocumentData>,
+	'header',
+	Lang
+>;
+
 /**
  * Content for Member documents
  */
@@ -46,7 +112,11 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-type PageDocumentDataSlicesSlice = RichTextSlice | MembersSlice;
+type PageDocumentDataSlicesSlice =
+	| FooterContainerSlice
+	| HeaderContainerSlice
+	| RichTextSlice
+	| MembersSlice;
 
 /**
  * Content for Page documents
@@ -122,7 +192,127 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
-export type AllDocumentTypes = MemberDocument | PageDocument;
+export type AllDocumentTypes = FooterDocument | HeaderDocument | MemberDocument | PageDocument;
+
+/**
+ * Primary content in *FooterContainer → Primary*
+ */
+export interface FooterContainerSliceDefaultPrimary {
+	/**
+	 * footer_title field in *FooterContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_container.primary.footer_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	footer_title: prismic.KeyTextField;
+
+	/**
+	 * footer_image field in *FooterContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_container.primary.footer_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	footer_image: prismic.ImageField<never>;
+
+	/**
+	 * footer_link field in *FooterContainer → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_container.primary.footer_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	footer_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for FooterContainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterContainerSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<FooterContainerSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *FooterContainer*
+ */
+type FooterContainerSliceVariation = FooterContainerSliceDefault;
+
+/**
+ * FooterContainer Shared Slice
+ *
+ * - **API ID**: `footer_container`
+ * - **Description**: FooterContainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FooterContainerSlice = prismic.SharedSlice<
+	'footer_container',
+	FooterContainerSliceVariation
+>;
+
+/**
+ * Primary content in *HeaderContainer → Primary*
+ */
+export interface HeaderContainerSliceDefaultPrimary {
+	/**
+	 * LogoTitle field in *HeaderContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_container.primary.logoTitle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	logoTitle: prismic.KeyTextField;
+
+	/**
+	 * logoImage field in *HeaderContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_container.primary.logoImage
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logoImage: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for HeaderContainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeaderContainerSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<HeaderContainerSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *HeaderContainer*
+ */
+type HeaderContainerSliceVariation = HeaderContainerSliceDefault;
+
+/**
+ * HeaderContainer Shared Slice
+ *
+ * - **API ID**: `header_container`
+ * - **Description**: HeaderContainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeaderContainerSlice = prismic.SharedSlice<
+	'header_container',
+	HeaderContainerSliceVariation
+>;
 
 /**
  * Primary content in *Members → Items*
@@ -167,11 +357,11 @@ type MembersSliceVariation = MembersSliceDefault;
 export type MembersSlice = prismic.SharedSlice<'members', MembersSliceVariation>;
 
 /**
- * Primary content in *TitleContainer → Primary*
+ * Primary content in *CallToActionContainer → Primary*
  */
 export interface RichTextSliceDefaultPrimary {
 	/**
-	 * websiteTitle field in *TitleContainer → Primary*
+	 * websiteTitle field in *CallToActionContainer → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -179,10 +369,20 @@ export interface RichTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	websiteTitle: prismic.KeyTextField;
+
+	/**
+	 * call_to_action_image field in *CallToActionContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.call_to_action_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	call_to_action_image: prismic.ImageField<never>;
 }
 
 /**
- * Default variation for TitleContainer Slice
+ * Default variation for CallToActionContainer Slice
  *
  * - **API ID**: `default`
  * - **Description**: RichText
@@ -195,12 +395,12 @@ export type RichTextSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *TitleContainer*
+ * Slice variation for *CallToActionContainer*
  */
 type RichTextSliceVariation = RichTextSliceDefault;
 
 /**
- * TitleContainer Shared Slice
+ * CallToActionContainer Shared Slice
  *
  * - **API ID**: `rich_text`
  * - **Description**: RichText
@@ -218,12 +418,26 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			FooterDocument,
+			FooterDocumentData,
+			FooterDocumentDataSlicesSlice,
+			HeaderDocument,
+			HeaderDocumentData,
+			HeaderDocumentDataSlicesSlice,
 			MemberDocument,
 			MemberDocumentData,
 			PageDocument,
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
+			FooterContainerSlice,
+			FooterContainerSliceDefaultPrimary,
+			FooterContainerSliceVariation,
+			FooterContainerSliceDefault,
+			HeaderContainerSlice,
+			HeaderContainerSliceDefaultPrimary,
+			HeaderContainerSliceVariation,
+			HeaderContainerSliceDefault,
 			MembersSlice,
 			MembersSliceDefaultItem,
 			MembersSliceVariation,

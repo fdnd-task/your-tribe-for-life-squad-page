@@ -1,0 +1,42 @@
+{
+  "id": "footer_container",
+  "type": "SharedSlice",
+  "name": "FooterContainer",
+  "description": "FooterContainer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "footer_title": {
+          "type": "Text",
+          "config": {
+            "label": "footer_title",
+            "placeholder": ""
+          }
+        },
+        "footer_image": {
+          "type": "Image",
+          "config": {
+            "label": "footer_image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "footer_link": {
+          "type": "Link",
+          "config": {
+            "label": "footer_link",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

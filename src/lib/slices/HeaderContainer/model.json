@@ -1,0 +1,34 @@
+{
+  "id": "header_container",
+  "type": "SharedSlice",
+  "name": "HeaderContainer",
+  "description": "HeaderContainer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "logoTitle": {
+          "type": "Text",
+          "config": {
+            "label": "LogoTitle",
+            "placeholder": ""
+          }
+        },
+        "logoImage": {
+          "type": "Image",
+          "config": {
+            "label": "logoImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
 	"id": "rich_text",
 	"type": "SharedSlice",
-	"name": "TitleContainer",
+	"name": "CallToActionContainer",
 	"description": "RichText",
 	"variations": [
 		{
@@ -16,6 +16,14 @@
 					"config": {
 						"label": "websiteTitle",
 						"placeholder": ""
+					}
+				},
+				"call_to_action_image": {
+					"type": "Image",
+					"config": {
+						"label": "call_to_action_image",
+						"constraint": {},
+						"thumbnails": []
 					}
 				}
 			},
