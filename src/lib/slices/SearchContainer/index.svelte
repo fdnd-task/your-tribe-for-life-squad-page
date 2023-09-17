@@ -21,21 +21,22 @@
 
 	input{
 		background-color: white;
-		padding: 1.8em 1em;
+		padding: 1.5em 1em;
 		border: none;
 		border-radius: 1.5em;
 		width: 100%;
 		margin-top: 1em;
+		font-size: 1em;
 	}
 
 	input::placeholder{
-		padding-left: 1em;
+		padding-left: 0.5em;
 		font-size: 1.125em;
 	}
 
 	img{
 		position: absolute;
 		right: 3em;
-		transform: translateY(-3.4em);
+		transform: translateY(-3.5em);
 	}
 </style>
