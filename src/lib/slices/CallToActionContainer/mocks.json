@@ -30,6 +30,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "question",
 				"type": "Text"
+			},
+			"search_button": {
+				"__TYPE__": "FieldContent",
+				"value": "effect",
+				"type": "Text"
 			}
 		},
 		"items": [

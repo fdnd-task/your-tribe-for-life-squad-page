@@ -75,17 +75,6 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
  */
 interface MemberDocumentData {
 	/**
-	 * title field in *member*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: member.title
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	title: prismic.KeyTextField;
-
-	/**
 	 * image field in *member*
 	 *
 	 * - **Field Type**: Image
@@ -95,6 +84,17 @@ interface MemberDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
+
+	/**
+	 * title field in *member*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField;
 }
 
 /**
@@ -379,6 +379,16 @@ export interface RichTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	call_to_action_image: prismic.ImageField<never>;
+
+	/**
+	 * search_button field in *CallToActionContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.primary.search_button
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	search_button: prismic.KeyTextField;
 }
 
 /**
