@@ -70,6 +70,71 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
+type LayoutDocumentDataSlicesSlice = HeaderContainerSlice | FooterContainerSlice;
+
+/**
+ * Content for layout documents
+ */
+interface LayoutDocumentData {
+	/**
+	 * Slice Zone field in *layout*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: layout.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<LayoutDocumentDataSlicesSlice>
+	/**
+	 * Meta Description field in *layout*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A brief summary of the page
+	 * - **API ID Path**: layout.meta_description
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */;
+	meta_description: prismic.KeyTextField;
+
+	/**
+	 * Meta Image field in *layout*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: layout.meta_image
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	meta_image: prismic.ImageField<never>;
+
+	/**
+	 * Meta Title field in *layout*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A title of the page used for social media and search engines
+	 * - **API ID Path**: layout.meta_title
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_title: prismic.KeyTextField;
+}
+
+/**
+ * layout document from Prismic
+ *
+ * - **API ID**: `layout`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LayoutDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<LayoutDocumentData>,
+	'layout',
+	Lang
+>;
+
 /**
  * Content for member documents
  */
@@ -192,7 +257,12 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
-export type AllDocumentTypes = FooterDocument | HeaderDocument | MemberDocument | PageDocument;
+export type AllDocumentTypes =
+	| FooterDocument
+	| HeaderDocument
+	| LayoutDocument
+	| MemberDocument
+	| PageDocument;
 
 /**
  * Primary content in *FooterContainer → Primary*
@@ -434,6 +504,9 @@ declare module '@prismicio/client' {
 			HeaderDocument,
 			HeaderDocumentData,
 			HeaderDocumentDataSlicesSlice,
+			LayoutDocument,
+			LayoutDocumentData,
+			LayoutDocumentDataSlicesSlice,
 			MemberDocument,
 			MemberDocumentData,
 			PageDocument,

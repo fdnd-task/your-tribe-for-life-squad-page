@@ -3,17 +3,21 @@
 
 	/** @type {import("@prismicio/client").Content.MembersSlice} */
 	export let slice;
-
-	console.log(slice)
 </script>
 
-<section class="all-members" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+<section
+	class="all-members"
+	data-slice-type={slice.slice_type}
+	data-slice-variation={slice.variation}
+>
 	{#each slice.items as item}
-		<section class="member-overview">
-			<div class="image-container">
-				<img src={item.members.data.image.url} alt="" />
-			</div>
-			<p>{item.members.data.title}</p>
+		<section>
+			<a href={item.members.uid}>
+				<div class="image-container">
+					<img src={item.members.data.image.url} alt="" />
+				</div>
+				<p>{item.members.data.title}</p>
+			</a>
 		</section>
 	{/each}
 </section>
@@ -25,8 +29,12 @@
 		margin: 3.125em 0;
 	}
 
-	.image-container{
-		border: 1em solid #A8A8A8;
+	a{
+		text-decoration: none;
+	}
+
+	.image-container {
+		border: 1em solid #a8a8a8;
 		margin-right: 2em;
 		margin-bottom: 0;
 		display: flex;
@@ -36,8 +44,8 @@
 		font-size: 1.25em;
 		margin-top: 0.5em;
 	}
-	
-	img{
+
+	img {
 		width: 10em;
 		height: 11em;
 		object-fit: cover;
