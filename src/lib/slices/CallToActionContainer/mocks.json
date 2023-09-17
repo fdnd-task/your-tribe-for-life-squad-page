@@ -3,13 +3,7 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"websiteTitle": {
-				"__TYPE__": "FieldContent",
-				"value": "difficult",
-				"type": "Text"
-			},
 			"call_to_action_image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
@@ -27,7 +21,15 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"call_to_action_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "question",
+				"type": "Text"
 			}
 		},
 		"items": [

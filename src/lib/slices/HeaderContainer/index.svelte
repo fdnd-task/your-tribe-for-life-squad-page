@@ -1,13 +1,11 @@
 <script>
 	/** @type {import("@prismicio/client").Content.HeaderContainerSlice} */
 	export let slice;
-
-	console.log(slice)
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<img src={slice.primary.logoImage.url} alt="logo">
-	<p>{slice.primary.logoTitle}</p>
+	<img src={slice.primary.logo_image.url} alt="logo">
+	<p>{slice.primary.logo_title}</p>
 </section>
 
 <style>

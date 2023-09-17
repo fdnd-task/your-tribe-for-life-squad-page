@@ -6,8 +6,8 @@
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<p>{slice.primary.websiteTitle}</p>
-	<img src={slice.primary.call_to_action_image.url}>
+	<p>{slice.primary.call_to_action_heading}</p>
+	<img src={slice.primary.call_to_action_image.url} alt="">
 </section>
 
 <style>

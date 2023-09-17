@@ -12,17 +12,17 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "logoTitle": {
+        "logo_title": {
           "type": "Text",
           "config": {
-            "label": "LogoTitle",
+            "label": "Logo_title",
             "placeholder": ""
           }
         },
-        "logoImage": {
+        "logo_image": {
           "type": "Image",
           "config": {
-            "label": "logoImage",
+            "label": "logo_image",
             "constraint": {},
             "thumbnails": []
           }

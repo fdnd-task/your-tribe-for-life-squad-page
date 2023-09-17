@@ -71,11 +71,11 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 /**
- * Content for Member documents
+ * Content for member documents
  */
 interface MemberDocumentData {
 	/**
-	 * title field in *Member*
+	 * title field in *member*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -86,7 +86,7 @@ interface MemberDocumentData {
 	title: prismic.KeyTextField;
 
 	/**
-	 * image field in *Member*
+	 * image field in *member*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -98,7 +98,7 @@ interface MemberDocumentData {
 }
 
 /**
- * Member document from Prismic
+ * member document from Prismic
  *
  * - **API ID**: `member`
  * - **Repeatable**: `true`
@@ -264,24 +264,24 @@ export type FooterContainerSlice = prismic.SharedSlice<
  */
 export interface HeaderContainerSliceDefaultPrimary {
 	/**
-	 * LogoTitle field in *HeaderContainer → Primary*
+	 * Logo_title field in *HeaderContainer → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header_container.primary.logoTitle
+	 * - **API ID Path**: header_container.primary.logo_title
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	logoTitle: prismic.KeyTextField;
+	logo_title: prismic.KeyTextField;
 
 	/**
-	 * logoImage field in *HeaderContainer → Primary*
+	 * logo_image field in *HeaderContainer → Primary*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header_container.primary.logoImage
+	 * - **API ID Path**: header_container.primary.logo_image
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
-	logoImage: prismic.ImageField<never>;
+	logo_image: prismic.ImageField<never>;
 }
 
 /**
@@ -361,14 +361,14 @@ export type MembersSlice = prismic.SharedSlice<'members', MembersSliceVariation>
  */
 export interface RichTextSliceDefaultPrimary {
 	/**
-	 * websiteTitle field in *CallToActionContainer → Primary*
+	 * call_to_action_heading field in *CallToActionContainer → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.websiteTitle
+	 * - **API ID Path**: rich_text.primary.call_to_action_heading
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
-	websiteTitle: prismic.KeyTextField;
+	call_to_action_heading: prismic.KeyTextField;
 
 	/**
 	 * call_to_action_image field in *CallToActionContainer → Primary*

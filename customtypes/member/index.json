@@ -1,6 +1,6 @@
 {
 	"id": "member",
-	"label": "Member",
+	"label": "member",
 	"format": "custom",
 	"repeatable": true,
 	"status": true,
