@@ -15,7 +15,7 @@
 }
 
 html,
-body, button {
+body, button, input {
   display: flex;
   flex-direction: column;
   padding: 0 1em;

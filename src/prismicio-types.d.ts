@@ -70,71 +70,6 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-type LayoutDocumentDataSlicesSlice = HeaderContainerSlice | FooterContainerSlice;
-
-/**
- * Content for layout documents
- */
-interface LayoutDocumentData {
-	/**
-	 * Slice Zone field in *layout*
-	 *
-	 * - **Field Type**: Slice Zone
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: layout.slices[]
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
-	 */
-	slices: prismic.SliceZone<LayoutDocumentDataSlicesSlice>
-	/**
-	 * Meta Description field in *layout*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: layout.meta_description
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */;
-	meta_description: prismic.KeyTextField;
-
-	/**
-	 * Meta Image field in *layout*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: layout.meta_image
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	meta_image: prismic.ImageField<never>;
-
-	/**
-	 * Meta Title field in *layout*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: layout.meta_title
-	 * - **Tab**: SEO & Metadata
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	meta_title: prismic.KeyTextField;
-}
-
-/**
- * layout document from Prismic
- *
- * - **API ID**: `layout`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type LayoutDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-	Simplify<LayoutDocumentData>,
-	'layout',
-	Lang
->;
-
 /**
  * Content for member documents
  */
@@ -178,6 +113,7 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type PageDocumentDataSlicesSlice =
+	| SearchContainerSlice
 	| FooterContainerSlice
 	| HeaderContainerSlice
 	| RichTextSlice
@@ -257,12 +193,45 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
+type SearchDocumentDataSlicesSlice = SearchContainerSlice;
+
+/**
+ * Content for search documents
+ */
+interface SearchDocumentData {
+	/**
+	 * Slice Zone field in *search*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<SearchDocumentDataSlicesSlice>;
+}
+
+/**
+ * search document from Prismic
+ *
+ * - **API ID**: `search`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SearchDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<SearchDocumentData>,
+	'search',
+	Lang
+>;
+
 export type AllDocumentTypes =
 	| FooterDocument
 	| HeaderDocument
-	| LayoutDocument
 	| MemberDocument
-	| PageDocument;
+	| PageDocument
+	| SearchDocument;
 
 /**
  * Primary content in *FooterContainer → Primary*
@@ -488,6 +457,71 @@ type RichTextSliceVariation = RichTextSliceDefault;
  */
 export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>;
 
+/**
+ * Primary content in *SearchContainer → Primary*
+ */
+export interface SearchContainerSliceDefaultPrimary {
+	/**
+	 * search_title field in *SearchContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search_container.primary.search_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	search_title: prismic.KeyTextField;
+
+	/**
+	 * input_placeholder field in *SearchContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search_container.primary.input_placeholder
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	input_placeholder: prismic.KeyTextField;
+
+	/**
+	 * input_svg field in *SearchContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search_container.primary.input_svg
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	input_svg: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for SearchContainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SearchContainerSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SearchContainerSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *SearchContainer*
+ */
+type SearchContainerSliceVariation = SearchContainerSliceDefault;
+
+/**
+ * SearchContainer Shared Slice
+ *
+ * - **API ID**: `search_container`
+ * - **Description**: SearchContainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SearchContainerSlice = prismic.SharedSlice<
+	'search_container',
+	SearchContainerSliceVariation
+>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -504,14 +538,14 @@ declare module '@prismicio/client' {
 			HeaderDocument,
 			HeaderDocumentData,
 			HeaderDocumentDataSlicesSlice,
-			LayoutDocument,
-			LayoutDocumentData,
-			LayoutDocumentDataSlicesSlice,
 			MemberDocument,
 			MemberDocumentData,
 			PageDocument,
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
+			SearchDocument,
+			SearchDocumentData,
+			SearchDocumentDataSlicesSlice,
 			AllDocumentTypes,
 			FooterContainerSlice,
 			FooterContainerSliceDefaultPrimary,
@@ -528,7 +562,11 @@ declare module '@prismicio/client' {
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceVariation,
-			RichTextSliceDefault
+			RichTextSliceDefault,
+			SearchContainerSlice,
+			SearchContainerSliceDefaultPrimary,
+			SearchContainerSliceVariation,
+			SearchContainerSliceDefault
 		};
 	}
 }
