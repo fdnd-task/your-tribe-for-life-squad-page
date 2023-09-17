@@ -27,6 +27,8 @@
 		display: flex;
 		overflow-x: scroll;
 		margin: 3.125em 0;
+		position: relative;
+		z-index: 2;
 	}
 
 	a{

@@ -3,7 +3,7 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+<section class="search-container" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<h2>{slice.primary.search_title}</h2>
 	<input type="text" placeholder={slice.primary.input_placeholder}>
 	<img src={slice.primary.input_svg.url} alt="">
@@ -17,6 +17,7 @@
 	h2{
 		font-size: 1.75em;
 		width: 75%;
+		font-weight: normal;
 	}
 
 	input{
