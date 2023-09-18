@@ -2,7 +2,7 @@
 
 In dit project ben ik samen met Mokhtar, Fatih, Arexan en Suus begonnen met het opbouwen van onze eerste squadpage in "Sveltekit" framework omgeving. Dit hebben we opgebouwd aan de hand van een headless CMS in "Prismic". 
 
-![image](https://github.com/jtoufik/S3-squad-page/assets/112856590/2ddfc1f7-fa38-4494-8c34-e96d0d4060e3)
+![image](https://github.com/jtoufik/S3-squad-page/assets/112856590/3bfcaf81-e369-4ff2-9aba-d3f2dbe7c12f)
 
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
