@@ -117,7 +117,8 @@ type PageDocumentDataSlicesSlice =
 	| FooterContainerSlice
 	| HeaderContainerSlice
 	| RichTextSlice
-	| MembersSlice;
+	| MembersSlice
+	| AboutContainerSlice;
 
 /**
  * Content for Page documents
@@ -232,6 +233,71 @@ export type AllDocumentTypes =
 	| MemberDocument
 	| PageDocument
 	| SearchDocument;
+
+/**
+ * Primary content in *AboutContainer → Primary*
+ */
+export interface AboutContainerSliceDefaultPrimary {
+	/**
+	 * about_title field in *AboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about_container.primary.about_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	about_title: prismic.KeyTextField;
+
+	/**
+	 * about_text field in *AboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about_container.primary.about_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	about_text: prismic.KeyTextField;
+
+	/**
+	 * about_image field in *AboutContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: about_container.primary.about_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	about_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for AboutContainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutContainerSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<AboutContainerSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *AboutContainer*
+ */
+type AboutContainerSliceVariation = AboutContainerSliceDefault;
+
+/**
+ * AboutContainer Shared Slice
+ *
+ * - **API ID**: `about_container`
+ * - **Description**: AboutContainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutContainerSlice = prismic.SharedSlice<
+	'about_container',
+	AboutContainerSliceVariation
+>;
 
 /**
  * Primary content in *FooterContainer → Primary*
@@ -557,6 +623,10 @@ declare module '@prismicio/client' {
 			SearchDocumentData,
 			SearchDocumentDataSlicesSlice,
 			AllDocumentTypes,
+			AboutContainerSlice,
+			AboutContainerSliceDefaultPrimary,
+			AboutContainerSliceVariation,
+			AboutContainerSliceDefault,
 			FooterContainerSlice,
 			FooterContainerSliceDefaultPrimary,
 			FooterContainerSliceVariation,

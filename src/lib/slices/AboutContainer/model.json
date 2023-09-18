@@ -1,0 +1,41 @@
+{
+  "id": "about_container",
+  "type": "SharedSlice",
+  "name": "AboutContainer",
+  "description": "AboutContainer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "about_title": {
+          "type": "Text",
+          "config": {
+            "label": "about_title",
+            "placeholder": ""
+          }
+        },
+        "about_text": {
+          "type": "Text",
+          "config": {
+            "label": "about_text",
+            "placeholder": ""
+          }
+        },
+        "about_image": {
+          "type": "Image",
+          "config": {
+            "label": "about_image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

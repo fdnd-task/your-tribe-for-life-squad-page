@@ -6,7 +6,7 @@
 	// what does export exactly do?
 	export let data;
 
-	console.log(data.data1 + "11111");
+	console.log(data);
 </script>
 
 <Header list={data.data2}/>
