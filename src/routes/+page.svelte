@@ -9,3 +9,5 @@
 </script>
 
 <SliceZone slices={data.slices} {components} />
+
+{console.log(data.slice)}
