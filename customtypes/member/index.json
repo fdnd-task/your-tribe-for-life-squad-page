@@ -29,6 +29,17 @@
 					"label": "title",
 					"placeholder": ""
 				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {
+						"member_about_container": {
+							"type": "SharedSlice"
+						}
+					}
+				}
 			}
 		}
 	}

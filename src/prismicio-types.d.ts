@@ -70,6 +70,8 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
+type MemberDocumentDataSlicesSlice = MemberAboutContainerSlice;
+
 /**
  * Content for member documents
  */
@@ -95,6 +97,17 @@ interface MemberDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	title: prismic.KeyTextField;
+
+	/**
+	 * Slice Zone field in *member*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<MemberDocumentDataSlicesSlice>;
 }
 
 /**
@@ -430,6 +443,111 @@ export type HeaderContainerSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *MemberAboutContainer → Primary*
+ */
+export interface MemberAboutContainerSliceDefaultPrimary {
+	/**
+	 * heading_1 field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Your best friend!
+	 * - **API ID Path**: member_about_container.primary.heading_1
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	heading_1: prismic.KeyTextField;
+
+	/**
+	 * highlight_1 field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Loves working hard
+	 * - **API ID Path**: member_about_container.primary.highlight_1
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	highlight_1: prismic.KeyTextField;
+
+	/**
+	 * highlight_2 field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Enjoys wearing suits
+	 * - **API ID Path**: member_about_container.primary.highlight_2
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	highlight_2: prismic.KeyTextField;
+
+	/**
+	 * highlight_3 field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Likes to have a drink
+	 * - **API ID Path**: member_about_container.primary.highlight_3
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	highlight_3: prismic.KeyTextField;
+
+	/**
+	 * heading_2 field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: More about your bestie.
+	 * - **API ID Path**: member_about_container.primary.heading_2
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	heading_2: prismic.KeyTextField;
+
+	/**
+	 * paragraph_more_about field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Patrick Bateman is portrayed as a wealthy, good-looking, and highly intelligent man
+	 * - **API ID Path**: member_about_container.primary.paragraph_more_about
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	paragraph_more_about: prismic.KeyTextField;
+
+	/**
+	 * image_more_about field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member_about_container.primary.image_more_about
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image_more_about: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for MemberAboutContainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MemberAboutContainerSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<MemberAboutContainerSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *MemberAboutContainer*
+ */
+type MemberAboutContainerSliceVariation = MemberAboutContainerSliceDefault;
+
+/**
+ * MemberAboutContainer Shared Slice
+ *
+ * - **API ID**: `member_about_container`
+ * - **Description**: MemberAboutContainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MemberAboutContainerSlice = prismic.SharedSlice<
+	'member_about_container',
+	MemberAboutContainerSliceVariation
+>;
+
+/**
  * Primary content in *Members → Items*
  */
 export interface MembersSliceDefaultItem {
@@ -616,6 +734,7 @@ declare module '@prismicio/client' {
 			HeaderDocumentDataSlicesSlice,
 			MemberDocument,
 			MemberDocumentData,
+			MemberDocumentDataSlicesSlice,
 			PageDocument,
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
@@ -635,6 +754,10 @@ declare module '@prismicio/client' {
 			HeaderContainerSliceDefaultPrimary,
 			HeaderContainerSliceVariation,
 			HeaderContainerSliceDefault,
+			MemberAboutContainerSlice,
+			MemberAboutContainerSliceDefaultPrimary,
+			MemberAboutContainerSliceVariation,
+			MemberAboutContainerSliceDefault,
 			MembersSlice,
 			MembersSliceDefaultItem,
 			MembersSliceVariation,

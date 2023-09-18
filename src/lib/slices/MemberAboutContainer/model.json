@@ -1,0 +1,69 @@
+{
+  "id": "member_about_container",
+  "type": "SharedSlice",
+  "name": "MemberAboutContainer",
+  "description": "MemberAboutContainer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_1": {
+          "type": "Text",
+          "config": {
+            "label": "heading_1",
+            "placeholder": "Your best friend!"
+          }
+        },
+        "highlight_1": {
+          "type": "Text",
+          "config": {
+            "label": "highlight_1",
+            "placeholder": "Loves working hard"
+          }
+        },
+        "highlight_2": {
+          "type": "Text",
+          "config": {
+            "label": "highlight_2",
+            "placeholder": "Enjoys wearing suits"
+          }
+        },
+        "highlight_3": {
+          "type": "Text",
+          "config": {
+            "label": "highlight_3",
+            "placeholder": "Likes to have a drink"
+          }
+        },
+        "heading_2": {
+          "type": "Text",
+          "config": {
+            "label": "heading_2",
+            "placeholder": "More about your bestie."
+          }
+        },
+        "paragraph_more_about": {
+          "type": "Text",
+          "config": {
+            "label": "paragraph_more_about",
+            "placeholder": "Patrick Bateman is portrayed as a wealthy, good-looking, and highly intelligent man"
+          }
+        },
+        "image_more_about": {
+          "type": "Image",
+          "config": {
+            "label": "image_more_about",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
