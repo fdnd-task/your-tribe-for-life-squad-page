@@ -9,7 +9,6 @@
 				"type": "Text"
 			},
 			"footer_image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
@@ -27,6 +26,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"footer_link": {
@@ -35,6 +37,11 @@
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com"
 				}
+			},
+			"footer_link_title": {
+				"__TYPE__": "FieldContent",
+				"value": "view",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -12,19 +12,22 @@
 				},
 				"type": "UID"
 			},
+			"image": {
+				"type": "Image",
+				"config": {
+					"label": "image",
+					"constraint": {
+						"width": 0,
+						"height": null
+					},
+					"thumbnails": []
+				}
+			},
 			"title": {
 				"type": "Text",
 				"config": {
 					"label": "title",
 					"placeholder": ""
-				}
-			},
-			"image": {
-				"type": "Image",
-				"config": {
-					"label": "image",
-					"constraint": {},
-					"thumbnails": []
 				}
 			}
 		}
