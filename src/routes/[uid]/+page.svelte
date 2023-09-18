@@ -1,24 +1,17 @@
 <script>
 	import { SliceZone } from '@prismicio/svelte';
 
-	// import HeaderSlice from '$lib/slices/HeaderContainer/index.svelte';
-    // import FooterSlice from '$lib/slices/FooterContainer/index.svelte';
-
-
-	// const components = {
-	// 	header_container: HeaderSlice,
-    //     footer_container: FooterSlice
-        
-	// };
+	import Header from '$lib/components/header/+page.svelte'
 
 	// what does export exactly do?
 	export let data;
 
-	console.log(data);
+	console.log(data.data1 + "11111");
 </script>
 
+<Header list={data.data2}/>
 <section>
-	<h1>{data.title}</h1>
+	<h1>{data.data1.title}</h1>
 </section>
 
 <!-- <SliceZone slices={data.slices} {components} /> -->

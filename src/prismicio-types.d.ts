@@ -258,6 +258,16 @@ export interface FooterContainerSliceDefaultPrimary {
 	footer_image: prismic.ImageField<never>;
 
 	/**
+	 * footer_link_title field in *FooterContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_container.primary.footer_link_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	footer_link_title: prismic.KeyTextField;
+
+	/**
 	 * footer_link field in *FooterContainer → Primary*
 	 *
 	 * - **Field Type**: Link

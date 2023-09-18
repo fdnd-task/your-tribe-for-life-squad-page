@@ -8,6 +8,12 @@ export async function load({fetch, request, params}) {
 
 	// page fetch
 	const page = await client.getByUID('member', params.uid);
-	// const page = await client.getByUID('page', 'home');
-	return page.data
+	const page1 = await client.getByUID('page', 'home');
+
+	let allData = {
+		data1: page.data,
+		data2: page1.data
+	}
+
+	return allData
 }

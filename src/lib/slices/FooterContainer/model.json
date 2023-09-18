@@ -27,6 +27,13 @@
             "thumbnails": []
           }
         },
+        "footer_link_title": {
+          "type": "Text",
+          "config": {
+            "label": "footer_link_title",
+            "placeholder": ""
+          }
+        },
         "footer_link": {
           "type": "Link",
           "config": {
