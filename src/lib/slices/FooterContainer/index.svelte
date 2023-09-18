@@ -9,7 +9,7 @@
 		<img src={slice.primary.footer_image.url} alt="" />
 	</div>
 	<div class="link">
-		<a href="{slice.primary.footer_link.url}">{slice.primary.footer_link}</a>
+		<a href="{slice.primary.footer_link.url}">{slice.primary.footer_link_title}</a>
 	</div>
 </footer>
 
