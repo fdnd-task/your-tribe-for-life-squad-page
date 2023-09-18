@@ -1,0 +1,41 @@
+{
+  "id": "search_container",
+  "type": "SharedSlice",
+  "name": "SearchContainer",
+  "description": "SearchContainer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "search_title": {
+          "type": "Text",
+          "config": {
+            "label": "search_title",
+            "placeholder": ""
+          }
+        },
+        "input_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "input_placeholder",
+            "placeholder": ""
+          }
+        },
+        "input_svg": {
+          "type": "Image",
+          "config": {
+            "label": "input_svg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
