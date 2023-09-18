@@ -5,19 +5,17 @@
 </script>
 
 
-<body>
-  <header>
-    <h1 class="fdnd">fdnd</h1>
-    <a href={slice.items[0].overons.url}>Over ons</a>
-  </header>
-</body>
+<header>
+  <h1 class="fdnd">fdnd</h1>
+  <a href={slice.items[0].overons.url}>Over ons</a>
+</header>
+
 
 <style>
-
 :root {
     --white: #fff;
     --turquoise: #55B6AE;
-    --rounded: .5rem;
+    --rounded: .3rem;
     --shadow: .3rem
 }
   /* Basic styling for the header */
@@ -42,7 +40,7 @@
   .fdnd {
   border: 1px solid var(--white);
   border-radius: var(--rounded);
-  box-shadow: calc(-1 * var(--shadow)) var(--shadow) 0 0 var(--turquoise);
+  /* box-shadow: calc(-1 * var(--shadow)) var(--shadow) 0 0 var(--turquoise); */
   color: var(--white);
   background: var(--turquoise);
   text-transform: lowercase;
@@ -56,6 +54,11 @@ a {
   color: var(--turquoise);
   text-transform: uppercase;
   font-family: 'Quantico', openSans, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+a:hover{
+  text-decoration: underline;
 }
 </style>
