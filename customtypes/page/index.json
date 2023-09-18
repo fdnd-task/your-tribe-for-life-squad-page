@@ -41,6 +41,9 @@
 						},
 						"members": {
 							"type": "SharedSlice"
+						},
+						"about_container": {
+							"type": "SharedSlice"
 						}
 					}
 				}
