@@ -1,0 +1,28 @@
+{
+	"id": "search",
+	"label": "search",
+	"format": "custom",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"uid": {
+				"config": {
+					"label": "UID"
+				},
+				"type": "UID"
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {
+						"search_container": {
+							"type": "SharedSlice"
+						}
+					}
+				}
+			}
+		}
+	}
+}

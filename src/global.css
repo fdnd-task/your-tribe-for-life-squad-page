@@ -15,10 +15,9 @@
 }
 
 html,
-body, button {
+body, button, input {
   display: flex;
   flex-direction: column;
-  padding: 0 1em;
   font-family: groovy, sans-serif;
 /*  width: 100%;
   height: 100%;
@@ -34,6 +33,20 @@ body, button {
 
 background-color: #C8C8C8;
 }
+
+/* body{
+  padding: 0 2em;
+} */
+
+/* IPV body padding */
+.header, .call-to-action-container, .search-container{
+  padding: 0 2em;
+}
+
+.all-members{
+  padding: 0 0 0 2em;
+}
+/* IPV body padding */
 
 h1 {
   font-size: 40px;

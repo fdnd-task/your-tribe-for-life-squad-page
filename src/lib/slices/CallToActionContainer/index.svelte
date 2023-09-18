@@ -5,7 +5,7 @@
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+<section class="call-to-action-container" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 	<p>{slice.primary.call_to_action_heading}</p>
 	<img src={slice.primary.call_to_action_image.url} alt="">
 	<button>{slice.primary.search_button}</button>

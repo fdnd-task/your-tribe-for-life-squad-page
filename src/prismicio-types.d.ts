@@ -113,6 +113,7 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type PageDocumentDataSlicesSlice =
+	| SearchContainerSlice
 	| FooterContainerSlice
 	| HeaderContainerSlice
 	| RichTextSlice
@@ -192,7 +193,45 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
-export type AllDocumentTypes = FooterDocument | HeaderDocument | MemberDocument | PageDocument;
+type SearchDocumentDataSlicesSlice = SearchContainerSlice;
+
+/**
+ * Content for search documents
+ */
+interface SearchDocumentData {
+	/**
+	 * Slice Zone field in *search*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<SearchDocumentDataSlicesSlice>;
+}
+
+/**
+ * search document from Prismic
+ *
+ * - **API ID**: `search`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SearchDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<SearchDocumentData>,
+	'search',
+	Lang
+>;
+
+export type AllDocumentTypes =
+	| FooterDocument
+	| HeaderDocument
+	| MemberDocument
+	| PageDocument
+	| SearchDocument;
 
 /**
  * Primary content in *FooterContainer → Primary*
@@ -217,6 +256,16 @@ export interface FooterContainerSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	footer_image: prismic.ImageField<never>;
+
+	/**
+	 * footer_link_title field in *FooterContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_container.primary.footer_link_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	footer_link_title: prismic.KeyTextField;
 
 	/**
 	 * footer_link field in *FooterContainer → Primary*
@@ -418,6 +467,71 @@ type RichTextSliceVariation = RichTextSliceDefault;
  */
 export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>;
 
+/**
+ * Primary content in *SearchContainer → Primary*
+ */
+export interface SearchContainerSliceDefaultPrimary {
+	/**
+	 * search_title field in *SearchContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search_container.primary.search_title
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	search_title: prismic.KeyTextField;
+
+	/**
+	 * input_placeholder field in *SearchContainer → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search_container.primary.input_placeholder
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	input_placeholder: prismic.KeyTextField;
+
+	/**
+	 * input_svg field in *SearchContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: search_container.primary.input_svg
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	input_svg: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for SearchContainer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SearchContainerSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SearchContainerSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *SearchContainer*
+ */
+type SearchContainerSliceVariation = SearchContainerSliceDefault;
+
+/**
+ * SearchContainer Shared Slice
+ *
+ * - **API ID**: `search_container`
+ * - **Description**: SearchContainer
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SearchContainerSlice = prismic.SharedSlice<
+	'search_container',
+	SearchContainerSliceVariation
+>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -439,6 +553,9 @@ declare module '@prismicio/client' {
 			PageDocument,
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
+			SearchDocument,
+			SearchDocumentData,
+			SearchDocumentDataSlicesSlice,
 			AllDocumentTypes,
 			FooterContainerSlice,
 			FooterContainerSliceDefaultPrimary,
@@ -455,7 +572,11 @@ declare module '@prismicio/client' {
 			RichTextSlice,
 			RichTextSliceDefaultPrimary,
 			RichTextSliceVariation,
-			RichTextSliceDefault
+			RichTextSliceDefault,
+			SearchContainerSlice,
+			SearchContainerSliceDefaultPrimary,
+			SearchContainerSliceVariation,
+			SearchContainerSliceDefault
 		};
 	}
 }
