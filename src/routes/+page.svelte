@@ -8,5 +8,4 @@
 
 </script>
 
-<SliceZone slices={data.slices[0]} {components} />
-{console.log(data.slices[0])}
+<SliceZone slices={data.slices} {components} />

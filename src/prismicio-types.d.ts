@@ -141,6 +141,17 @@ export type OveronsDocument<Lang extends string = string> =
  */
 interface SquadmembersDocumentData {
   /**
+   * squadName field in *squadMembers*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.squadname
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  squadname: prismic.KeyTextField;
+
+  /**
    * memberName field in *squadMembers*
    *
    * - **Field Type**: Text
