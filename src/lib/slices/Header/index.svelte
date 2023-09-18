@@ -1,7 +1,7 @@
 <script>
   /** @type {import("@prismicio/client").Content.HeaderSlice} */
   export let slice;
-  console.log(slice.items[0])
+  // console.log(slice.items[0])
 </script>
 
 <section
