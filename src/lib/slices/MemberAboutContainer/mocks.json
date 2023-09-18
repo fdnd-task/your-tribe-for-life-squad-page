@@ -5,32 +5,32 @@
 		"primary": {
 			"heading_1": {
 				"__TYPE__": "FieldContent",
-				"value": "spirit",
+				"value": "magic",
 				"type": "Text"
 			},
 			"highlight_1": {
 				"__TYPE__": "FieldContent",
-				"value": "captured",
+				"value": "graph",
 				"type": "Text"
 			},
 			"highlight_2": {
 				"__TYPE__": "FieldContent",
-				"value": "exchange",
+				"value": "conversation",
 				"type": "Text"
 			},
 			"highlight_3": {
 				"__TYPE__": "FieldContent",
-				"value": "came",
+				"value": "gather",
 				"type": "Text"
 			},
 			"heading_2": {
 				"__TYPE__": "FieldContent",
-				"value": "applied",
+				"value": "voice",
 				"type": "Text"
 			},
 			"paragraph_more_about": {
 				"__TYPE__": "FieldContent",
-				"value": "spite",
+				"value": "cold",
 				"type": "Text"
 			},
 			"image_more_about": {

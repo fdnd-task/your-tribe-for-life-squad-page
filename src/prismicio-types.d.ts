@@ -450,7 +450,7 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	 * heading_1 field in *MemberAboutContainer → Primary*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: Your best friend!
+	 * - **Placeholder**: *None*
 	 * - **API ID Path**: member_about_container.primary.heading_1
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
@@ -460,7 +460,7 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	 * highlight_1 field in *MemberAboutContainer → Primary*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: Loves working hard
+	 * - **Placeholder**: *None*
 	 * - **API ID Path**: member_about_container.primary.highlight_1
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
@@ -470,7 +470,7 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	 * highlight_2 field in *MemberAboutContainer → Primary*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: Enjoys wearing suits
+	 * - **Placeholder**: *None*
 	 * - **API ID Path**: member_about_container.primary.highlight_2
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
@@ -480,7 +480,7 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	 * highlight_3 field in *MemberAboutContainer → Primary*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: Likes to have a drink
+	 * - **Placeholder**: *None*
 	 * - **API ID Path**: member_about_container.primary.highlight_3
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
@@ -490,7 +490,7 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	 * heading_2 field in *MemberAboutContainer → Primary*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: More about your bestie.
+	 * - **Placeholder**: *None*
 	 * - **API ID Path**: member_about_container.primary.heading_2
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
@@ -500,7 +500,7 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	 * paragraph_more_about field in *MemberAboutContainer → Primary*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: Patrick Bateman is portrayed as a wealthy, good-looking, and highly intelligent man
+	 * - **Placeholder**: *None*
 	 * - **API ID Path**: member_about_container.primary.paragraph_more_about
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
