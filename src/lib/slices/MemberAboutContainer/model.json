@@ -61,6 +61,14 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "pointy_finger_svg": {
+          "type": "Image",
+          "config": {
+            "label": "pointy_finger_svg",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}
