@@ -10,20 +10,20 @@
 </header>
 
 <main>
-<section> 
-    <a href="/SquadPage">A</a>
+
+    <a href="/SquadPage"><span>B</span></a>
     <SliceZone slices={data.slices} {components} />
-</section>
-<section> 
-    <a href="/SquadPage">B</a> 
+  
+    <a href="/SquadPage"><span>B</span></a> 
     <SliceZone slices={data.slices} {components} />
-</section>
+
 </main>
 
 <style>
     header h1 {
-    font-size: 6rem;
+    font-size: var(--text-size-title);
     text-align: center; 
+    color: var(--text-color);
     }
 
     main {
@@ -33,11 +33,29 @@
         gap: 2rem;
         flex-direction: column;  
     }
-
-    section {
-        background-color: green;
+    
+   main a {
+        position: relative; 
+        background-color:var(--primary-color);
         width: 300px;
         height: 300px;
         border-radius: 50%;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    main span {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);  
+    }
+
+   
+    @media screen and (min-width: 48em) {
+        /* Apply the flex-direction: row for desktop screens */
+        main {
+            flex-direction: row;  
+        }
     }
 </style>
