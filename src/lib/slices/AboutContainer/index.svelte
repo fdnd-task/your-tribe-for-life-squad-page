@@ -18,21 +18,23 @@
 
 <style>
 	h2 {
-		margin-top: 1em;
-		margin-bottom: 1em;
-		text-align: center;
+		/* margin-top: 1em;
+		margin-bottom: 1em; */
+		text-align: left;
+		padding: 2rem;
+		
 	}
 
 	img {
-		width: 302px;
-		filter: saturate(0);
-		justify-content: center;
+		width: 100%;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	p {
 		text-align: left;
-		margin-top: 50px;
 		margin-bottom: 50px;
-		margin-left: 1.5em;
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 </style>
