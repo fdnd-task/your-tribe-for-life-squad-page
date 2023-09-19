@@ -46,11 +46,7 @@
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {
-            "student_card": {
-              "type": "SharedSlice"
-            }
-          }
+          "choices": {}
         }
       }
     }

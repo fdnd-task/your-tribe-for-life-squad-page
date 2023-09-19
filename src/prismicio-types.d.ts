@@ -136,7 +136,7 @@ export type OveronsDocument<Lang extends string = string> =
     Lang
   >;
 
-type SquadmembersDocumentDataSlicesSlice = StudentCardSlice;
+type SquadmembersDocumentDataSlicesSlice = never;
 
 /**
  * Content for squadMembers documents
