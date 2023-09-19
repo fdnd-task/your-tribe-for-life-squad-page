@@ -3,15 +3,13 @@
 
 	import Header from '$lib/components/header/+page.svelte';
 
-	import Footer from '$lib/components/footer/+page.svelte';
-
 	// what does export exactly do?
 	export let data;
 
 	console.log(data.data1);
 </script>
 
-<Header header={data.data2} />
+<Header list={data.data2} />
 
 <section>
 	<h1>{data.data1.slices[0].primary.heading_1}!</h1>
@@ -40,8 +38,6 @@
 
 	<img id="image2" src={data.data1.slices[0].primary.image_more_about.url} />
 </section>
-
-<Footer footer={data.data2}/>
 
 <style>
 	section {

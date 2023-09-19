@@ -3,11 +3,9 @@
 	import { components } from '$lib/slices';
 
 	import Header from '$lib/components/header/+page.svelte'
-	import Footer from '$lib/components/footer/+page.svelte'
 
 	export let data;
 </script>
 
-<Header header={data}/>
+<Header list={data}/>
 <SliceZone slices={data.slices} {components}/>
-<Footer footer={data}/>
