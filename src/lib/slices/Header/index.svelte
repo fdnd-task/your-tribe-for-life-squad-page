@@ -4,36 +4,61 @@
   console.log(slice.items[0])
 </script>
 
-<section
-  data-slice-type={slice.slice_type}
-  data-slice-variation={slice.variation}
->
-  Placeholder component for {slice.slice_type} (variation: {slice.variation})
-  Slices
-</section>
 
 <header>
-  <nav>
-    <ul>
-      <li>
-        <a href="/"><img src={slice.items[0].logo.url}></a>
-      </li>
-      <li>
-        <a href={slice.items[0].overons.url}>hj</a>
-      </li>
-    </ul>
-  </nav>
+  <h1 class="fdnd">fdnd</h1>
+  <a href={slice.items[0].overons.url}>Over ons</a>
 </header>
 
+
 <style>
-
-  header{
-    background-color: #49297E;
-    color: #fff;
-    padding: 5em;
+:root {
+    --white: #fff;
+    --turquoise: #55B6AE;
+    --rounded: .3rem;
+    --shadow: .3rem
+}
+  /* Basic styling for the header */
+  header {
+      background-color: #ffffff;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 20px;
   }
 
-  a{
-     color: #fff;
-  }
+  /* Responsive styling for smaller screens */
+  /* @media (max-width: 768px) {
+      header {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px;
+      }
+  } */
+
+  .fdnd {
+  border: 1px solid var(--white);
+  border-radius: var(--rounded);
+  /* box-shadow: calc(-1 * var(--shadow)) var(--shadow) 0 0 var(--turquoise); */
+  color: var(--white);
+  background: var(--turquoise);
+  text-transform: lowercase;
+  padding: 0.5rem 1.2rem;
+  font-size: 2rem;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--turquoise);
+  text-transform: uppercase;
+  font-family: 'Quantico', openSans, sans-serif;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+a:hover{
+  text-decoration: underline;
+}
 </style>

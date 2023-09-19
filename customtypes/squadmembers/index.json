@@ -12,6 +12,13 @@
         },
         "type": "UID"
       },
+      "squadname": {
+        "type": "Text",
+        "config": {
+          "label": "squadName",
+          "placeholder": ""
+        }
+      },
       "membername": {
         "type": "Text",
         "config": {
