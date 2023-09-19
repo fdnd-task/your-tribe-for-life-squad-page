@@ -12,6 +12,7 @@
 <Header list={data.data2} />
 
 <section>
+	<div class="grain"></div>
 	<h1>{data.data1.slices[0].primary.heading_1}!</h1>
 
 	<img id="image" src={data.data1.image.url} alt="" />
@@ -75,6 +76,7 @@
 
 	.fingers {
 		width: 2.8rem;
+		z-index: 2;
 	}
 
 	#pointy-finger {
