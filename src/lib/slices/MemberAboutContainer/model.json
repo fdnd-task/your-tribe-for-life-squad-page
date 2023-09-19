@@ -62,17 +62,10 @@
             "thumbnails": []
           }
         },
-<<<<<<< Updated upstream
         "pointy_finger_svg": {
           "type": "Image",
           "config": {
             "label": "pointy_finger_svg",
-=======
-        "pointy_finger": {
-          "type": "Image",
-          "config": {
-            "label": "pointy_finger",
->>>>>>> Stashed changes
             "constraint": {},
             "thumbnails": []
           }
