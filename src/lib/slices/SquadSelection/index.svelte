@@ -7,22 +7,16 @@
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
 >
-
   <h1>{slice.primary.title}</h1>
 
-
   <section class="subtitle">
-  <p>{slice.primary.subtitle}</p>
-    </section>
+    <p>{slice.primary.subtitle}</p>
+  </section>
 
   <section class="button-a">
     <a href={slice.primary.squadA.url} />
-    </section>
-    <section class="button-b"
-    <a href={slice.primary.squadA.url} />
-     </section>
-
-
+  </section>
+  <section class="button-b" <a href={slice.primary.squadA.url} />
 </section>
 
 <style>
@@ -38,7 +32,7 @@
 
   :root {
     --deep-blue: #55b6ae;
-    --blue-purple: #768BBA;
+    --blue-purple: #768bba;
     --pinkish: #d399bc;
     --hot-pink: #ff3394;
     --light-blue: #90dcff;
@@ -65,10 +59,4 @@
     font-size: 50px;
     text-shadow: 5px 1px var(--hot-pink);
   }
-
-
-
-
-
-  
 </style>
