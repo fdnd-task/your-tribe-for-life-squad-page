@@ -13,11 +13,12 @@
 
 @font-face {
   font-family: groovy;
-  src: url("./lib/assets/AbstractGroovy-K7Zdy.ttf");
+  src: url("./lib/assets/finger_cursor.svg");
 }
 
 html,
 body, button, input {
+  cursor: url("/src/lib/assets/Cursor.svg"), auto;
   display: flex;
   flex-direction: column;
   font-family: groovy, sans-serif;
@@ -65,3 +66,4 @@ p {
   color: var(--text);
   font-family: 'Poppins', sans-serif;
 }
+

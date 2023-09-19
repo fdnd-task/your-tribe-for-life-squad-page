@@ -35,6 +35,10 @@
 		text-decoration: none;
 	}
 
+	a:hover {
+		cursor: url("/src/lib/assets/CursorSHover.svg"), auto;
+	}
+
 	.image-container {
 		border: 1em solid #a8a8a8;
 		margin-right: 2em;
