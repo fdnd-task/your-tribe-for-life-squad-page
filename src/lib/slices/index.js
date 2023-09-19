@@ -6,6 +6,7 @@ import Main from "./Main/index.svelte";
 import MainOverons from "./MainOverons/index.svelte";
 import SquadMembers from "./SquadMembers/index.svelte";
 import SquadSelection from "./SquadSelection/index.svelte";
+import StudentCard from "./StudentCard/index.svelte";
 
 export const components = {
   footer: Footer,
@@ -14,4 +15,5 @@ export const components = {
   main_overons: MainOverons,
   squad_members: SquadMembers,
   squad_selection: SquadSelection,
+  student_card: StudentCard,
 };

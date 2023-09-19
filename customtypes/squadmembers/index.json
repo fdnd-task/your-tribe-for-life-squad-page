@@ -12,17 +12,17 @@
         },
         "type": "UID"
       },
-      "squadname": {
-        "type": "Text",
-        "config": {
-          "label": "squadName",
-          "placeholder": ""
-        }
-      },
       "membername": {
         "type": "Text",
         "config": {
           "label": "memberName",
+          "placeholder": ""
+        }
+      },
+      "squadname": {
+        "type": "Text",
+        "config": {
+          "label": "squadName",
           "placeholder": ""
         }
       },
@@ -40,6 +40,17 @@
           "label": "githubLink",
           "placeholder": "",
           "select": null
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "student_card": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     }
