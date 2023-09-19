@@ -6,7 +6,7 @@
 	// what does export exactly do?
 	export let data;
 
-	console.log(data);
+	console.log(data.data1);
 </script>
 
 <Header list={data.data2} />
@@ -19,12 +19,18 @@
 	<h2>{data.data1.title}</h2>
 
 	<ul>
-		<li>{data.data1.slices[0].primary.highlight_1}</li>
-		<li>{data.data1.slices[0].primary.highlight_2}</li>
-		<li>{data.data1.slices[0].primary.highlight_3}</li>
-	</ul>
+		<div class="fingers">
+			<img id="pointy-finger" src={data.data1.slices[0].primary.pointy_finger_svg.url} />
+			<img id="pointy-finger" src={data.data1.slices[0].primary.pointy_finger_svg.url} />
+			<img id="pointy-finger" src={data.data1.slices[0].primary.pointy_finger_svg.url} />
+		</div>
 
-	<img id="pointy-finger" src={data.data1.slices[0].primary.pointy_finger.url} />
+		<div class="info-list">
+			<li>{data.data1.slices[0].primary.highlight_1}</li>
+			<li>{data.data1.slices[0].primary.highlight_2}</li>
+			<li>{data.data1.slices[0].primary.highlight_3}</li>
+		</div>
+	</ul>
 
 	<h2 id="second-header">{data.data1.slices[0].primary.heading_2}</h2>
 
@@ -60,20 +66,39 @@
 	ul {
 		padding: 0;
 		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
+
+
+	.fingers {
+		width: 2.8rem;
+	}
+
+	#pointy-finger {
+		margin-left: 1rem;
+		margin-bottom: 1.3rem;
+	}
+
+	.info-list{
+		font-size: 1.3rem;
+
 	}
 
 	li {
-		margin-bottom: 10px;
-		padding-left: 1rem;
+		margin-left: 2rem;
+		margin-top: 1.6rem;
+		margin-bottom: 1.6rem;
 		text-align: left;
-		font-size: 1.3rem;
-		margin-bottom: 1.5rem;
+
 	}
 
 	#second-header {
 		text-align: left;
 		padding: 1rem;
-		margin-top: 2rem;
+		margin-top: -0.5rem;
 		margin-bottom: -0.8rem;
 	}
 
