@@ -1,6 +1,6 @@
 {
-  "id": "squads",
-  "label": "squadOverview",
+  "id": "squadoverview",
+  "label": "squadoverview",
   "format": "page",
   "repeatable": true,
   "status": true,
@@ -13,25 +13,18 @@
         },
         "type": "UID"
       },
-      "squadname": {
-        "type": "Text",
-        "config": {
-          "label": "squadName",
-          "placeholder": ""
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "footer": {
-              "type": "SharedSlice"
-            },
             "header": {
               "type": "SharedSlice"
             },
             "squad_members": {
+              "type": "SharedSlice"
+            },
+            "footer": {
               "type": "SharedSlice"
             }
           }
