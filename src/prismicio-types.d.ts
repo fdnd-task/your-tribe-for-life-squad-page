@@ -137,11 +137,11 @@ export type OveronsDocument<Lang extends string = string> =
   >;
 
 /**
- * Content for squadMembers documents
+ * Content for studentCards documents
  */
 interface SquadmembersDocumentData {
   /**
-   * memberName field in *squadMembers*
+   * memberName field in *studentCards*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -152,7 +152,7 @@ interface SquadmembersDocumentData {
   membername: prismic.KeyTextField;
 
   /**
-   * squadName field in *squadMembers*
+   * squadName field in *studentCards*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -163,7 +163,7 @@ interface SquadmembersDocumentData {
   squadname: prismic.KeyTextField;
 
   /**
-   * memberImg field in *squadMembers*
+   * memberImg field in *studentCards*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -174,7 +174,7 @@ interface SquadmembersDocumentData {
   memberimg: prismic.ImageField<never>;
 
   /**
-   * githubLink field in *squadMembers*
+   * githubLink field in *studentCards*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -186,7 +186,7 @@ interface SquadmembersDocumentData {
 }
 
 /**
- * squadMembers document from Prismic
+ * studentCards document from Prismic
  *
  * - **API ID**: `squadmembers`
  * - **Repeatable**: `true`

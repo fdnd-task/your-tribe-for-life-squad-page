@@ -1,6 +1,6 @@
 {
   "id": "squadmembers",
-  "label": "squadMembers",
+  "label": "studentCards",
   "format": "custom",
   "repeatable": true,
   "status": true,
