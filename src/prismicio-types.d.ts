@@ -136,8 +136,6 @@ export type OveronsDocument<Lang extends string = string> =
     Lang
   >;
 
-type SquadmembersDocumentDataSlicesSlice = StudentCardSlice;
-
 /**
  * Content for squadMembers documents
  */
@@ -185,17 +183,6 @@ interface SquadmembersDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   githublink: prismic.LinkField;
-
-  /**
-   * Slice Zone field in *squadMembers*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: squadmembers.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<SquadmembersDocumentDataSlicesSlice>;
 }
 
 /**
@@ -778,7 +765,6 @@ declare module "@prismicio/client" {
       OveronsDocumentDataSlicesSlice,
       SquadmembersDocument,
       SquadmembersDocumentData,
-      SquadmembersDocumentDataSlicesSlice,
       SquadoverviewDocument,
       SquadoverviewDocumentData,
       SquadoverviewDocumentDataSlicesSlice,
