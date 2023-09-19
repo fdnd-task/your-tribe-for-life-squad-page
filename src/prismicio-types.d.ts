@@ -517,6 +517,7 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	image_more_about: prismic.ImageField<never>;
 
 	/**
+<<<<<<< Updated upstream
 	 * pointy_finger_svg field in *MemberAboutContainer → Primary*
 	 *
 	 * - **Field Type**: Image
@@ -525,6 +526,16 @@ export interface MemberAboutContainerSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	pointy_finger_svg: prismic.ImageField<never>;
+=======
+	 * pointy_finger field in *MemberAboutContainer → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member_about_container.primary.pointy_finger
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	pointy_finger: prismic.ImageField<never>;
+>>>>>>> Stashed changes
 }
 
 /**
