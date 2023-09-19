@@ -1,11 +1,12 @@
 <script>
   /** @type {import("@prismicio/client").Content.SquadSelectionSlice} */
   export let slice;
+  console.log(slice);
 </script>
 
 <section
-  data-slice-type={slice.slice_type}
-  data-slice-variation={slice.variation}
+data-slice-type={slice.slice_type}
+data-slice-variation={slice.variation}
 >
   <h1>{slice.primary.title}</h1>
 
@@ -14,11 +15,13 @@
   </section>
 
   <section class="button-a">
-    <a href={slice.primary.squadA.url} />
+    <a href={slice.primary.squada.url} />
   </section>
-  <section class="button-b" <a href={slice.primary.squadA.url} />
-</section>
+  <section class="button-b">
+    <a href={slice.primary.squadb.url} />
+  </section>
 
+</section>
 <style>
   * {
     box-sizing: border-box;
