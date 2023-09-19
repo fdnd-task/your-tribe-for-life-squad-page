@@ -9,6 +9,8 @@
     scroll-behavior: smooth;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 @font-face {
   font-family: groovy;
   src: url("./lib/assets/AbstractGroovy-K7Zdy.ttf");
@@ -61,4 +63,5 @@ h2 {
 p {
   font-size: 18px;
   color: var(--text);
+  font-family: 'Poppins', sans-serif;
 }
