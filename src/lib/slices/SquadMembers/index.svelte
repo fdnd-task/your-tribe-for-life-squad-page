@@ -10,6 +10,15 @@
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
 >
-{console.log(slice.items)}
+
+{#each slice.items as item}
+<article>
+  <!-- <h2>{item.squadmembers.data.membername} <span>{item.squadmembers.data.squadname}"</span></h2>
+  <PrismicImage field={item.squadmembers.data.memberimage} />
+  <a href="/{item.squadmembers.uid}"><span>Nerd stats</span></a> -->
+  {console.log(item)}
+
+</article>
+{/each}
 </section>
 
