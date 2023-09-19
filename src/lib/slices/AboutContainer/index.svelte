@@ -22,7 +22,6 @@
 		margin-bottom: 1em; */
 		text-align: left;
 		padding: 2rem;
-		
 	}
 
 	img {
