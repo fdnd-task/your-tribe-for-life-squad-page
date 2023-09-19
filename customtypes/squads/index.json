@@ -1,6 +1,6 @@
 {
   "id": "squads",
-  "label": "Squad",
+  "label": "squadOverview",
   "format": "page",
   "repeatable": true,
   "status": true,
