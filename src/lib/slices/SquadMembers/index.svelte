@@ -10,3 +10,4 @@
   Placeholder component for {slice.slice_type} (variation: {slice.variation})
   Slices
 </section>
+
