@@ -25,7 +25,7 @@ const routes = [
 	},
 	{
 		type: 'squadoverview',
-		path: '/squad-leden'
+		path: '/squad-leden/:uid'
 	},
 	{
 		type: 'squadoverview',
