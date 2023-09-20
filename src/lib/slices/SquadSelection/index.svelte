@@ -8,23 +8,21 @@
   data-slice-variation={slice.variation}
 >
   <h1>{slice.primary.title}</h1>
-  <div class="plate"></div>
-  <div class="front-plate"></div>
+  <div class="plate" />
+  <div class="front-plate" />
 
   <section class="subtitle">
     <p>{slice.primary.subtitle}</p>
   </section>
 
-  <section class="button-a">
-    <a href={slice.primary.squadA.url}></a>
-    <div class="square-plate"></div>
-    <div class="back-square-plate"></div> 
-  </section>
-  <section class="button-b">
-    <a href={slice.primary.squadB.url}></a>
-    <div class="square-plate"></div>
-    <div class="back-square-plate"></div>
-  </section>
+  <div class="button-wrapper">
+    <section class="button-a">
+      <a href={slice.primary.squada.url}>Squad A</a>
+    </section>
+    <section class="button-b">
+      <a href={slice.primary.squadb.url}>Squad B</a>
+    </section>
+  </div>
 </section>
 
 <style>
@@ -94,37 +92,48 @@
   /*section subtitle*/
   .subtitle {
     font-family: "Quantico", sans-serif;
+    font-size: 30px;
     text-transform: uppercase;
     color: var(--blue-purple);
+    text-align: center;
+    margin-top: 120px;
   }
 
   /*end section subtitle*/
 
   /* section buttons*/
 
-  .square-plate {
-  display: inline-block;
-  background-color: var(--pinkish);
-  height: 100px;
-  width: 100px;
-  font-size: 1px;
-  padding: 1px;
-  color: white;
-  margin-right: 5px;
-  margin-left: 5px;
-  animation: skew 3s infinite;
-  transform: skew(20deg);
-  animation-direction: alternate;
-  opacity: .7;
-}
+  a {
+    margin: 0;
+    height: 100dvh;
+    display: grid;
+    place-items: center;
 
-@keyframes skew {
-  0% {
+    aspect-ratio: 1;
+    height: 6.5em;
+    background-color: var(--pinkish);
     transform: skewX(20deg);
-  }
-  100% {
-    transform: skewX(-20deg);
-  }
-}
+    box-shadow: -1em 1em 0 var(--blue-purple);
+    transition: 0.5s;
 
+    font-family: "Quantico", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+  }
+
+  a:hover {
+    transform: skewX(-20deg);
+    box-shadow: 1em 1em 0 var(--blue-purple);
+  }
+
+ 
+
+  .button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50%;
+  
+  }
 </style>
