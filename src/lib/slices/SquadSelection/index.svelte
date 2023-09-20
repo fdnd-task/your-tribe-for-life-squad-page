@@ -9,22 +9,22 @@
   data-slice-variation={slice.variation}
 >
   <h1>{slice.primary.title}</h1>
-  <div class="plate" />
-  <div class="front-plate" />
+  <div class="plate"></div>
+  <div class="front-plate"></div>
 
   <section class="subtitle">
     <p>{slice.primary.subtitle}</p>
   </section>
 
   <section class="button-a">
-    <a href={slice.primary.squada.url} />
-    <div class="square-plate" />
-    <div class="back-square-plate" />
+    <a href={slice.primary.squadA.url}></a>
+    <div class="square-plate"></div>
+    <div class="back-square-plate"></div> 
   </section>
   <section class="button-b">
-    <a href={slice.primary.squadb.url} />
-    <div class="square-plate" />
-    <div class="back-square-plate" />
+    <a href={slice.primary.squadB.url}></a>
+    <div class="square-plate"></div>
+    <div class="back-square-plate"></div>
   </section>
 </section>
 
