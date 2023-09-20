@@ -12,7 +12,7 @@
 <Header list={data.data2} />
 
 <section>
-	<div class="grain"></div>
+	<div class="grain" />
 	<h1>{data.data1.slices[0].primary.heading_1}!</h1>
 
 	<img id="image" src={data.data1.image.url} alt="" />
@@ -73,7 +73,6 @@
 		flex-direction: row;
 	}
 
-
 	.fingers {
 		width: 2.8rem;
 		z-index: 2;
@@ -84,9 +83,8 @@
 		margin-bottom: 1.3rem;
 	}
 
-	.info-list{
+	.info-list {
 		font-size: 1.3rem;
-
 	}
 
 	li {
@@ -94,7 +92,6 @@
 		margin-top: 1.6rem;
 		margin-bottom: 1.6rem;
 		text-align: left;
-
 	}
 
 	#second-header {
