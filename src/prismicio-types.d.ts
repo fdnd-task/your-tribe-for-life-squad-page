@@ -600,6 +600,16 @@ export interface SquadMembersSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   githublink: prismic.LinkField;
+
+  /**
+   * memberData field in *SquadMembers → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squad_members.items[].memberdata
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  memberdata: prismic.ContentRelationshipField;
 }
 
 /**
