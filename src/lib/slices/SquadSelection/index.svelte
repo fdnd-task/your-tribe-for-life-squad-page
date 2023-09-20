@@ -1,7 +1,6 @@
 <script>
   /** @type {import("@prismicio/client").Content.SquadSelectionSlice} */
   export let slice;
-  console.log(slice);
 </script>
 
 <section
