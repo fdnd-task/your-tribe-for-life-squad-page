@@ -73,11 +73,11 @@ export type HomepageDocument<Lang extends string = string> =
 type OveronsDocumentDataSlicesSlice = MainOveronsSlice;
 
 /**
- * Content for Overons documents
+ * Content for overons documents
  */
 interface OveronsDocumentData {
   /**
-   * Slice Zone field in *Overons*
+   * Slice Zone field in *overons*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -87,7 +87,7 @@ interface OveronsDocumentData {
    */
   slices: prismic.SliceZone<OveronsDocumentDataSlicesSlice>
   /**
-   * Meta Description field in *Overons*
+   * Meta Description field in *overons*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
@@ -98,7 +98,7 @@ interface OveronsDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Overons*
+   * Meta Image field in *overons*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -109,7 +109,7 @@ interface OveronsDocumentData {
   meta_image: prismic.ImageField<never>;
 
   /**
-   * Meta Title field in *Overons*
+   * Meta Title field in *overons*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
@@ -121,7 +121,7 @@ interface OveronsDocumentData {
 }
 
 /**
- * Overons document from Prismic
+ * overons document from Prismic
  *
  * - **API ID**: `overons`
  * - **Repeatable**: `false`
@@ -137,22 +137,11 @@ export type OveronsDocument<Lang extends string = string> =
   >;
 
 /**
- * Content for squadMembers documents
+ * Content for studentCards documents
  */
 interface SquadmembersDocumentData {
   /**
-   * squadName field in *squadMembers*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: squadmembers.squadname
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  squadname: prismic.KeyTextField;
-
-  /**
-   * memberName field in *squadMembers*
+   * memberName field in *studentCards*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -163,7 +152,18 @@ interface SquadmembersDocumentData {
   membername: prismic.KeyTextField;
 
   /**
-   * memberImg field in *squadMembers*
+   * squadName field in *studentCards*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadmembers.squadname
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  squadname: prismic.KeyTextField;
+
+  /**
+   * memberImg field in *studentCards*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -174,7 +174,7 @@ interface SquadmembersDocumentData {
   memberimg: prismic.ImageField<never>;
 
   /**
-   * githubLink field in *squadMembers*
+   * githubLink field in *studentCards*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -186,7 +186,7 @@ interface SquadmembersDocumentData {
 }
 
 /**
- * squadMembers document from Prismic
+ * studentCards document from Prismic
  *
  * - **API ID**: `squadmembers`
  * - **Repeatable**: `true`
@@ -201,64 +201,53 @@ export type SquadmembersDocument<Lang extends string = string> =
     Lang
   >;
 
-type SquadsDocumentDataSlicesSlice =
-  | FooterSlice
+type SquadoverviewDocumentDataSlicesSlice =
   | HeaderSlice
-  | SquadMembersSlice;
+  | SquadMembersSlice
+  | FooterSlice;
 
 /**
- * Content for Squad documents
+ * Content for squadoverview documents
  */
-interface SquadsDocumentData {
+interface SquadoverviewDocumentData {
   /**
-   * squadName field in *Squad*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: squads.squadname
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  squadname: prismic.KeyTextField;
-
-  /**
-   * Slice Zone field in *Squad*
+   * Slice Zone field in *squadoverview*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: squads.slices[]
+   * - **API ID Path**: squadoverview.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<SquadsDocumentDataSlicesSlice>
+  slices: prismic.SliceZone<SquadoverviewDocumentDataSlicesSlice>
   /**
-   * Meta Description field in *Squad*
+   * Meta Description field in *squadoverview*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: squads.meta_description
+   * - **API ID Path**: squadoverview.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Squad*
+   * Meta Image field in *squadoverview*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: squads.meta_image
+   * - **API ID Path**: squadoverview.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   meta_image: prismic.ImageField<never>;
 
   /**
-   * Meta Title field in *Squad*
+   * Meta Title field in *squadoverview*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: squads.meta_title
+   * - **API ID Path**: squadoverview.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
@@ -266,16 +255,20 @@ interface SquadsDocumentData {
 }
 
 /**
- * Squad document from Prismic
+ * squadoverview document from Prismic
  *
- * - **API ID**: `squads`
+ * - **API ID**: `squadoverview`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type SquadsDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<Simplify<SquadsDocumentData>, "squads", Lang>;
+export type SquadoverviewDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<SquadoverviewDocumentData>,
+    "squadoverview",
+    Lang
+  >;
 
 type SquadselectDocumentDataSlicesSlice =
   | HeaderSlice
@@ -350,7 +343,7 @@ export type AllDocumentTypes =
   | HomepageDocument
   | OveronsDocument
   | SquadmembersDocument
-  | SquadsDocument
+  | SquadoverviewDocument
   | SquadselectDocument;
 
 /**
@@ -607,6 +600,16 @@ export interface SquadMembersSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   githublink: prismic.LinkField;
+
+  /**
+   * memberData field in *SquadMembers → Items*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squad_members.items[].memberdata
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  memberdata: prismic.ContentRelationshipField<"squadmembers">;
 }
 
 /**
@@ -724,6 +727,36 @@ export type SquadSelectionSlice = prismic.SharedSlice<
   SquadSelectionSliceVariation
 >;
 
+/**
+ * Default variation for StudentCard Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StudentCardSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *StudentCard*
+ */
+type StudentCardSliceVariation = StudentCardSliceDefault;
+
+/**
+ * StudentCard Shared Slice
+ *
+ * - **API ID**: `student_card`
+ * - **Description**: StudentCard
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StudentCardSlice = prismic.SharedSlice<
+  "student_card",
+  StudentCardSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -742,9 +775,9 @@ declare module "@prismicio/client" {
       OveronsDocumentDataSlicesSlice,
       SquadmembersDocument,
       SquadmembersDocumentData,
-      SquadsDocument,
-      SquadsDocumentData,
-      SquadsDocumentDataSlicesSlice,
+      SquadoverviewDocument,
+      SquadoverviewDocumentData,
+      SquadoverviewDocumentDataSlicesSlice,
       SquadselectDocument,
       SquadselectDocumentData,
       SquadselectDocumentDataSlicesSlice,
@@ -773,6 +806,9 @@ declare module "@prismicio/client" {
       SquadSelectionSliceDefaultPrimary,
       SquadSelectionSliceVariation,
       SquadSelectionSliceDefault,
+      StudentCardSlice,
+      StudentCardSliceVariation,
+      StudentCardSliceDefault,
     };
   }
 }
