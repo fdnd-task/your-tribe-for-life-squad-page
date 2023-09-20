@@ -1,7 +1,6 @@
 <script>
   /** @type {import("@prismicio/client").Content.SquadSelectionSlice} */
   export let slice;
-  console.log(slice);
 </script>
 
 <section
@@ -17,7 +16,7 @@
   </section>
 
   <section class="button-a">
-    <a href={slice.primary.squada.url} />
+    <a href={slice.primary.squada.url}> </a> 
     <div class="square-plate" />
     <div class="back-square-plate" />
   </section>
