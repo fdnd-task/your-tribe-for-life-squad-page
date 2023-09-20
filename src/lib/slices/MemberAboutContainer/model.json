@@ -1,0 +1,77 @@
+{
+  "id": "member_about_container",
+  "type": "SharedSlice",
+  "name": "MemberAboutContainer",
+  "description": "MemberAboutContainer",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_1": {
+          "type": "Text",
+          "config": {
+            "label": "heading_1",
+            "placeholder": ""
+          }
+        },
+        "highlight_1": {
+          "type": "Text",
+          "config": {
+            "label": "highlight_1",
+            "placeholder": ""
+          }
+        },
+        "highlight_2": {
+          "type": "Text",
+          "config": {
+            "label": "highlight_2",
+            "placeholder": ""
+          }
+        },
+        "highlight_3": {
+          "type": "Text",
+          "config": {
+            "label": "highlight_3",
+            "placeholder": ""
+          }
+        },
+        "heading_2": {
+          "type": "Text",
+          "config": {
+            "label": "heading_2",
+            "placeholder": ""
+          }
+        },
+        "paragraph_more_about": {
+          "type": "Text",
+          "config": {
+            "label": "paragraph_more_about",
+            "placeholder": ""
+          }
+        },
+        "image_more_about": {
+          "type": "Image",
+          "config": {
+            "label": "image_more_about",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "pointy_finger_svg": {
+          "type": "Image",
+          "config": {
+            "label": "pointy_finger_svg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

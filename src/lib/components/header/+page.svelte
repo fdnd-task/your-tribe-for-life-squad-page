@@ -1,12 +1,10 @@
 <script>
-    export let list
+    export let header
 </script>
 
-<!-- {data.slices[0].primary.logo_title} -->
-
-<section class="header" data-slice-type={list.slices[0].slice_type} data-slice-variation={list.slices[0].variation}>
-	<img src={list.slices[0].primary.logo_image.url} alt="logo">
-	<p>{list.slices[0].primary.logo_title}</p>
+<section class="header" data-slice-type={header.slices[0].slice_type} data-slice-variation={header.slices[0].variation}>
+	<img src={header.slices[0].primary.logo_image.url} alt="logo">
+	<p>{header.slices[0].primary.logo_title}</p>
 </section>
 
 <style>

@@ -3,6 +3,7 @@
 import AboutContainer from './AboutContainer/index.svelte';
 import FooterContainer from './FooterContainer/index.svelte';
 import HeaderContainer from './HeaderContainer/index.svelte';
+import MemberAboutContainer from './MemberAboutContainer/index.svelte';
 import Members from './Members/index.svelte';
 import CallToActionContainer from './CallToActionContainer/index.svelte';
 import SearchContainer from './SearchContainer/index.svelte';
@@ -11,6 +12,7 @@ export const components = {
 	about_container: AboutContainer,
 	footer_container: FooterContainer,
 	header_container: HeaderContainer,
+	member_about_container: MemberAboutContainer,
 	members: Members,
 	rich_text: CallToActionContainer,
 	search_container: SearchContainer
