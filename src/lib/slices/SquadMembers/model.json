@@ -13,29 +13,6 @@
       "imageUrl": "",
       "primary": {},
       "items": {
-        "membername": {
-          "type": "Text",
-          "config": {
-            "label": "memberName",
-            "placeholder": ""
-          }
-        },
-        "memberProfile": {
-          "type": "Image",
-          "config": {
-            "label": "memberProfile",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "githublink": {
-          "type": "Link",
-          "config": {
-            "label": "githubLink",
-            "placeholder": "",
-            "select": null
-          }
-        },
         "memberdata": {
           "type": "Link",
           "config": {

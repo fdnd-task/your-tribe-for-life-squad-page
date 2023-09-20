@@ -572,36 +572,6 @@ export type MainOveronsSlice = prismic.SharedSlice<
  */
 export interface SquadMembersSliceDefaultItem {
   /**
-   * memberName field in *SquadMembers → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: squad_members.items[].membername
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  membername: prismic.KeyTextField;
-
-  /**
-   * memberProfile field in *SquadMembers → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: squad_members.items[].memberProfile
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  memberProfile: prismic.ImageField<never>;
-
-  /**
-   * githubLink field in *SquadMembers → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: squad_members.items[].githublink
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  githublink: prismic.LinkField;
-
-  /**
    * memberData field in *SquadMembers → Items*
    *
    * - **Field Type**: Content Relationship
