@@ -40,7 +40,10 @@
           "type": "Link",
           "config": {
             "label": "memberData",
-            "select": "document"
+            "select": "document",
+            "customtypes": [
+              "squadmembers"
+            ]
           }
         }
       }

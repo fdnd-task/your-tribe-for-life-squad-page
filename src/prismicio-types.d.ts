@@ -609,7 +609,7 @@ export interface SquadMembersSliceDefaultItem {
    * - **API ID Path**: squad_members.items[].memberdata
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  memberdata: prismic.ContentRelationshipField;
+  memberdata: prismic.ContentRelationshipField<"squadmembers">;
 }
 
 /**
