@@ -6,8 +6,8 @@ export async function load({fetch, request}){
     const client = createClient({fetch, request})
     // const document = await client.getAllByType('squadmembers');
     // console.log(document);
-    const document  = await client.getByUID('squadoverview', 'squad-uid-a', { fetchLinks: ['studentCards.membername', 'studentCards.memberimage', 'studentCards.squadname', 'studentCards.githublink', 'squadmembers.membername', 'squadmembers.memberimage', 'squadmembers.squadname', 'squadmembers.githublink'],});
-    // console.log(document)
+    const document  = await client.getByUID('squadoverview', 'squad-uid-a', { fetchLinks: ['squadmembers.membername'],});
+    console.log(document.data.slices)
     if(document){
         return { document }
 

@@ -2,7 +2,8 @@
   /** @type {import("@prismicio/client").Content.SquadMembersSlice} */
   export let slice;
   import { PrismicImage } from '@prismicio/svelte'
-  
+  // {console.log(slice.items.memberdata)}
+
 </script>
 
 <section
@@ -15,7 +16,6 @@
   <!-- <h2>{item.squadmembers.data.membername} <span>{item.squadmembers.data.squadname}"</span></h2>
   <PrismicImage field={item.squadmembers.data.memberimage} />
   <a href="/{item.squadmembers.uid}"><span>Nerd stats</span></a> -->
-  {console.log(slice.items)}
 
 </article>
 {/each}
