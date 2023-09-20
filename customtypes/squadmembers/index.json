@@ -1,0 +1,47 @@
+{
+  "id": "squadmembers",
+  "label": "squadMembers",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "squadname": {
+        "type": "Text",
+        "config": {
+          "label": "squadName",
+          "placeholder": ""
+        }
+      },
+      "membername": {
+        "type": "Text",
+        "config": {
+          "label": "memberName",
+          "placeholder": ""
+        }
+      },
+      "memberimg": {
+        "type": "Image",
+        "config": {
+          "label": "memberImg",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "githublink": {
+        "type": "Link",
+        "config": {
+          "label": "githubLink",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}
