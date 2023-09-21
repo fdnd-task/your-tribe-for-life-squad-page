@@ -13,7 +13,7 @@ body{
     color: var(--primary-color);
     position: relative;
     background-color: gold;
-    background-image: image-set(src/Gradient-2.png);
+    background-image: url("/Gradient-2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
