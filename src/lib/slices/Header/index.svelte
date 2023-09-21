@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 20px;
   }
 
   .fdnd {
@@ -66,7 +66,7 @@
   @media (min-width: 800px) {
 
     header{
-      padding: 0px 23px;
+      padding: 23px;
     }
 
     .fdnd {
