@@ -214,6 +214,17 @@ type SquadoverviewDocumentDataSlicesSlice =
  */
 interface SquadoverviewDocumentData {
   /**
+   * backgroundImg field in *squadoverview*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: squadoverview.backgroundimg
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  backgroundimg: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *squadoverview*
    *
    * - **Field Type**: Slice Zone
@@ -396,14 +407,14 @@ export type FooterSlice = prismic.SharedSlice<"footer", FooterSliceVariation>;
  */
 export interface HeaderSliceDefaultItem {
   /**
-   * logo field in *Header → Items*
+   * homeBtn field in *Header → Items*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.items[].logo
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **API ID Path**: header.items[].homebtn
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  logo: prismic.ImageField<never>;
+  homebtn: prismic.LinkField;
 
   /**
    * overOns field in *Header → Items*
