@@ -51,8 +51,9 @@ npm run dev -- --open
 
 ## Bronnen 📚
 
-* 
-* 
+* [Prismic documentatie ](https://prismic.io/docs/svelte-fetch-data)
+* [SvelteKit 1.0 Crash Course - Full Tutorial with Prismic](https://www.youtube.com/watch?v=mDQy0NsBrwg&t=666s)
+* [Sveltekit documentatie](https://kit.svelte.dev/)
 
 
 
