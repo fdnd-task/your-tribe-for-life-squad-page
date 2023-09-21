@@ -9,6 +9,6 @@ export async function load() {
     const client = createClient();
 
     const document  = await client.getByUID('overons', "over-ons");
-    return document
+    return document.data
 
 }
