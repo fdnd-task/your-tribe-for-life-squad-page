@@ -531,24 +531,49 @@ export interface MainOveronsSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * informatie field in *MainOverons → Primary*
+   * subtitle field in *MainOverons → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: main_overons.primary.informatie
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **API ID Path**: main_overons.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  informatie: prismic.RichTextField;
+  subtitle: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *MainOverons → Items*
+ */
+export interface MainOveronsSliceDefaultItem {
+  /**
+   * memberName field in *MainOverons → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main_overons.items[].membername
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  membername: prismic.KeyTextField;
 
   /**
-   * contentImg field in *MainOverons → Primary*
+   * memberImg field in *MainOverons → Items*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: main_overons.primary.contentimg
+   * - **API ID Path**: main_overons.items[].memberimg
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  contentimg: prismic.ImageField<never>;
+  memberimg: prismic.ImageField<never>;
+
+  /**
+   * githubLink field in *MainOverons → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main_overons.items[].githublink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  githublink: prismic.LinkField;
 }
 
 /**
@@ -561,7 +586,7 @@ export interface MainOveronsSliceDefaultPrimary {
 export type MainOveronsSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<MainOveronsSliceDefaultPrimary>,
-  never
+  Simplify<MainOveronsSliceDefaultItem>
 >;
 
 /**
@@ -780,6 +805,7 @@ declare module "@prismicio/client" {
       MainSliceDefault,
       MainOveronsSlice,
       MainOveronsSliceDefaultPrimary,
+      MainOveronsSliceDefaultItem,
       MainOveronsSliceVariation,
       MainOveronsSliceDefault,
       SquadMembersSlice,

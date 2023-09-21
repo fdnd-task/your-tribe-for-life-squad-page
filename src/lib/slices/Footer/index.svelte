@@ -13,8 +13,10 @@
 >
   
   <section>
-    <img class="hva-logo" src="{slice.items[0].hvalogo.url}" alt="hva logo"/>
-    <span> © 2023 FDND Squadpage </span>
+    <div>
+      <img class="hva-logo" src="{slice.items[0].hvalogo.url}" alt="hva logo"/>
+      <span> © 2023 FDND Squadpage </span>
+    </div>
   </section>
 
 </section>
@@ -30,10 +32,10 @@
     background-color: var(--turquoise);
     width: 100%;
     height: auto;
-    margin-top: 2em;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
+  }
 
+  div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +62,7 @@
 
   @media (min-width: 800px) {
 
-    section{
+    div{
       flex-direction: row;
       justify-content: space-between;
     }
