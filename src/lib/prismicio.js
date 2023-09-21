@@ -20,17 +20,22 @@ const routes = [
 		path: '/home'
 	},
 	{
-		type: 'squadmembers',
-		path: '/squad-leden'
+		type: 'squadselect',
+		path: '/squadselect'
+	},
+	{
+		type: 'squadoverview',
+		path: '/squad-leden/:uid'
+	},
+	{
+		type: 'squadoverview',
+		path: '/squad-uid-b'
 	},
 	{
 		type: 'overons',
 		path: '/over-ons'
 	},
-	{
-		type: 'squadselect',
-		path: '/squadselect'
-	}
+
 ];
 
 /**

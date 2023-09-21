@@ -67,7 +67,10 @@
     .hva-logo{
     width: 20rem;
     }
-
+    
+    .hva-logo{
+    width: 20rem;
+    }
 
   }
 </style>

@@ -9,7 +9,6 @@ export async function load() {
     const client = createClient();
 
     const document  = await client.getByUID('homepage', "home");
-
     return document.data
 
 }
