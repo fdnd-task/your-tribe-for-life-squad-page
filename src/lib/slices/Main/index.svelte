@@ -28,7 +28,7 @@
   </div>
 
   <div class="h2-center">
-    <h2>Tribe</h2>
+    <h2>Tribe :</h2>
   </div>
   
 
