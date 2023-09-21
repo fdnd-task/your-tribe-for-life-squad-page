@@ -1,8 +1,9 @@
-# Framework based Squadpage
+# Squadpage FDND - Sveltekit & Prismic ⭐️
 
-In dit project ben ik samen met Mokhtar, Fatih, Arexan en Suus begonnen met het opbouwen van onze eerste squadpage in "Sveltekit" framework omgeving. Dit hebben we opgebouwd aan de hand van een headless CMS in "Prismic". 
+Ons team, bestaande uit Jalal, Mokhtar, Fatih, Suus en Arexan, heeft voor ons groepsproject een Squadpage ontwikkeld met alle leden van het tweede jaar van de opleiding FDND. Voor deze pagina hebben we SvelteKit en het headless CMS Prismic gebruikt
 
-![image](https://github.com/jtoufik/S3-squad-page/assets/112856590/3bfcaf81-e369-4ff2-9aba-d3f2dbe7c12f)
+<img width="540" alt="54E142E2-BB51-44BE-8BF2-BAE491EB0DB7" src="https://github.com/jtoufik/S3-squad-page/assets/94745953/2bede8ee-1249-41df-bfe1-38e525274c74">
+
 
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
