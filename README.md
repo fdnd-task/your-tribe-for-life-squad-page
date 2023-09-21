@@ -21,6 +21,7 @@ Ons team, bestaande uit Jalal, Mokhtar, Fatih, Suus en Arexan, heeft voor ons gr
 
 We hebben ons project ontwikkeld met SvelteKit, een framework, en Prismic, een headless CMS. In Prismic hebben we gegevens aangemaakt en met SvelteKit hebben we deze gegevens opgehaald en op de Squadpage weergegeven. Op deze pagina kunnen tweedejaarsstudenten elkaar vinden en contact houden. Elke profielkaart bevat een directe link naar hun individuele profielpagina met een link naar hun GitHub-portfolio voor werkvoorbeelden
 
+s3-squad-page.vercel.app
 
 ## Gebruik
 
