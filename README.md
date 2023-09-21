@@ -19,10 +19,8 @@ Ons team, bestaande uit Jalal, Mokhtar, Fatih, Suus en Arexan, heeft voor ons gr
 
 ## Beschrijving
 
+We hebben ons project ontwikkeld met SvelteKit, een framework, en Prismic, een headless CMS. In Prismic hebben we gegevens aangemaakt en met SvelteKit hebben we deze gegevens opgehaald en op de Squadpage weergegeven. Op deze pagina kunnen tweedejaarsstudenten elkaar vinden en contact houden. Elke profielkaart bevat een directe link naar hun individuele profielpagina met een link naar hun GitHub-portfolio voor werkvoorbeelden
 
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
 
 ## Gebruik
 
