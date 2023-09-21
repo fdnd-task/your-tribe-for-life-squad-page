@@ -1,0 +1,70 @@
+{
+  "id": "member",
+  "label": "member",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "slug": {
+        "type": "Text",
+        "config": {
+          "label": "slug",
+          "placeholder": ""
+        }
+      },
+      "first_name": {
+        "type": "Text",
+        "config": {
+          "label": "first_name",
+          "placeholder": ""
+        }
+      },
+      "last_name": {
+        "type": "Text",
+        "config": {
+          "label": "last_name",
+          "placeholder": ""
+        }
+      },
+      "github_link": {
+        "type": "Link",
+        "config": {
+          "label": "github_link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "website": {
+        "type": "Link",
+        "config": {
+          "label": "website",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "avatar": {
+        "type": "Image",
+        "config": {
+          "label": "avatar",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "squad_link": {
+        "type": "Link",
+        "config": {
+          "label": "squad_link",
+          "select": "document",
+          "customtypes": ["squad"]
+        }
+      }
+    }
+  }
+}
