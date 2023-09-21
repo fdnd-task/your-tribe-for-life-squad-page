@@ -2,8 +2,36 @@
   export let data;
 </script>
 
-<a href="/">FDND Squadpage</a>
-<h1>{data.page.title}</h1>
-{#each data.members as member}
-  <a href="{data.page.slug}/{member.uid}">{member.data.first_name}</a>
-{/each}
+<div class="container">
+  <div class="title-container">
+    <a href="/" class="title-link">FDND Squadpage</a>
+    <h1>{data.page.title}</h1>
+  </div>
+  <div class="link-list">
+    {#each data.members as member}
+      <a href="{data.page.slug}/{member.uid}" class="button">
+        <svg width="22" height="8" viewBox="0 0 22 8" fill="none" class="arrow">
+          <path d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM21.3536 4.35355C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464466C17.9763 0.269204 17.6597 0.269204 17.4645 0.464466C17.2692 0.659728 17.2692 0.976311 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53553C17.6597 7.7308 17.9763 7.7308 18.1716 7.53553L21.3536 4.35355ZM1 4.5H21V3.5H1V4.5Z"
+            fill="#353535"/>
+        </svg>
+        {member.data.first_name}
+      </a>
+    {/each}
+  </div>
+</div>
+<button class="back-to-top">test</button>
+
+<style>
+  /* deze min-hight zorgt er voor dat de tietle niet uit het scherm gaan. (screen breakpoint moeten apart gemaakt worden) */
+  /* text op 40px is in hoogte 46px zo voor elke title laag is het ++++ de hoogte van de title */
+
+  .title-container {
+    min-height: 138px;
+  }
+
+  @media only screen and (min-width: 426px) {
+    .title-container {
+      min-height: 92px;
+    }
+  }
+</style>
