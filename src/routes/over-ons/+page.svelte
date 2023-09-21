@@ -7,7 +7,6 @@
 
 <SliceZone slices={data.slices} {components} />
 
-{console.log(data)}
+<!-- {console.log(data)} -->
 
 
-<h1> Over ons</h1>

@@ -10,12 +10,13 @@ export async function load({fetch, request, params}){
 
     if(params.slug === "squadA"){
         const document  = await client.getByUID('squadoverview', 'squad-uid-a' ,{ fetchLinks: ['squadmembers.membername', 'squadmembers.squadname', 'squadmembers.memberimg', 'squadmembers.githublink'],});
-        console.log(params.slug)
+        console.log(params.slug, document.data)
+
         return { document }
     }
     else if(params.slug === "squadB"){
         const document  = await client.getByUID('squadoverview', 'squad-uid-b' ,{ fetchLinks: ['squadmembers.membername', 'squadmembers.squadname', 'squadmembers.memberimg', 'squadmembers.githublink'],});
-        console.log(params.slug)
+        console.log(params.slug, document.data)
         return { document } 
     }
     if(document){
