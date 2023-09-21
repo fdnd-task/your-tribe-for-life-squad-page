@@ -10,26 +10,26 @@ Ons team, bestaande uit Jalal, Mokhtar, Fatih, Suus en Arexan, heeft voor ons gr
 
 ## Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+  * [Beschrijving 📝](#beschrijving)
+  * [Gebruik 🖇](#gebruik)
+  * [Kenmerken 📌](#kenmerken)
+  * [Installatie 📲](#installatie)
+  * [Bronnen 📚](#bronnen)
+  * [Licentie ⚙️](#licentie)
 
-## Beschrijving
+## Beschrijving 📝
 
 We hebben ons project ontwikkeld met SvelteKit, een framework, en Prismic, een headless CMS. In Prismic hebben we gegevens aangemaakt en met SvelteKit hebben we deze gegevens opgehaald en op de Squadpage weergegeven. Op deze pagina kunnen tweedejaarsstudenten elkaar vinden en contact houden. Elke profielkaart bevat een directe link naar hun individuele profielpagina met een link naar hun GitHub-portfolio voor werkvoorbeelden
 
 [s3-squad-page.vercel.app](https://s3-squad-page.vercel.app)
 
-## Gebruik
+## Gebruik 🖇
 
-## Kenmerken
+## Kenmerken 📌
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
 
-## Installatie
+## Installatie ⚙️
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
 * CMS - Prismic
@@ -45,7 +45,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Bronnen
+## Bronnen 📚
 
 * 
 * 
