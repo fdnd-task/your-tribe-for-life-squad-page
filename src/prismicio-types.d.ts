@@ -70,7 +70,10 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type OveronsDocumentDataSlicesSlice = MainOveronsSlice;
+type OveronsDocumentDataSlicesSlice =
+  | HeaderSlice
+  | FooterSlice
+  | MainOveronsSlice;
 
 /**
  * Content for overons documents
