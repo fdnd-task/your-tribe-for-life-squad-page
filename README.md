@@ -26,7 +26,9 @@ We hebben ons project ontwikkeld met SvelteKit, een framework, en Prismic, een h
 ## Gebruik 🖇
 
 ## Kenmerken 📌
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+- Tools:  🖥️ Visual Studio Code 🖥️ Vercel 🖥️ Figma
+
+- Gebruikte technieken:  💻 HTML 🎨 CSS 🛠 Sveltekit ⚙️ Prismic 🛠 Javascript
 
 
 ## Installatie ⚙️
@@ -39,7 +41,9 @@ We hebben ons project ontwikkeld met SvelteKit, een framework, en Prismic, een h
 Server starten:
 
 ```bash
+npm install
 npm run dev
+npm slicemachine
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
