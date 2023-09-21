@@ -1,0 +1,110 @@
+:root{
+    --primary-color: #353535;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0  10%;
+    color: var(--primary-color);
+    position: relative;
+    background-color: gold;
+    background-image: image-set(src/Gradient-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background-size: 100%; */
+    
+}
+/* h1 en .title-link zijn de tietels (. title-link zijn de tietel die geen h1 is maar die linkjes zijn) */
+h1{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.title-link{
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: 500;
+
+    opacity: .3;
+}
+
+/* general a href styling */
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* container pagina content */
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* container van de tietels */
+.title-container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+/* container alle linken (fdnd squadpage en squad page) */
+.link-list{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 250px;
+}
+
+/* a href pagina link */
+.button{
+    padding: 10px 20px;
+    font-size: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.button:hover{
+    text-decoration: underline;
+}
+
+.arrow{
+    width: 20px;
+}
+
+.arrow:hover{
+    width: 40px;
+}
+
+/* knop voor naar top van document gaan */
+.back-to-top{
+    height: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    /* background-color: orange; */
+    background: none;
+    /* border: none; */
+    position: absolute;
+    right: 1.5rem;
+    bottom: 2rem;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+}
+
+/* 
+een breakpoint voor tablet tussenface
+het kan al iets grooter vanaf 450px ongeveer en ik denk dat het wel beter is als we dat doen
+en de laatste breakpoint rond weet ik het 1000px doen ofzo om het op desktop goed te maken
+*/
