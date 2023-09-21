@@ -14,12 +14,12 @@
     <li>
       <h2>Naam: {item.memberdata.data.membername} </h2>
       <h2>Squad: <span>{item.memberdata.data.squadname}</span></h2>
-      <PrismicImage field={item.memberdata.data.memberimg} width="150" height="200"/>
+      <span class="imgBorder"><PrismicImage field={item.memberdata.data.memberimg} width="140" height="200"/></span>
       <a href="{item.memberdata.data.githublink.url}"><span>Github Link</span></a>
     </li>
 
-
 {/each}
+
 </ul>
 </section>
 
@@ -34,5 +34,10 @@
     width: 12em;
     text-align: center;
   }
- 
+  .imgBorder{
+    display: block;
+    border: solid 4px rgb(110, 110, 110);
+    padding: 1em;
+    border-radius: 10px;
+  }
 </style>
