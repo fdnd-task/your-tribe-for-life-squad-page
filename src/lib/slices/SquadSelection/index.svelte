@@ -1,29 +1,57 @@
 <script>
   /** @type {import("@prismicio/client").Content.SquadSelectionSlice} */
   export let slice;
+  console.log(slice);
 </script>
 
 <section
   data-slice-type={slice.slice_type}
   data-slice-variation={slice.variation}
 >
-  <h1>{slice.primary.title}</h1>
-  <div class="plate" />
-  <div class="front-plate" />
-
+  <section class="title">
+    <h1>{slice.primary.title}</h1>
+  </section>
+    <div class="plate" />
+    <div class="front-plate" />
+  </section>
   <section class="subtitle">
     <p>{slice.primary.subtitle}</p>
+    <div class="zigzag">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 10">
+        <path
+          d="m 0 0
+      l 10 10
+      10 -10
+      10 10
+      10 -10
+      10 10
+      10 -10
+      10 10
+      10 -10
+      10 10"
+          stroke="#90dcff"
+          stroke-width="3"
+          fill="none"
+        />
+      </svg>
+    </div>
   </section>
 
   <div class="button-wrapper">
     <section class="button-a">
-      <a href={slice.primary.squada.url}>Squad A</a>
+      <a href={slice.primary.squada.url}>
+        <span class="first-word">Squad</span>
+        <span class="second-word">A</span></a
+      >
     </section>
     <section class="button-b">
-      <a href={slice.primary.squadb.url}>Squad B</a>
+      <a href={slice.primary.squadb.url}
+        ><span class="first-word">Squad</span>
+        <span class="second-word">B</span></a
+      >
     </section>
   </div>
-</section>
+
 
 <style>
   * {
@@ -65,6 +93,21 @@
     z-index: 100;
     font-size: 50px;
     text-shadow: 5px 1px var(--hot-pink);
+  }
+
+  .first-word {
+    font-family: "Quantico", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .second-word {
+    color: var(--light-blue);
+    font-size: 50px;
   }
 
   .plate {
@@ -114,6 +157,7 @@
     background-color: var(--pinkish);
     transform: skewX(20deg);
     box-shadow: -1em 1em 0 var(--blue-purple);
+    border-radius: 0.5em;
     transition: 0.5s;
 
     font-family: "Quantico", sans-serif;
@@ -128,12 +172,41 @@
     box-shadow: 1em 1em 0 var(--blue-purple);
   }
 
- 
-
   .button-wrapper {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 50%;
-  
+    margin-top: 10%;
+  }
+
+  /* end section buttons*/
+
+  /* figuurtjes*/
+
+  .zigzag {
+    /* position: relative; */
+    z-index: 20;
+    width: 100px;
+    rotate: 10deg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Desktops and laptops */
+  @media only screen and (min-width: 750px) {
+
+    .title {
+      display: flex;
+      justify-content: center;
+    }
+    .title h1 {
+      max-width: 510px;
+      font-size: 70px;
+      margin-top: -40px;
+    }
+    .zigzag {
+      margin-top: 0px;
+      margin-left: 260px;
+    }
   }
 </style>
