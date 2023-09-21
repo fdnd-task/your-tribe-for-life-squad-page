@@ -1,0 +1,16 @@
+{
+  "id": "student_card",
+  "type": "SharedSlice",
+  "name": "StudentCard",
+  "description": "StudentCard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}

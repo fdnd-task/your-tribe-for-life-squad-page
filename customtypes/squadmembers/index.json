@@ -1,0 +1,47 @@
+{
+  "id": "squadmembers",
+  "label": "studentCards",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "membername": {
+        "type": "Text",
+        "config": {
+          "label": "memberName",
+          "placeholder": ""
+        }
+      },
+      "squadname": {
+        "type": "Text",
+        "config": {
+          "label": "squadName",
+          "placeholder": ""
+        }
+      },
+      "memberimg": {
+        "type": "Image",
+        "config": {
+          "label": "memberImg",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "githublink": {
+        "type": "Link",
+        "config": {
+          "label": "githubLink",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}

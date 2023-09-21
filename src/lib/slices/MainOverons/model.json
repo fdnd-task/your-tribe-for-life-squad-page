@@ -1,0 +1,43 @@
+{
+  "id": "main_overons",
+  "type": "SharedSlice",
+  "name": "MainOverons",
+  "description": "MainOverons",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "informatie": {
+          "type": "StructuredText",
+          "config": {
+            "label": "informatie",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "contentimg": {
+          "type": "Image",
+          "config": {
+            "label": "contentImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

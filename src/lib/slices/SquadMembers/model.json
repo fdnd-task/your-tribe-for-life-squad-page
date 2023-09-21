@@ -1,0 +1,29 @@
+{
+  "id": "squad_members",
+  "type": "SharedSlice",
+  "name": "SquadMembers",
+  "description": "SquadMembers",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "memberdata": {
+          "type": "Link",
+          "config": {
+            "label": "memberData",
+            "select": "document",
+            "customtypes": [
+              "squadmembers"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

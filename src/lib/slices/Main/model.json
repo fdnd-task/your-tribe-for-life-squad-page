@@ -1,0 +1,42 @@
+{
+  "id": "main",
+  "type": "SharedSlice",
+  "name": "Main",
+  "description": "Main",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "contentimg": {
+          "type": "Image",
+          "config": {
+            "label": "contentImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "linksquads": {
+          "type": "Link",
+          "config": {
+            "label": "linkSquads",
+            "placeholder": "",
+            "select": "media"
+          }
+        }
+      }
+    }
+  ]
+}
