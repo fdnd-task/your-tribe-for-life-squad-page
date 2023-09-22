@@ -1,10 +1,12 @@
 <script>
+	import { fly } from 'svelte/transition';
+
   export let data;
 </script>
 
 <div class="container">
   <div class="title-container">
-    <a href="/" class="title-link">FDND Squadpage</a>
+    <a in:fly={{ y: 60, duration: 700, opacity: .3 }} href="/" class="title-link">FDND Squadpage</a>
     <h1>{data.page.title}</h1>
   </div>
   <div class="link-list">
