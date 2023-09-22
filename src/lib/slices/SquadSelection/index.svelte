@@ -58,9 +58,6 @@
     line-height: 1.4;
   }
 
-  html {
-    height: 100vh;
-  }
 
   :root {
     --deep-blue: #55b6ae;
@@ -70,12 +67,12 @@
     --light-blue: #90dcff;
   }
 
-  main {
+  /* main {
     margin-top: 100px;
     width: 100%;
     height: 100%;
     margin-left: 10px;
-  }
+  } */
   /*section title*/
   h1 {
     font-family: "Quantico", sans-serif;
