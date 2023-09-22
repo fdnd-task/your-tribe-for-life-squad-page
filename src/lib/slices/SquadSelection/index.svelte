@@ -26,9 +26,7 @@
       10 -10
       10 10
       10 -10
-      10 10
-      10 -10
-      10 10"
+      "
           stroke="#90dcff"
           stroke-width="3"
           fill="none"
@@ -97,9 +95,8 @@
     text-transform: uppercase;
     color: white;
     font-size: 20px;
-    font-weight: bold;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    font-weight:300;
+   
   }
 
   .second-word {
@@ -133,10 +130,12 @@
   .subtitle {
     font-family: "Quantico", sans-serif;
     font-size: 30px;
+    font-weight: bold;
     text-transform: uppercase;
     color: var(--blue-purple);
     text-align: center;
     margin-top: 120px;
+
   }
 
   /*end section subtitle*/
@@ -148,6 +147,7 @@
     height: 100dvh;
     display: grid;
     place-items: center;
+    text-decoration: none;
 
     aspect-ratio: 1;
     height: 6.5em;
@@ -183,10 +183,11 @@
     /* position: relative; */
     z-index: 20;
     width: 100px;
-    rotate: 10deg;
+    /* rotate: 10deg; */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 30px auto;
   }
 
   /* Desktops and laptops */
@@ -202,8 +203,8 @@
       margin-top: -40px;
     }
     .zigzag {
-      margin-top: 0px;
-      margin-left: 260px;
+    
+      margin:30px auto;
     }
   }
 </style>
