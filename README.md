@@ -38,17 +38,17 @@ We hebben ons project ontwikkeld met SvelteKit, een framework, en Prismic, een h
 * CMS - Prismic
 * Framework - Sveltekit
 
-
-Server starten:
-
-```bash
-npm install
-npm run dev
-npm run slicemachine
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
+# Cloning the repository
+Open de repo via github desktop
+
+# Install NPM packages
+npm install
+
+# Run local server
+npm run dev
+```
+
 
 ## Bronnen 📚
 
