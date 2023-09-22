@@ -172,7 +172,7 @@
   .button-wrapper {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 
   /* end section buttons*/
