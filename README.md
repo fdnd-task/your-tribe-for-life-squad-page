@@ -44,7 +44,7 @@ Server starten:
 ```bash
 npm install
 npm run dev
-npm slicemachine
+npm run slicemachine
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
