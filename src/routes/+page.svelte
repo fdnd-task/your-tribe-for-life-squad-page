@@ -18,19 +18,4 @@
     {/each}
   </div>
 </div>
-<button class="back-to-top">test</button>
-
-<style>
-    /* deze min-hight zorgt er voor dat de tietle niet uit het scherm gaan. (screen breakpoint moeten apart gemaakt worden) */
-    /* text op 40px is in hoogte 46px zo voor elke title laag is het ++++ de hoogte van de title */
-
-  .title-container {
-    min-height: 92px;
-  }
-
-  @media only screen and (min-width: 446px) {
-    .title-container {
-      min-height: 46px;
-    }
-  }
-</style>
+<!-- <button class="back-to-top">test</button> -->

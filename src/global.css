@@ -8,30 +8,37 @@
     box-sizing: border-box;
 }
 
-body{
-    padding: 0  10%;
-    color: var(--primary-color);
+html{
     position: relative;
-    background-color: gold;
+
+}
+
+body{
+    padding: 0 7% 4rem 7%;
+    color: var(--primary-color);
+    background-color: var(--primary-color);
     background-image: url("/Gradient-2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* background-size: 100%; */
-    
+    background-attachment: fixed;    
+    min-height: 100vh;
 }
 /* h1 en .title-link zijn de tietels (. title-link zijn de tietel die geen h1 is maar die linkjes zijn) */
 h1{
     font-size: 40px;
     font-weight: 500;
+    padding: 5px 20px;
+
 }
 
 .title-link{
     font-size: 40px;
     text-decoration: none;
     font-weight: 500;
-
     opacity: .3;
+    padding: 5px 20px;
+
 }
 
 /* general a href styling */
@@ -42,21 +49,19 @@ a{
 
 /* container pagina content */
 .container{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 10vh;
     max-width: 1600px;
-    margin: 0 auto;
 }
 
 /* container van de tietels */
 .title-container{
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0 20px;
+    height: 500px;
+    padding: 3rem 0 0 0;
 }
 
 /* container alle linken (fdnd squadpage en squad page) */
@@ -74,9 +79,10 @@ a{
     display: flex;
     gap: 20px;
     align-items: center;
+    transition: .3s;
 }
 
-.button:hover{
+.button:is(:hover, :focus){
     text-decoration: underline;
 }
 
@@ -84,7 +90,7 @@ a{
     width: 20px;
 }
 
-.arrow:hover{
+button:is(:hover, :focus) .arrow{
     width: 40px;
 }
 
@@ -101,6 +107,30 @@ a{
     bottom: 2rem;
     cursor: pointer;
     border: 2px solid var(--primary-color);
+    transition: .3s;
+}
+
+.button:is(:hover, :focus) .scale{
+    transform: scale(1.2);
+}
+
+.avatar {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 10rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background-color: var(--primary-color);
+}
+
+.button:hover .avatar {
+    display: block;
+}
+
+.visible {
+    display: block;
 }
 
 /* 
@@ -108,3 +138,38 @@ een breakpoint voor tablet tussenface
 het kan al iets grooter vanaf 450px ongeveer en ik denk dat het wel beter is als we dat doen
 en de laatste breakpoint rond weet ik het 1000px doen ofzo om het op desktop goed te maken
 */
+
+@media only screen and (min-width: 800px) {
+    body{
+        padding: 0 10% 4rem 10%;
+    }
+
+    h1{
+        font-size: 96px;    
+    }
+    
+    .title-link{
+        font-size: 80px;
+    }
+
+    .button{
+        font-size: 32px;
+    }
+
+    .arrow{
+        width: 60px;
+    }
+    
+    button:is(:hover, :focus) .arrow{
+        width: 100px;
+    }
+
+    .avatar {
+        top: unset;
+        right: 0;
+        bottom: 0;
+        height: 20rem;
+    }
+
+    
+}

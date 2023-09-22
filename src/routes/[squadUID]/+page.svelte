@@ -15,23 +15,13 @@
             fill="#353535"/>
         </svg>
         {member.data.first_name}
+        <img class="avatar" src={member.data.github_link.url}.png alt="">
       </a>
     {/each}
   </div>
 </div>
-<button class="back-to-top">test</button>
+<!-- <button class="back-to-top">test</button> -->
 
 <style>
-  /* deze min-hight zorgt er voor dat de tietle niet uit het scherm gaan. (screen breakpoint moeten apart gemaakt worden) */
-  /* text op 40px is in hoogte 46px zo voor elke title laag is het ++++ de hoogte van de title */
 
-  .title-container {
-    min-height: 138px;
-  }
-
-  @media only screen and (min-width: 426px) {
-    .title-container {
-      min-height: 92px;
-    }
-  }
 </style>
