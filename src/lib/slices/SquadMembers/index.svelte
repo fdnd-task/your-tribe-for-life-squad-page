@@ -17,8 +17,8 @@
 <ul>
 {#each slice.items as item}
     <li>
-      <h2>Naam: {item.memberdata.data.membername} </h2>
-      <a href="{item.memberdata.data.githublink.url}"><span class="imgBorder"><PrismicImage field={item.memberdata.data.memberimg} width="140" height="200"/></span>
+      <a href="{item.memberdata.data.githublink.url}"><span class="imgBorder">      <h2>{item.memberdata.data.membername} </h2>
+        <PrismicImage field={item.memberdata.data.memberimg} width="140" height="200"/></span>
       </a>
     </li>
 
@@ -85,9 +85,10 @@
   }
   h2{
     font-family: 'Quantico', sans-serif;
-    color: rgb(255, 0, 255);
+    color: var(--deep-blue);
     font-size: 25px;
-    text-shadow: 4px 2px 2px rgb(41, 41, 41);
+    text-shadow: 2px 1px 2px rgb(135, 135, 135);
+    height: 3em;
   }
   .imgBorder{
     display: block;
@@ -96,5 +97,9 @@
     border-radius: 10px;
     background-color: white;
     box-shadow: 5px 2px 10px rgb(31, 30, 30);
+    height: 20em;
+  }
+  a{
+    text-decoration: none;
   }
 </style>
