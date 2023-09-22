@@ -18,7 +18,7 @@
     {/each}
   </div>
 </div>
-<button class="back-to-top">test</button>
+<!-- <button class="back-to-top">test</button> -->
 
 <style>
     /* deze min-hight zorgt er voor dat de tietle niet uit het scherm gaan. (screen breakpoint moeten apart gemaakt worden) */

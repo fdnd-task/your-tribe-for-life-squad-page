@@ -9,16 +9,15 @@
 }
 
 body{
-    padding: 0  10%;
+    padding: 0 10%;
     color: var(--primary-color);
     position: relative;
-    background-color: gold;
+    background-color: var(--primary-color);
     background-image: url("/Gradient-2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* background-size: 100%; */
-    
+    background-attachment: fixed;    
 }
 /* h1 en .title-link zijn de tietels (. title-link zijn de tietel die geen h1 is maar die linkjes zijn) */
 h1{
@@ -42,28 +41,26 @@ a{
 
 /* container pagina content */
 .container{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 10vh;
     max-width: 1600px;
-    margin: 0 auto;
+    margin: 3rem auto;
 }
 
 /* container van de tietels */
 .title-container{
-    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 20px;
+    margin-top: 30dvh;
 }
 
 /* container alle linken (fdnd squadpage en squad page) */
 .link-list{
     display: flex;
     flex-direction: column;
-    width: fit-content;
     min-width: 250px;
 }
 

@@ -1,4 +1,5 @@
 <script>
+  import { PrismicImage } from "@prismicio/svelte";
   import { page } from "$app/stores";
   $: squadpage = $page.params.squadUID;
 
@@ -12,10 +13,11 @@
     <h1>{data.page.first_name} {data.page.last_name}</h1>
   </div>
   <div class="link-list">
+    <a href="{data.page.github_link.url}" class="button">Github profile</a>
+    <a href="{data.page.website.url}" class="button">Personal website</a>    
   </div>
 </div>
-
-<button class="back-to-top">test</button>
+<!-- <button class="back-to-top">test</button> -->
 
 <style>
     /* deze min-hight zorgt er voor dat de tietle niet uit het scherm gaan. (screen breakpoint moeten apart gemaakt worden) */
