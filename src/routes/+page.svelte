@@ -1,6 +1,7 @@
-<!-- <script>
+<script>
 	export let data;
-</script> -->
+</script>
 
-<h1>Adana Durum</h1>
-<p>Koen, Larissa, Yu-Jing, Robin, Kaan</p>
+<h1>Example:</h1>
+<h2>{data.persons[2].name}</h2>
+<p>{data.persons[2].prefix} {data.persons[2].surname}</p>
