@@ -4,7 +4,19 @@
     
     // Check if the data has been received and is an array
     console.log("Received data in +page.svelte:", data);
+
+    import RandomBtn from '../components /title.svelte';
+    
 </script>
+
+<RandomBtn 
+label = "Dit is de tekst"
+/>
+
+<RandomBtn 
+label = "Dit is andere tekst"
+/>
+
 
 <!-- Only render if we have people in the data -->
 {#if data.people}
