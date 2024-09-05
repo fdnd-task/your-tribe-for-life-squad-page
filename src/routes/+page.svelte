@@ -6,6 +6,7 @@
     console.log("Received data in +page.svelte:", data);
 
     import Example from '../components /example.svelte';
+    import SquadLogo from '../components /squad-logo.svelte';
     
 </script>
 
@@ -21,7 +22,22 @@
     }
 
     nav {
-        display: flex; 
+        display: flex;
+        margin: 2.25em;
+    }
+
+    /* Media queries */
+
+    @media (min-width: 40em){
+        nav {
+            margin: 4.25em
+        }
+    }
+
+    @media (min-width: 80em){
+        nav {
+            margin: 5em
+        }
     }
 
 
@@ -29,14 +45,20 @@
 
 <body>
     <nav>
-        <Logo />
+        <SquadLogo />
 
-        <ThemeSwitchBtn />
+        <!-- <ThemeSwitchBtn />
 
-        <NavigationMenu /> 
+        <NavigationMenu />  -->
     </nav>
-
-    section
+    <main>
+        <div>
+            <!--Title-->
+        </div>
+        <div>
+            <!--Main-cta-->
+        </div>
+    </main>
 </body>
 
 
