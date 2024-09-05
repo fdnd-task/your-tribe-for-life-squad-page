@@ -3,7 +3,7 @@
 </script>
 
 
-<button><span class="button-component">dit is het componeent button</span>
+<button><span class="button-component">dit is het button component</span>
 </button>
 
 
