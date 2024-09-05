@@ -5,26 +5,38 @@
     // Check if the data has been received and is an array
     console.log("Received data in +page.svelte:", data);
 
-    import RandomBtn from '../components /title.svelte';
+    import Example from '../components /example.svelte';
     
 </script>
 
-<RandomBtn 
-label = "Dit is de tekst"
-/>
+<style>
+    body {
+		height: 100vh;
+		width: 100vw;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        background-image: linear-gradient(180deg, #B285E5 10%, #660BCC 33%, #4C0899 58%, #000000 97%);
+    }
 
-<RandomBtn 
-label = "Dit is andere tekst"
-/>
+    nav {
+        display: flex; 
+    }
 
 
-<!-- Only render if we have people in the data -->
-{#if data.people}
-    {#each data.people as person}
-        <h1>{person.name}</h1>
-        <p>{person.bio}</p>
-    {/each}
-{:else}
-    <!-- This will show if no people are available -->
-    <p>No data available</p>
-{/if}
+</style>
+
+<body>
+    <nav>
+        <Logo />
+
+        <ThemeSwitchBtn />
+
+        <NavigationMenu /> 
+    </nav>
+
+    section
+</body>
+
+
