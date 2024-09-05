@@ -3,7 +3,9 @@
 </script>
 
 <main>
-    <p>lets go</p>
+  {#each data.persons as person}
+    <p>{person.name}</p>
+    {/each}
 </main>
 
 <style>
