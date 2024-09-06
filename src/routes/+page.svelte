@@ -5,7 +5,8 @@
     // Check if the data has been received and is an array
     console.log("Received data in +page.svelte:", data);
 
-    import Example from '../components /example.svelte';
+    import SquadLogo from '../components /squad-logo.svelte';
+    import DropdownMenu from '../components /dropdown-menu.svelte';
     
 </script>
 
@@ -20,23 +21,45 @@
         background-image: linear-gradient(180deg, #B285E5 10%, #660BCC 33%, #4C0899 58%, #000000 97%);
     }
 
-    nav {
-        display: flex; 
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: 2.25em;
+    }
+
+    /* Media queries */
+
+    @media (min-width: 40em){
+        header {
+            margin: 4.25em
+        }
+    }
+
+    @media (min-width: 80em){
+        header {
+            margin: 5em
+        }
     }
 
 
 </style>
 
 <body>
-    <nav>
-        <Logo />
+    <header>
+        <SquadLogo />
 
-        <ThemeSwitchBtn />
+        <!-- <ThemeSwitchBtn /> -->
 
-        <NavigationMenu /> 
-    </nav>
-
-    section
+        <DropdownMenu />
+    </header>
+    <main>
+        <div>
+            <!--Title-->
+        </div>
+        <div>
+            <!--Main-cta-->
+        </div>
+    </main>
 </body>
 
 
