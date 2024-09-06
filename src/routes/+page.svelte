@@ -1,7 +1,16 @@
 <script>
-	export let data;
+  import Package from '$lib/package/Package.svelte';
+	// export let data;
 </script>
 
-<h1>Example:</h1>
-<h2>{data.persons[2].name}</h2>
-<p>{data.persons[2].prefix} {data.persons[2].surname}</p>
+<h1>FDND</h1>
+
+<Package squad={"Squad C"} href={"/squad-c"}/>
+<Package squad={"Squad D"} href={"/squad-d"}/>
+
+<style>
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+    }
+</style>
