@@ -7,6 +7,9 @@
 
     import SquadLogo from '../components /squad-logo.svelte';
     import DropdownMenu from '../components /dropdown-menu.svelte';
+    import CardComponent from "../components/card-component.svelte";
+  
+    const imgSrcs = ['/images/Daan.png'];
     
 </script>
 
@@ -58,8 +61,10 @@
         </div>
         <div>
             <!--Main-cta-->
+ {#each imgSrcs as imgSrc}
+        <CardComponent imgSrc={imgSrc}></CardComponent>
+    {/each}
         </div>
     </main>
 </body>
-
 
