@@ -175,5 +175,4 @@ ul:nth-of-type(30) {
       grid-area: ag;
       background-color: green;
 }
-
 </style>
