@@ -1,21 +1,25 @@
 <script>
   export let colors = {
-    "top-left": "#f5dd71",
-    "top-right": "#ecbd00",
+    topLeft: "#dcdc3b",
+    topRight: "#33db95",
     left: "#ad0000",
     right: "#92008b",
     front: "#009207",
     back: "#00b9b0",
+    border: "#000000",
   };
+
+  export let size = 8;
+  export let rotation = { x: "-10deg", y: "-15deg" };
 </script>
 
-<div class="wrapper">
-  <!-- <div class="top-left"></div> -->
-  <!-- <div class="top-right"></div> -->
-  <div class="left" style="background-color: {colors.left};"></div>
-  <div class="right" style="background-color: {colors.right};"></div>
-  <div class="front" style="background-color: {colors.front};"></div>
-  <div class="back" style="background-color: {colors.back};"></div>
+<div class="wrapper" style=" --rotation-x: {rotation.x}; --rotation-y: {rotation.y}">
+  <div class="top-left" style="--color: {colors.topLeft}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="top-right" style="--color: {colors.topRight}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="left" style="--color: {colors.left}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="right" style="--color: {colors.right}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="front" style="--color: {colors.front}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
+  <div class="back" style="--color: {colors.back}; --border-color: {colors.border}; --package-size: {size}rem;"></div>
 </div>
 
 <style>
@@ -27,42 +31,59 @@
     height: 100%;
     /* background-color: red; */
 
-    --package-size: 8rem;
-    --rotation-x: -10deg;
-    --rotation-y: -15deg;
+    --animation-speed: 0.5s;
   }
 
-  /* .wrapper > div {
-    border: 1px solid rgb(159, 142, 108);
-  } */
+  .wrapper > div {
+    position: absolute;
+    left: calc(50% - 0.5 * var(--package-size));
+    top: calc(50% - 0.5 * var(--package-size));
+    transition: transform var(--animation-speed);
+    height: var(--package-size);
+    background-color: var(--color);
+    border: 1px solid var(--border-color);
+    outline: 1px solid transparent; /* Required workaround for anti aliasing issues */
+  }
 
   .left,
   .right,
   .front,
   .back {
-    position: absolute;
-    left: calc(50% - 0.5 * var(--package-size));
-    top: calc(50% - 0.5 * var(--package-size));
     width: var(--package-size);
-    height: var(--package-size);
+  }
+
+  .top-left,
+  .top-right {
+    width: calc(0.5 * var(--package-size));
   }
 
   .top-left {
-    position: absolute;
-    width: calc(0.5 * var(--package-size));
-    height: var(--package-size);
-    background-color: #d20f0f;
-    transform: rotateX(-10deg) rotateY(-15deg)
+    transform-origin: right;
+    transform: rotateX(calc(var(--rotation-x) - 90deg))
+      rotateZ(var(--rotation-y)) rotateY(180deg)
+      translateX(calc(0.5 * var(--package-size)))
       translateZ(calc(0.5 * var(--package-size)));
   }
 
   .top-right {
-    position: absolute;
-    width: calc(0.5 * var(--package-size));
-    height: var(--package-size);
-    background-color: #18ec00;
-    transform: rotateY(345deg) rotateX(260deg)
-      translateZ(calc(0.5 * var(--package-size)));
+    transform-origin: right;
+    transform: rotateX(calc(var(--rotation-x) - 90deg))
+      rotateZ(var(--rotation-y)) translateX(calc(0.5 * var(--package-size)))
+      translateZ(calc(-0.5 * var(--package-size)));
+  }
+
+  .wrapper:hover > .top-left {
+    transform: rotateX(calc(var(--rotation-x) - 90deg))
+      rotateZ(var(--rotation-y)) rotateY(180deg)
+      translateX(calc(0.5 * var(--package-size)))
+      translateZ(calc(0.5 * var(--package-size)))
+      rotateY(220deg);
+  }
+
+  .wrapper:hover > .top-right {
+    transform: rotateX(calc(var(--rotation-x) - 90deg))
+      rotateZ(var(--rotation-y)) translateX(calc(0.5 * var(--package-size)))
+      translateZ(calc(-0.5 * var(--package-size))) rotateY(-220deg);
   }
 
   .left {

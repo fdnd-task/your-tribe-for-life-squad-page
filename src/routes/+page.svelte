@@ -7,16 +7,23 @@
 
 <Package 
   colors={{
-    "left": "#7d6b52",
-    "right": "#ebca9d",
-    "front": "#ebca9d",
-    "back": "#7d6b52"
+    topLeft: "#f0d0a3",
+    topRight: "#f0d0a3",
+    left: "#7d6b52",
+    right: "#debd8e",
+    front: "#e3c496",
+    back: "#7d6b52",
+    border: "#c9a574",
   }}
+  size={8}
+  rotation={{x: "-10deg", y: "-15deg"}}
   squad={"Squad C"} 
   href={"/squad-c"}
 />
 
-<Package squad={"Squad D"} href={"/squad-d"}/>
+<Package size={6}
+rotation={{x: "-10deg", y: "15deg"}}
+squad={"Squad D"} href={"/squad-d"} />
 
 <style>
   h1 {

@@ -3,10 +3,12 @@
   export let squad;
   export let href;
   export let colors;
+  export let rotation;
+  export let size;
 </script>
 
 <a href={href}>
-  <PackageIcon colors={colors} />
+  <PackageIcon colors={colors} rotation={rotation} size={size}/>
   <h2>{squad}</h2>
 </a>
 
@@ -22,6 +24,4 @@
     height: 24rem;
     width: 24rem;
   }
-
-
 </style>
