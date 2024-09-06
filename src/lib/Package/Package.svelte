@@ -2,10 +2,11 @@
   import PackageIcon from './PackageIcon.svelte';
   export let squad;
   export let href;
+  export let colors;
 </script>
 
 <a href={href}>
-  <PackageIcon />
+  <PackageIcon colors={colors} />
   <h2>{squad}</h2>
 </a>
 

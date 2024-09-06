@@ -5,7 +5,17 @@
 
 <h1>FDND</h1>
 
-<Package squad={"Squad C"} href={"/squad-c"}/>
+<Package 
+  colors={{
+    "left": "#7d6b52",
+    "right": "#ebca9d",
+    "front": "#ebca9d",
+    "back": "#7d6b52"
+  }}
+  squad={"Squad C"} 
+  href={"/squad-c"}
+/>
+
 <Package squad={"Squad D"} href={"/squad-d"}/>
 
 <style>
