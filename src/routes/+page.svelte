@@ -61,6 +61,9 @@
         </div>
         <div>
             <!--Main-cta-->
+ {#each imgSrcs as imgSrc}
+        <CardComponent imgSrc={imgSrc}></CardComponent>
+    {/each}
         </div>
     </main>
 </body>
