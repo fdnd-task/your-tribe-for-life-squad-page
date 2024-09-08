@@ -1,10 +1,14 @@
 <script>
+	import Topbar from '../components/topbar.svelte';
+
     /** @type {import('./$types').PageData} */
     export let data;
     
     // Check if the data has been received and is an array
     console.log("Received data in +page.svelte:", data);
 </script>
+
+<Topbar /> 
 
 <!-- Only render if we have people in the data -->
 {#if data.people}
