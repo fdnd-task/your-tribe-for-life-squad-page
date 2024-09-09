@@ -1,8 +1,9 @@
 <script>
-	import Details from '../../component detailpage/details.svelte';
+	import {Details, Carousel} from '$lib';
 
     /** @type {import('./$types').PageData} */
     export let data;
+
     let showModal = false;
     const toggle = () =>{
 		showModal = !showModal;
@@ -12,19 +13,11 @@
 </script>
 
 <!-- Only render if we have people in the data -->
-{#if data.people}
-    {#each data.people as person}
-        <h1>{person.name}</h1>
-        <p>{person.bio}</p>
-    {/each}
-{:else}
-    <!-- This will show if no people are available -->
-    <p>No data available</p>
-{/if}
+
 
 {#if 10 > 2}
 	<p>10 bigger</p>
-	<Details peeps="im the peep" showModal={showModal} on:click={toggle}>
+	<Details showModal={showModal} on:click={toggle}>
 		<section>
 			<article>
 				<ul>
@@ -46,6 +39,8 @@
 			</article>
 		</section>
 	</Details>
+
+	<Carousel people={data.people}/>
 {/if}
 
 <button on:click={toggle} > open modal
