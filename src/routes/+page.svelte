@@ -1,178 +1,168 @@
 <script>
-  export let data
+ export let data
 </script>
-
+       
 <main>
+ <ul>
   {#each data.persons as person}
-  <ul>
     <li>
-    <p>{person.name}</p>
-  </li>
-  </ul>
+     <p>{person.name}</p>
+   </li>
   {/each}
+    <li><p>D</p></li>
+    <li><p>C</p></li>
+    <li><p>Ons Team</p></li>
+  </ul>
 </main>
 
 <style>
-main {
-      box-sizing: border-box;
-      border: 10px solid black;
-      width: 100%;
-      height: 100%;
-      box-shadow: 4px 4px 3px #dddddd;
-      background-color: black;
-      display: grid;
-      grid-template-columns: 1fr 1.2fr 0.9fr 1fr 2.9fr;
-      grid-template-rows: 1.7fr 0.3fr 1fr 1fr 1.5fr 3.5fr;
-      grid-gap: 10px;
-      grid-template-areas: 
-            "a b d d f" 
-            "a c d d f" 
-            "a c e e f" 
-            "a c e e g"
-            "a c e e h" 
-            "i i i j j"
-            "k k l m m";
+ ul {
+  background-color: #000000;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 1fr 1.2fr 0.9fr 1fr 2.9fr;
+  grid-template-rows: 1.7fr 0.3fr 1fr 1fr 1.5fr 3.5fr;
+  grid-gap: 2px;
+  grid-template-areas:
+   "a  a  b  c  c"
+   "a  a  b  d  d"
+   "e  e  f  d  d"   
+   "g  h  h  i  j"
+   "g  k  k  l  j"
+   "m  m  n  o  o"
+   "p  p  n  o  o"
+   "q  q  r  r  s"
+   "t  t  u  u  s"
+   "t  t  u  u  s"
 }
-ul {
-  
-      background-color: white;
-}
-
-ul {
-      background-color: white;
-}
-
-ul:nth-of-type(1) {
-      grid-area: a;
+li {
+  background-color: white;
+  list-style-type: none;
+  border: 5px solid black;
+  &:hover{
+   scale: 1.1;
+   transition: .2s;
+  }
 }
 
-ul:nth-of-type(2) {
-      grid-area: b;
-      background-color: #1500b2;
-}
+      li:nth-of-type(1) {
+            grid-area: a;
+      }
 
-ul:nth-of-type(3) {
-      grid-area: c;
-}
+      li:nth-of-type(2) {
+            grid-area: b;
+            background-color: #1500b2;
+      }
 
-ul:nth-of-type(4) {
-      grid-area: d;
-}
+      li:nth-of-type(3) {
+            grid-area: c;
+      }
 
-ul:nth-of-type(5) {
-      grid-area: e;
-}
+      li:nth-of-type(4) {
+            grid-area: d;
+            background-color: yellow;
+      }
 
-ul:nth-of-type(6) {
-      grid-area: f;
-      background-color: yellow;
-}
+      li:nth-of-type(5) {
+            grid-area: e;
+      }
 
-ul:nth-of-type(7) {
-      grid-area: g;
-}
+      li:nth-of-type(6) {
+            grid-area: f;
+            background-color: yellow;
+      }
 
-ul:nth-of-type(8) {
-      grid-area: h;
-      background-color: #1500b2;
-}
+      li:nth-of-type(7) {
+            grid-area: g;
+      }
 
-ul:nth-of-type(9) {
-      grid-area: i;
-      background-color: red;
-}
+      li:nth-of-type(8) {
+            grid-area: s;
+            background-color: #1500b2;
+      }
 
-ul:nth-of-type(10) {
-      grid-area: j;
-}
+      li:nth-of-type(9) {
+            grid-area: t;
+            background-color: red;
+      }
 
-ul:nth-of-type(11) {
-      grid-area: k;
-      background-color: green;
-}
+      li:nth-of-type(10) {
+            grid-area: u;
+      }
 
-ul:nth-of-type(12) {
-      grid-area: l;
-      background-color: green;
-}
+      li:nth-of-type(11) {
+            grid-area: i;
+            background-color: red;
+      }
 
-ul:nth-of-type(13) {
-      grid-area: m;
-      background-color: green;
-}
+      li:nth-of-type(12) {
+            grid-area: k;
+      }
 
-ul:nth-of-type(14) {
-      grid-area: n;
-      background-color: green;
-}
+      li:nth-of-type(13) {
+            grid-area: m;
+      }
 
-ul:nth-of-type(15) {
-      grid-area: o;
-      background-color: green;
-}
-ul:nth-of-type(16) {
-      grid-area: p;
-      background-color: green;
-}
-ul:nth-of-type(17) {
-      grid-area: q;
-      background-color: green;
-}
-ul:nth-of-type(18) {
-      grid-area: r;
-      background-color: green;
-}
-ul:nth-of-type(19) {
-      grid-area: s;
-      background-color: green;
-}
-ul:nth-of-type(20) {
-      grid-area: t;
-      background-color: green;
-}
+      li:nth-of-type(14) {
+            grid-area: n;
+            background-color: blue;
+      }
 
-ul:nth-of-type(21) {
-      grid-area: u;
-}
+      li:nth-of-type(15) {
+            grid-area: o;
+      }
+      li:nth-of-type(16) {
+            grid-area: p;
+            background-color: red;
+      }
+      li:nth-of-type(17) {
+            grid-area: q;
 
-ul:nth-of-type(22) {
-      grid-area: v;
-      background-color: green;
-}
+      }
+      li:nth-of-type(18) {
+            grid-area: r;
+      }
+      li:nth-of-type(19) {
+            grid-area: h;
+            background-color: blue;
+            color: white;
+      }
+      li:nth-of-type(20) {
+            grid-area: l;
+            background-color: red;
+            color: white;
+      }
 
-ul:nth-of-type(23) {
-      grid-area: w;
-      background-color: green;
-}
+      li:nth-of-type(21) {
+            grid-area: j;
+      }
 
-ul:nth-of-type(24) {
-      grid-area: aa;
-      background-color: green;
-}
-
-ul:nth-of-type(25) {
-      grid-area: ab;
-      background-color: green;
-}
-
-ul:nth-of-type(26) {
-      grid-area: ac;
-      background-color: green;
-}
-ul:nth-of-type(27) {
-      grid-area: ad;
-      background-color: green;
-}
-ul:nth-of-type(28) {
-      grid-area: ae;
-      background-color: green;
-}
-ul:nth-of-type(29) {
-      grid-area: af;
-      background-color: green;
-}
-ul:nth-of-type(30) {
-      grid-area: ag;
-      background-color: green;
+@media (width < 28em) {
+ul{
+ grid-template-columns: 1fr;
+ grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h"
+      "i"
+      "j"
+      "k"
+      "l"
+      "m"
+      "n"
+      "o"
+      "p"
+      "q"
+      "r"
+      "s"
+      "t"
+      "u"
+      }
 }
 </style>
