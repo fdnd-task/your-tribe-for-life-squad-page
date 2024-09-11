@@ -5,6 +5,7 @@ import { PUBLIC_APIURL } from '$env/static/public';
 function getDirectusInstance(fetch) {
   	const options = fetch ? { globals: { fetch } } : {};
 	const directus = createDirectus(PUBLIC_APIURL, options ).with(rest());
+	console.log(directus);
 	return directus;
 }
 
