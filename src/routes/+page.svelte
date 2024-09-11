@@ -1,13 +1,16 @@
 <script>
 
+	import '../styles/global.css'
+	import '../styles/intro-section.css'
+
 </script>
 
 <main>
 	<!--Workspace Jason-->
 	<section class="intro-section">
 		<div class="intro-text">
-			<!--H1 Welcome to our squadpage-->
-			<!--P-->
+			<h1>Welcome to our Squadpage</h1>
+			<p>We are a group of students passionate about front-end development, exploring new ways to broaden our skills and deepen our understanding of web design. With a keen eye for detail and creativity, we combine coding with aesthetic design to build engaging, user-friendly digital experiences.</p>
 		</div>
 		<!--Workspace Daan-->
 		<section class="random-cards">
