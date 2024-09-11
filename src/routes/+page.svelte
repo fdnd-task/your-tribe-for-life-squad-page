@@ -2,6 +2,7 @@
 
 	import '../styles/global.css'
 	import '../styles/intro-section.css'
+	import '../styles/fonts.css'
 
 </script>
 
@@ -10,11 +11,26 @@
 	<section class="intro-section">
 		<div class="intro-text">
 			<h1>Welcome to our Squadpage</h1>
-			<p>We are a group of students passionate about front-end development, exploring new ways to broaden our skills and deepen our understanding of web design. With a keen eye for detail and creativity, we combine coding with aesthetic design to build engaging, user-friendly digital experiences.</p>
+			<p>We are a group of students passionate about front-end development, exploring ways to broaden our skills and deepen our understanding of webdesign.</p>
 		</div>
 		<!--Workspace Daan-->
-		<section class="random-cards">
+		<section class="card-section-layout">
 			<!--Random Cards for squadmembers component 5x-->
+			<div class="div1">
+				<img src="../images/A19F6889-518F-406C-9590-2F7FD69AD278_4_5005_c.jpeg" alt="">
+			</div>
+			<div class="div2">
+				<img src="../images/A19F6889-518F-406C-9590-2F7FD69AD278_4_5005_c.jpeg" alt="">
+			</div>
+			<div class="div3">
+				<img src="../images/A19F6889-518F-406C-9590-2F7FD69AD278_4_5005_c.jpeg" alt="">
+			</div>
+			<div class="div4">
+				<img src="../images/A19F6889-518F-406C-9590-2F7FD69AD278_4_5005_c.jpeg" alt="">
+			</div>
+			<div class="div5">
+				<img src="../images/A19F6889-518F-406C-9590-2F7FD69AD278_4_5005_c.jpeg" alt="">
+			</div>
 		</section>
 	</section>
 	
