@@ -1,16 +1,2 @@
-<script>
-	export let data;
-  import ButtonComponent from './button.svelte';
-	import Brief from '$lib/briefForm.svelte';
-	console.log({ data });
-</script>
-
-<h1>Example:</h1>
-<h2>{data.persons[2].name}</h2>
-<p>{data.persons[2].prefix} {data.persons[2].surname}</p>
-<ButtonComponent />
-<style>
-
-</style>
-
-<Brief />
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
