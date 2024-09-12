@@ -45,6 +45,7 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 1em;
+    filter: grayscale(100%);
 }
 
 .div1 {
@@ -165,7 +166,31 @@ img {
 }
 
 @media (min-width: 1440px){
-    
+
 }
 
+/* Animation */ 
 
+.div1{
+    animation: fadeIn 1.25s;
+}
+.div2{
+    animation: fadeIn 2.25s;
+}
+.div3{
+    animation: fadeIn 2s;
+}
+.div4{
+    animation: fadeIn 3.3s;
+}
+.div5{
+    animation: fadeIn 2.5s;
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 0.5;}
+    100% { opacity: 1; }
+  }
