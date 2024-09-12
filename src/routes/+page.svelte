@@ -71,21 +71,7 @@
 </main>
 
 <style>
-*,
-*::before,
-*::after,
-html {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  appearance: none;
-  text-decoration: none;
-  scroll-behavior: smooth;
-  scrollbar-gutter: stable;
-  scrollbar-width: thin;
-}
-
+/* for some reason this peace of css can not be moved  */
 .masonry {
     display: flex;
     width: 100%;
@@ -130,49 +116,6 @@ html {
                 flex: auto;
                 height: 250px;
                 min-width: 150px;
-            }
-
-            @media only screen and (min-width: 1024px) {
-                /* Horizontal masonry bricks on desktop-sized screen */ .masonry-brick--h:nth-child(4n+1) {
-                    width: 250px;
-                }
-
-                .masonry-brick--h:nth-child(4n+2) {
-                    width: 325px;
-                }
-
-                .masonry-brick--h:nth-child(4n+3) {
-                    width: 180px;
-                }
-
-                .masonry-brick--h:nth-child(4n+4) {
-                    width: 380px;
-                }
-            }
-
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
- .masonry-brick--h:nth-child(4n+1) {
-                    width: 200px;
-                }
-
-                .masonry-brick--h:nth-child(4n+2) {
-                    width: 250px;
-                }
-
-                .masonry-brick--h:nth-child(4n+3) {
-                    width: 120px;
-                }
-
-                .masonry-brick--h:nth-child(4n+4) {
-                    width: 280px;
-                }                
-            }
-
-            .masonry-img {
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                filter: brightness(50%);
             }
 
 
