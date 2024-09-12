@@ -13,21 +13,31 @@ p {
     color: #444343;
     line-height: 1.25;
     text-align: center;
-    margin-top: 1.5em;
+    margin-top: 2em;
+}
+
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8em;
 }
 
 .intro-text {
-    margin: 8em 3.2em 2em 3.2em;
+    margin: 0em 1.5em 0em 1.5em;
 }
 
 .card-section-layout {
     display: grid;
     justify-content: center;
+    align-content: center;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(13, 1fr);
     grid-gap: 12px;
     height: 55vh;
-    margin:3em 1.25em 1.25em 1.25em;
+    margin: 3em 1.25em 1.25em 1.25em;
+    max-width: 90vw;
 }
 
 img {
@@ -35,7 +45,6 @@ img {
     height: 100%;
     object-fit: cover;
     border-radius: 1em;
-    max-width: 125px;
 }
 
 .div1 {
@@ -52,4 +61,56 @@ img {
 }
 .div5 {
     grid-area: 7 / 6 / 13 / 9;
+}
+
+/* Larger screen: Tablet */
+@media (min-width: 728px) {
+    .intro-text{
+        max-width: 50vw;
+
+        h1{
+            font-size: 3em;
+        }
+    }
+
+    .card-section-layout {
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        margin: 2em 1.25em 1.25em 1.25em;
+        grid-gap: 14px;
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .div1 {
+        grid-area: 3 / 1 / 12 / 4;
+    }
+    .div2 {
+        grid-area: 2 / 4 / 11 / 7;
+    }
+    .div3 {
+        grid-area: 4 / 7 / 13 / 10;
+    }
+    .div4 {
+        grid-area: 2 / 10 / 11 / 13;
+    }
+    .div5 {
+        grid-area: 3 / 13 / 12 / 16;
+    }
+}
+
+/* Larger screen: Desktop */
+@media (min-width: 1024px) {
+    .intro-text{
+        max-width: 45vw;
+
+        h1{
+            font-size: 4.5em;
+        }
+    }
+
+}
+
+/* Even larger screen: Wide desktop */
+@media (min-width: 1440px) {
 }
