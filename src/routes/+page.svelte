@@ -17,19 +17,19 @@
 		<section class="card-section-layout">
 			<!--Random Cards for squadmembers component 5x-->
 			<div class="div1">
-				<img src="../images/image.png" alt="">
+				<img src="../images/87DDE812-A203-49EE-A304-632056AF2DB5_4_5005_c.jpeg" alt="">
 			</div>
 			<div class="div2">
-				<img src="../images/image.png" alt="">
+				<img src="../images/6BED93D6-F18D-43B2-81E8-882FEB74D5F9_4_5005_c.jpeg" alt="">
 			</div>
 			<div class="div3">
-				<img src="../images/image.png" alt="">
+				<img src="../images/2D2A8708-B2FC-418D-967C-F21EC6D2E020_1_102_o.jpeg" alt="">
 			</div>
 			<div class="div4">
-				<img src="../images/image.png" alt="">
+				<img src="../images/1532C412-5E9A-452E-AE18-D87CE16968A2_4_5005_c.jpeg" alt="">
 			</div>
 			<div class="div5">
-				<img src="../images/image.png" alt="">
+				<img src="../images/3DDFB72A-4A72-4CE3-8C0F-B49A706288A7_4_5005_c.jpeg" alt="">
 			</div>
 		</section>
 	</section>
