@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: ArialMT-rounded;
+    transition: .25s;
 }
 
 h1 {
