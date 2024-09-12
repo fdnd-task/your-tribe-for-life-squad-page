@@ -35,7 +35,7 @@ p {
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(13, 1fr);
     grid-gap: 12px;
-    height: 55vh;
+    height: 55%;
     margin: 3em 1.25em 1.25em 1.25em;
     max-width: 90vw;
 }
@@ -102,15 +102,70 @@ img {
 /* Larger screen: Desktop */
 @media (min-width: 1024px) {
     .intro-text{
-        max-width: 45vw;
+        max-width: 60vw;
 
         h1{
             font-size: 4.5em;
         }
     }
+    .card-section-layout {
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        margin-top: 3.25em;
+        gap: 16px;
+        width: 80%;
+    }
+    .div1 {
+        grid-area: 4 / 1 / 14 / 4;
+    }
+    .div2 {
+        grid-area: 2 / 4 / 12 / 7;
+    }
+    .div3 {
+        grid-area: 4 / 7 / 14 / 10;
+    }
+    .div4 {
+        grid-area: 2 / 10 / 12 / 13;
+    }
+    .div5 {
+        grid-area: 4 / 13 / 14 / 16;
+    }
+
+    img{
+        max-width: 9.5em;
+    }
 
 }
 
 /* Even larger screen: Wide desktop */
-@media (min-width: 1440px) {
+@media (min-width: 1120px) {
+
+    .card-section-layout {
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        margin-top: 3.25em;
+        gap: 16px;
+        width: 80%;
+    }
+    .div1 {
+        grid-area: 4 / 1 / 14 / 4;
+    }
+    .div2 {
+        grid-area: 2 / 4 / 12 / 7;
+    }
+    .div3 {
+        grid-area: 4 / 7 / 14 / 11;
+    }
+    .div4 {
+        grid-area: 2 / 10 / 12 / 13;
+    }
+    .div5 {
+        grid-area: 4 / 13 / 14 / 16;
+    }
 }
+
+@media (min-width: 1440px){
+    
+}
+
+
