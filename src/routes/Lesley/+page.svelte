@@ -3,11 +3,7 @@
 </svelte:head>
 
 <script>
-    /** @type {import('./$types').PageData} */
     export let data;
-
-    let people = data.data || [];
-    console.log(people);
 
     let lesley = '/assets/Lesley.JPG';
     let zainab = '/assets/Zainab.JPG';
@@ -43,19 +39,21 @@
 </main>
 
 
-<section class="squad">
-    {#each people as person}
-        <div class="person">
-            <img src={person.avatar} alt={person.name + ' avatar'} />
-            <h2>{person.name}</h2>
-            <p>{person.nickname}</p>
-            <p>Role: {person.role.join(', ')}</p>
-            <p>GitHub: <a href={person.github_handle} target="_blank">{person.github_handle}</a></p>
-            <p>Website: <a href={person.website} target="_blank">{person.website}</a></p>
-            <p>Bio: {person.bio}</p>
-        </div>
+<ul>
+    {#each data.persons as person}
+      <li>
+        <strong>{person.name} {person.prefix} {person.surname}</strong>
+        
+        <!-- Check if avatar exists, else use a placeholder -->
+        <img
+          class="main__card--background"
+          src={person.avatar && person.avatar !== '' ? person.avatar : 'assets/placeholder.jpg'}
+          on:error="{() => this.src = 'assets/placeholder.jpg'}"
+          alt="{person.name}"
+        />
+      </li>
     {/each}
-</section>
+  </ul>
 
 
 
