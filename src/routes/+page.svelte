@@ -1,5 +1,5 @@
 <script>
-
+	import '../styles/grid.css';
 </script>
 
 <main>
@@ -71,52 +71,7 @@
 </main>
 
 <style>
-/* for some reason this peace of css can not be moved  */
-.masonry {
-    display: flex;
-    width: 100%;
-}
 
-.masonry--h {
-    flex-flow: row wrap;
-	margin-left: -8px;
-    counter-reset: brick;
-}
-
-.masonry-brick {
-                overflow: hidden;
-                border-radius: 5px;
-                margin: 0 0 8px 8px;
-                /* Some Gutter */
-                background-color: #333;
-                color: white;
-                position: relative;
-            }
-
-            .masonry-brick:after {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 5000;
-                transform: translate(-50%, -50%);
-                counter-increment: brick;
-                content: counter(brick);
-                transition: font-size .25s, opacity .25s ease-in-out;
-                font-weight: 700;
-                opacity: .5;
-                font-size: 1.25em;
-            }
-
-            .masonry-brick:hover:after {
-                font-size: 2.25em;
-                opacity: 1;
-            }
-
-            .masonry-brick--h {
-                flex: auto;
-                height: 250px;
-                min-width: 150px;
-            }
 
 
 </style>
