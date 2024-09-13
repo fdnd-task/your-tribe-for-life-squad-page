@@ -45,7 +45,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2em 4em;
+    gap: 2em 8em;
   }
 
   li {
@@ -88,7 +88,7 @@
   /*  hover album cover*/
   .vinyl-cover:hover + .vinyl-record {
     transform: rotate(360deg);
-    left: 7em;
+    left: 6.5em;
   }
 
   /* unhover image */
