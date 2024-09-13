@@ -47,6 +47,7 @@ img {
     object-fit: cover;
     border-radius: 1em;
     filter: grayscale(100%);
+    max-width: 8em;
 }
 
 .div1 {
@@ -176,16 +177,16 @@ img {
     animation: fadeIn 1.25s;
 }
 .div2{
-    animation: fadeIn 2.25s;
+    animation: fadeIn 2.15s;
 }
 .div3{
-    animation: fadeIn 2s;
+    animation: fadeIn 1.55s;
 }
 .div4{
-    animation: fadeIn 3.3s;
+    animation: fadeIn 3.15s;
 }
 .div5{
-    animation: fadeIn 2.5s;
+    animation: fadeIn 2.3s;
 }
 
 /* Keyframes */
@@ -195,3 +196,5 @@ img {
     50% { opacity: 0.5;}
     100% { opacity: 1; }
   }
+
+  
