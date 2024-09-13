@@ -14,7 +14,7 @@
 // Variables
 	/** @type {import('./$types').PageData} */
 	export let data;
-
+	
 // JS and functions
 	const links = [
 		'/images/2D2A8708-B2FC-418D-967C-F21EC6D2E020_1_102_o.jpeg',
@@ -107,22 +107,9 @@ const imgSrcs = getRandomLinks(links, 5);
 		<!--Workspace Daan-->
 		<section class="card-section-layout">
 			<!--Random Cards for squadmembers component 5x-->
-			<div class="div1">
-				<!--Cardcomponent #1-->
-			</div>
-			<div class="div2">
-				<!--Cardcomponent #2-->
-			</div>
-			<div class="div3">
-				<!--Cardcomponent #3-->
-			</div>
-			<div class="div4">
-				<!--Cardcomponent #4-->
-			</div>
-			<div class="div5">
-				<!--Cardcomponent #5-->
-			</div>
-		</section>
+			{#each imgSrcs as imgSrc}
+			<CardComponent imgSrc={imgSrc}></CardComponent>
+		{/each}
 	</section>
 	
 	<!--Workspace Annelinde-->
