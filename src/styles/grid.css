@@ -1,11 +1,14 @@
+.meet-our-tribe {
+    display: flex;
+}
 .masonry {
     display: flex;
-    width: 100%;
+    width: 90%;
+    margin: 50px auto;
 }
 
 .masonry--h {
     flex-flow: row wrap;
-	margin-left: -8px;
     counter-reset: brick;
 }
 
@@ -19,7 +22,7 @@
                 position: relative;
             }
 
-            .masonry-brick:after {
+            /* .masonry-brick:after {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -31,17 +34,27 @@
                 font-weight: 700;
                 opacity: .5;
                 font-size: 1.25em;
-            }
+            } */
 
-            .masonry-brick:hover:after {
+            /* .masonry-brick:hover:after {
                 font-size: 2.25em;
                 opacity: 1;
-            }
+            } */
 
             .masonry-brick--h {
                 flex: auto;
-                height: 250px;
+                height: 400px;
                 min-width: 150px;
+                filter: grayscale(100%);
+                transition: filter 1s ease, transform 0.3s ease; /* Zachte overgang */
+                cursor: pointer;
+            }
+
+            .masonry-brick--h:hover {
+                transform: translateY(-15px); /* Laat de afbeelding omhoog bewegen bij hover */
+                box-shadow: -5px 0 100px rgba(255, 255, 255, 0.5); /* Witte schaduw */
+                filter: grayscale(0); /* Kleur terugbrengen bij hover */
+                scale: 1.02; /* Beetje vergroten bij hover */
             }
 
 			@media only screen and (min-width: 1024px) {
@@ -81,8 +94,12 @@
             }
 
             .masonry-img {
-                object-fit: cover;
+                object-position:50% 50%;
                 width: 100%;
                 height: 100%;
-                filter: brightness(50%);
             }
+
+            .color {
+                filter: grayscale(0);
+            }
+        
