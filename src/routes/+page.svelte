@@ -1,5 +1,6 @@
 <script>
- export let data
+      import {Icon} from '$lib'
+      export let data
 </script>
        
 <main>
@@ -14,6 +15,8 @@
     <li><p>Ons Team</p></li>
   </ul>
 </main>
+
+<Icon stroke="hotpink" />
 
 <style>
  ul {
