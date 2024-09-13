@@ -147,7 +147,7 @@ img {
         grid-template-columns: repeat(15, 1fr);
         grid-template-rows: repeat(16, 1fr);
         margin-top: 3.25em;
-        gap: 16px;
+        gap: 12px;
         width: 80%;
     }
     .div1 {
@@ -169,6 +169,34 @@ img {
 
 @media (min-width: 1440px){
 
+    .intro-section{
+        margin-top: 6em;
+    }
+    .intro-text{
+        max-width: 40vw;
+    }
+    .card-section-layout {
+        grid-template-rows: repeat(10, 1fr);
+    }
+    .div1 {
+        grid-area: 3 / 1 / 11 / 4;
+    }
+    .div2 {
+        grid-area: 2 / 4 / 10 / 7;
+    }
+    .div3 {
+        grid-area: 3 / 7 / 11 / 10;
+    }
+    .div4 {
+        grid-area: 2 / 10 / 10 / 13;
+    }
+    .div5 {
+        grid-area: 3 / 13 / 11 / 16;
+    }
+
+    img {
+        max-width: 100%;
+    }
 }
 
 /* Animation */ 
