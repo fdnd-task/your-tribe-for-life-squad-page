@@ -35,7 +35,7 @@ p {
     align-content: center;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(13, 1fr);
-    grid-gap: 12px;
+    gap: 1%;
     height: 55%;
     margin: 3em 1.25em 1.25em 1.25em;
     max-width: 90vw;
@@ -80,7 +80,6 @@ img {
         grid-template-columns: repeat(15, 1fr);
         grid-template-rows: repeat(16, 1fr);
         margin: 2em 1.25em 1.25em 1.25em;
-        grid-gap: 14px;
         height: 50vh;
         width: 100vw;
     }
@@ -115,7 +114,6 @@ img {
         grid-template-columns: repeat(15, 1fr);
         grid-template-rows: repeat(16, 1fr);
         margin-top: 3.25em;
-        gap: 16px;
         width: 80%;
     }
     .div1 {
@@ -147,7 +145,7 @@ img {
         grid-template-columns: repeat(15, 1fr);
         grid-template-rows: repeat(16, 1fr);
         margin-top: 3.25em;
-        gap: 12px;
+        gap: 1%;
         width: 80%;
     }
     .div1 {
