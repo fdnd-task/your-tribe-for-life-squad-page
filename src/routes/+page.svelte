@@ -68,19 +68,28 @@
   
 	// Functie om 5 willekeurige unieke links te kiezen
 	function getRandomLinks(arr, count) {
-		const selectedLinks = [];
-		while (selectedLinks.length < count) {
-		const randomIndex = Math.floor(Math.random() * arr.length);
-		const selectedLink = arr[randomIndex];
+    // Maak een lege array om de geselecteerde links in op te slaan
+    const selectedLinks = [];
+    
+    // Blijf doorgaan totdat we het gewenste aantal links hebben
+    while (selectedLinks.length < count) {
+        // Kies een willekeurige index uit de array
+        const randomIndex = Math.floor(Math.random() * arr.length);
+        // Haal de link op die bij die willekeurige index hoort
+        const selectedLink = arr[randomIndex];
 
-		if (!selectedLinks.includes(selectedLink)) {
-			selectedLinks.push(selectedLink);
-		}
-		}
-		return selectedLinks;
-	}
+        // Voeg de link toe aan de geselecteerde links als deze nog niet is toegevoegd
+        if (!selectedLinks.includes(selectedLink)) {
+            selectedLinks.push(selectedLink);
+        }
+    }
 
-	const imgSrcs = getRandomLinks(links, 5); // Haal 5 willekeurige links op
+    // Geef de array met geselecteerde links terug
+    return selectedLinks;
+}
+
+// Roep de functie aan om 5 willekeurige links te kiezen uit de 'links' array
+const imgSrcs = getRandomLinks(links, 5);
 </script>
     
     <main>
