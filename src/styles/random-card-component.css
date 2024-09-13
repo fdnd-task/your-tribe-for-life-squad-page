@@ -1,0 +1,13 @@
+.random-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+/* needs to be added so that the images look normal */
+.random-cards img {
+	object-fit: cover;
+	object-position: top ;
+}
+
