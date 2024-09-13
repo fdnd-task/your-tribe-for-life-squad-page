@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mainColor: #33293A;
+  --secondColor: #140A3D;
+  --envelopColor: #fdf3e2;
+
+  --fontColor: ;
+}
+
+body {
+  background-color: var(--mainColor);
+}

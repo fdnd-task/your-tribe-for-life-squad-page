@@ -22,6 +22,14 @@
     color: black;
     margin: 1rem;
     height: 24rem;
-    width: 24rem;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: white;
   }
 </style>

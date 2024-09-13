@@ -1,33 +1,65 @@
 <script>
-  import Package from '$lib/package/Package.svelte';
-	// export let data;
+  import Package from "$lib/package/Package.svelte";
+  // export let data;
 </script>
 
 <h1>FDND</h1>
 
-<Package 
+<main>
+  <Package
+    colors={{
+      topLeft: "#f2bd80",
+      topRight: "#f2bd80",
+      left: "#ad8455",
+      right: "#f5bf82",
+      front: "#e3b178",
+      back: "#ad8455",
+      border: "#c9a574",
+    }}
+    size={8}
+    rotation={{ x: "-10deg", y: "-15deg" }}
+    squad={"Squad C"}
+    href={"/squad-c"}
+  />
+
+  <Package
   colors={{
-    topLeft: "#f0d0a3",
-    topRight: "#f0d0a3",
-    left: "#7d6b52",
-    right: "#debd8e",
-    front: "#e3c496",
-    back: "#7d6b52",
+    topLeft: "#f2bd80",
+    topRight: "#f2bd80",
+    left: "#f5bf82",
+    right: "#ad8455",
+    front: "#e3b178",
+    back: "#ad8455",
     border: "#c9a574",
   }}
   size={8}
-  rotation={{x: "-10deg", y: "-15deg"}}
-  squad={"Squad C"} 
-  href={"/squad-c"}
-/>
-
-<Package size={6}
-rotation={{x: "-10deg", y: "15deg"}}
-squad={"Squad D"} href={"/squad-d"} />
+    rotation={{ x: "-10deg", y: "15deg" }}
+    squad={"Squad D"}
+    href={"/squad-d"}
+  />
+</main>
 
 <style>
   h1 {
-    margin-left: auto;
-    margin-right: auto;
-    }
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: white;
+    margin-top: 2rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+  }
 </style>
