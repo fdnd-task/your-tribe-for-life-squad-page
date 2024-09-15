@@ -98,15 +98,12 @@ const imgSrcs = getRandomLinks(links, 5);
 </script> 
 
 <main>
-	<!--Workspace Jason-->
 	<section class="intro-section">
 		<div class="intro-text">
 			<h1>Welcome to our Squadpage</h1>
 			<p>We are a group of students passionate about front-end development, exploring ways to broaden our skills and deepen our understanding of webdesign.</p>
 		</div>
-		<!--Workspace Daan-->
 		<section class="card-section-layout">
-			<!--Random Cards for squadmembers component 5x-->
 			{#each imgSrcs as imgSrc}
 			<CardComponent imgSrc={imgSrc}></CardComponent>
 		{/each}
