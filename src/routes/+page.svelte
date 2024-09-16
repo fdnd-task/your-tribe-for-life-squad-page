@@ -33,8 +33,6 @@
     </ul>
 </main>
 
-<Icon stroke="hotpink" />
-
 <style>
     ul {
         background-color: #000000;
