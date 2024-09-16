@@ -11,10 +11,12 @@
      {/each}
        <li><p>D</p></li>
        <li><p>C</p></li>
+       <li><p>E</p></li>
        <li><p>Ons Team</p></li>
        <li></li>
        <li></li>
-     </ul>
+       <li></li>
+      </ul>
    </main>
    
    <style>
@@ -24,7 +26,7 @@
      margin: 0;
      padding: 0;
      grid-template-columns: 1fr 1.2fr 0.9fr 1fr 2.9fr;
-     grid-template-rows: 1.7fr 0.3fr 1fr 1fr 1.5fr 3.5fr;
+     grid-template-rows: 1.7fr 2fr 1fr 2fr 3fr 3.5fr 3.1fr 3fr 5fr 3fr;
      grid-gap: 2px;
      grid-template-areas:
     "a  a  b  c  c"
@@ -47,7 +49,6 @@
       transition: .2s;
      }
    }
-   
          li:nth-of-type(1) {
                grid-area: a;
          }
@@ -124,7 +125,7 @@
          }
          li:nth-of-type(18) {
                grid-area: r;
-         }
+         }         
          li:nth-of-type(19) {
                grid-area: h;
                background-color: blue;
@@ -143,6 +144,7 @@
    @media (width < 28em) {
    ul{
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
          "a"
          "b"
@@ -168,4 +170,3 @@
          }
    }
    </style>
-   

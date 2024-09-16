@@ -4,18 +4,16 @@
        
 <main>
  <ul>
+  <li><p>D</p></li>
+  <li><p>C</p></li>
+  <li><p>E</p></li>
+  <li><p>Ons Team</p></li>
   {#each data.persons as person}
     <li>
      <p>{person.name}</p>
    </li>
   {/each}
-    <li><p>D</p></li>
-    <li><p>C</p></li>
-    <li><p>E</p></li>
-    <li><p>Ons Team</p></li>
-    <li></li>
-    <li></li>
-    <li></li>
+
   </ul>
 </main>
 
@@ -39,6 +37,7 @@
    "q  q  r  r  s"
    "t  t  u  u  s"
    "t  t  u  u  s"
+
 }
 li {
   background-color: white;
@@ -128,7 +127,7 @@ li {
             grid-area: r;
       }
       li:nth-of-type(19) {
-            grid-area: h;
+            grid-area: s;
             background-color: blue;
             color: white;
       }
@@ -140,14 +139,6 @@ li {
 
       li:nth-of-type(21) {
             grid-area: j;
-      }
-
-      li:nth-of-type(22) {
-            grid-area: v;
-      }
-
-      li:nth-of-type(23) {
-            grid-area: w;
       }
 
 @media (width < 28em) {
