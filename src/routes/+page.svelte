@@ -1,5 +1,4 @@
 <script>
-      import {Icon} from '$lib'
       export let data
 </script>
 
@@ -29,7 +28,11 @@
         {/each}
         <li><p>D</p></li>
         <li><p>C</p></li>
+        <li>E</li>
         <li><p>Ons Team</p></li>
+        <li></li>
+        <li></li>
+        <li></li>
     </ul>
 </main>
 
@@ -65,11 +68,11 @@
         align-items: center;
         padding: 10px;
         text-align: center;
-        transition: transform 0.2s ease;
-    }
 
-    li:hover {
-        transform: scale(1.1);
+          &:hover{
+            scale: 1.1;
+            transition: .25s;
+  }
     }
 
     p {
@@ -117,6 +120,7 @@
     li:nth-of-type(19) { grid-area: h; background-color: blue; color: white; }
     li:nth-of-type(20) { grid-area: l; background-color: red; color: white; }
     li:nth-of-type(21) { grid-area: j; }
+  
 
     @media (max-width: 28em) {
         ul {
