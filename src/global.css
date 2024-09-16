@@ -1,13 +1,16 @@
 :root {
-  --color-main-bg: #050542;
-  --color-main-text: #66E5BF;
+	--color-main-bg: #050542;
+	--color-main-text: #66e5bf;
+	--blueberry: #a675f5;
 }
 
-:root, html, body {
-  margin: 0;
-  padding: 0;
-  /* height: 100%; */
-  background-color: var(--color-main-bg);
-  line-height: 1.6;
-  font-size: 1.2rem;
+:root,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	/* height: 100%; */
+	background-color: var(--color-main-bg);
+	line-height: 1.6;
+	font-size: 1.2rem;
 }
