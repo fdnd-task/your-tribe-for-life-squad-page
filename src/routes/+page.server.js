@@ -1,5 +1,3 @@
-export let csr = false
- 
 export async function load() {
     try {
         //dit fetched data van een specifieke end point const response is een variable 
