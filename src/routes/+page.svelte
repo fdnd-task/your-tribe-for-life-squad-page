@@ -1,5 +1,4 @@
 <script>
-      import {Icon} from '$lib'
       export let data
 </script>
        
@@ -19,8 +18,6 @@
     <li></li>
   </ul>
 </main>
-
-<Icon stroke="hotpink" />
 
 <style>
  ul {
