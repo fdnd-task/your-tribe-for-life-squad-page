@@ -52,3 +52,89 @@ body {
 	background-color: #0B0C0C;
 	color: #FFFFFF;
 }
+
+/* Annelinde */
+
+.meet-our-team {
+    /* background-color: #111212; */
+	background-color: aquamarine;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.about-us{
+		margin: 10%;
+		width: 30%;
+	}
+
+	h3 {
+		font-size: 2em;
+	}
+
+	.about-us p {
+		text-align: left;
+		margin-top: 1em;
+		color: #444343;
+	}
+
+}
+
+ @media(min-width : 540px){
+	.meet-our-team {
+		/* background-color: #111212; */
+		background-color: aquamarine;
+		display: flex;
+		
+	
+		.about-us {
+			margin: 10em;
+		}
+	
+		h3 {
+			font-size: 2em;
+		}
+	
+		.about-us p {
+			text-align: left;
+			margin-top: 1em;
+			color: #444343;
+		}
+	
+	}
+} 
+
+/* .about-us {
+    flex: 1; 
+    max-width: 50%; 
+    padding-left: 50px; 
+	margin: 2em;
+	margin-top: 4em;
+}
+
+.about-us h3 {
+	padding-left: 50px;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.about-us p {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	margin-top: 0;
+}
+
+.our-team-cards {
+    flex: 1; 
+    max-width: 50%; 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.meet-our-tribe {
+	display: none;
+} */

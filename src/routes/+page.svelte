@@ -110,9 +110,10 @@ const imgSrcs = getRandomLinks(links, 5);
 	</section>
 	
 	<!--Workspace Annelinde-->
-	<section class="Meet our team">
+	<section class="meet-our-team">
 		<div class="about-us">
-			<!--H3-->
+			<h3>Meet our team</h3>
+			<p>Our team of frontend developers is a group of enthusiastic individuals focused on creating websites and apps that are both user-friendly and visually appealing. We work well together to ensure everything runs smoothly, looks great, and is easy for users to understand.</p>
 		</div>
 		<div class="our-team-cards">
 			<!--Our team card components 6x-->
@@ -162,3 +163,4 @@ const imgSrcs = getRandomLinks(links, 5);
 		</div>
 	</section>
  </main>
+ 
