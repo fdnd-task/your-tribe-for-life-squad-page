@@ -3,6 +3,7 @@
 // Stylesheets
 	import '../styles/grid.css';
   	import '../styles/random-card-component.css';
+	import '../styles/deail.css';
 
 	import '../styles/global.css'
 	import '../styles/intro-section.css'
@@ -10,6 +11,7 @@
 
 	// Components
 	import CardComponent from "$lib/card-component.svelte";
+	import Details from '$lib/Details.svelte';
 
 // Variables
 	/** @type {import('./$types').PageData} */
@@ -158,6 +160,17 @@ const imgSrcs = getRandomLinks(links, 5);
 				<figure class="masonry-brick masonry-brick--h color"><img src="/images/code.jpeg" class="masonry-img" alt="Squad member"></figure>
 				<figure class="masonry-brick masonry-brick--h color"><img src="/images/FDND.jpg" class="masonry-img" alt="Squad member"></figure>
 			</section>
+
+			{#if selectedPerson}
+				<div class="backdrop" on:click={close}>
+					<Details
+					{selectedPerson}
+					{close}
+					>
+				<p>pol</p>
+				</Details>
+				</div>
+			{/if}
 			
 		</div>
 	</section>
