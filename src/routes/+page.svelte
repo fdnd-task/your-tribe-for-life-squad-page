@@ -4,9 +4,6 @@
   </script>
   
   <main>
-
-    <a href="/Akiko">back</a>
-
     <section class="card">
       <article>
         <h1>Our team of experts</h1>

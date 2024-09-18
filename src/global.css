@@ -3,12 +3,13 @@
   --color-main-text: #66E5BF;
 }
 
-:root, html, body {
-  margin: 0;
-  padding: 0;
-  /* height: 100%; */
-  background-color: var(--color-main-bg);
-  line-height: 1.6;
-  font-size: 1.2rem;
-  font-family: 'Open Sans', sans-serif;
+:root,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-main-bg);
+	line-height: 1.6;
+	font-size: 1.2rem;
+	font-family: 'Open Sans', sans-serif;
 }
