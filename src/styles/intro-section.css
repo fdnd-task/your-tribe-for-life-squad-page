@@ -40,8 +40,10 @@ p {
     margin: 3em 1.25em 1.25em 1.25em;
     max-width: 90vw;
 
+
     img:nth-child(1) {
         grid-area: 1 / 1 / 7 / 4;
+        
     }
     img:nth-child(2) {
         grid-area: 1 / 7 / 7 / 10;
@@ -50,10 +52,11 @@ p {
         grid-area: 2 / 4 / 8 / 7;
     }
     img:nth-child(4) {
-        grid-area: 7 / 2 / 13 / 5;
+        grid-area: 5 / 2 / 11 / 5;
     }
     img:nth-child(5) {
-        grid-area: 7 / 6 / 13 / 9;
+        grid-area: 5 / 6 / 11 / 9;
+
     }
 
     img {
@@ -86,6 +89,8 @@ p {
 
         img:nth-child(1) {
             grid-area: 3 / 1 / 12 / 4;
+           
+
         }
         img:nth-child(2) {
             grid-area: 2 / 4 / 11 / 7;
@@ -122,6 +127,8 @@ p {
         }
         .div2 {
             grid-area: 2 / 4 / 12 / 7;
+            
+
         }
         .div3 {
             grid-area: 4 / 7 / 14 / 10;
@@ -180,6 +187,8 @@ p {
 
         img:nth-child(1) {
             grid-area: 3 / 1 / 11 / 4;
+            background-color:  red;
+
         }
         img:nth-child(2) {
             grid-area: 2 / 4 / 10 / 7;
