@@ -1,6 +1,19 @@
 <script>
     // betekent dat deze component of pagina verwacht dat de data vanuit +page.js meegegven wordt aan deze pagina
     export let data;
+
+    function getPersonLink(person) {
+      //mapping van elke persoon naar specifieke route
+      const personRoutes = {
+        'Eva': '/Eva',
+        'Rukiya': '/Rukiya',
+        'Akiko': '/Akiko',
+        'Zainab': '/Zainab',
+        'Lesley': '/Lesley'
+      };
+
+      return personRoutes[person.name] || '/';
+    }
   </script>
   
   <main>
@@ -17,8 +30,9 @@
         {#each data.persons as person, index}
             <!-- for elke persoon word er een image gerenderd in dit geval zijn het er 5 aan de hand van de specifieke filter -->
              <!-- squad__img is een generalisatie van class name voor de images squad__img--{index} en de index geeft de class een unieke nummer dat start van 0 -->
-          <img class="squad__img squad__img--{index}" src={person.avatar ? person.avatar : '/placeholder.jpg'} alt={`foto van ${person.name}`} />
-          
+            <a href={getPersonLink(person)} class="squad__link">
+              <img class="squad__img squad__img--{index}" src={person.avatar ? person.avatar : '/placeholder.jpg'} alt={`foto van ${person.name}`} />
+            </a> 
         <!--Met deze if statement heeft als index is of gelijk is aan de nummer zet dan deze de letter  -->
           {#if index === 0}<p class="squad__F">D</p>{/if}
           {#if index === 1}<p class="squad__D">F</p>{/if}
