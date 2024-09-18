@@ -16,6 +16,14 @@
 // Variables
 	/** @type {import('./$types').PageData} */
 	export let data;
+
+	let people = data.people.map(peep => ({ ...peep }));
+
+	console.log(people);
+	
+
+	
+	
 	
 // JS and functions
 	const links = [
@@ -64,6 +72,33 @@
 		{id:'',src:'/images/F7D4543D-945D-49F4-AE3B-FD77B8439ABD_4_5005_c.jpeg'},
 		{id:'',src:'/images/F78E4E64-3C6F-4B8B-AEAA-1D897BFD52D6_4_5005_c.jpeg'}
 	];
+
+		
+	let images = links.map((link,index) =>({
+		src: link.src,
+		alt: `image ${index + 1}`,
+		id: link.id
+	}))
+
+	let imgArr = images.map(function(each){
+		return each.src
+	})
+
+	export let selectedPerson = null;
+
+	function open(image){
+		selectedPerson = image;
+		console.log(selectedPerson);
+	}
+
+	function close(){
+		selectedPerson = null;
+		console.log(selectedPerson);
+	}
+	
+	
+	
+	
   
 	// Functie om 5 willekeurige unieke links te kiezen
 	function getRandomLinks(arr, count) {
@@ -84,10 +119,10 @@
     }
     // Geef de array met geselecteerde links terug
     return selectedLinks;
-}
+	}	
 
-// Roep de functie aan om 5 willekeurige links te kiezen uit de 'links' array
-const imgSrcs = getRandomLinks(links, 5);
+	// Roep de functie aan om 5 willekeurige links te kiezen uit de 'links' array
+	const imgSrcs = getRandomLinks(imgArr, 5);
 
 </script> 
 
@@ -99,7 +134,7 @@ const imgSrcs = getRandomLinks(links, 5);
 		</div>
 		<section class="card-section-layout">
 			{#each imgSrcs as imgSrc}
-			<CardComponent imgSrc={imgSrc}></CardComponent>
+			<CardComponent {imgSrc} ></CardComponent>
 		{/each}
 	</section>
 	
@@ -118,7 +153,8 @@ const imgSrcs = getRandomLinks(links, 5);
 		<!--H3-->
 		<div class="our-tribe-cards">
 			<!--Loop with card components & layout-->
-			<section class="masonry masonry--h">
+			<!-- <section class="masonry masonry--h">
+				
 				<figure class="masonry-brick masonry-brick--h"><img src="/images/2D2A8708-B2FC-418D-967C-F21EC6D2E020_1_102_o.jpeg" class="masonry-img" alt="Squad member"></figure>
 				<figure class="masonry-brick masonry-brick--h"><img src="/images/2DECD1CC-399D-4A2F-B33A-EE4D3A77E553_4_5005_c.jpeg" class="masonry-img" alt="Squad member"></figure>
 				<figure class="masonry-brick masonry-brick--h"><img src="/images/3A2FC855-6E30-4443-8D61-B047C7F560B7_4_5005_c.jpeg" class="masonry-img" alt="Squad member"></figure>
@@ -151,6 +187,28 @@ const imgSrcs = getRandomLinks(links, 5);
 				<figure class="masonry-brick masonry-brick--h"><img src="/images/D5FC597F-C385-409A-9D19-D74BDABA1998_4_5005_c.jpeg" class="masonry-img" alt="Squad member"></figure>
 				<figure class="masonry-brick masonry-brick--h color"><img src="/images/code.jpeg" class="masonry-img" alt="Squad member"></figure>
 				<figure class="masonry-brick masonry-brick--h color"><img src="/images/FDND.jpg" class="masonry-img" alt="Squad member"></figure>
+			</section> -->
+
+			<section class="masonry masonry--h">
+				
+				{#each images as image}
+					{#if people}
+					<figure class="masonry-brick masonry-brick--h" on:click={() => open(image)}>
+						<img src={image.src} class="masonry-img" alt="Squad member {image.alt}">
+					</figure>
+					{:else}
+					<figure class="masonry-brick masonry-brick--h" >
+						<p>missing</p>
+					</figure>
+					{/if}
+				{/each}
+
+				{#each [...people] as person,i}
+					<div>
+						{person.avatar} {person.name} {person.id} 
+					</div>
+				{/each}
+				
 			</section>
 
 			{#if selectedPerson}
@@ -167,3 +225,4 @@ const imgSrcs = getRandomLinks(links, 5);
 		</div>
 	</section>
  </main>
+
