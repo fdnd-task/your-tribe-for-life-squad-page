@@ -27,18 +27,18 @@
 	
 // JS and functions
 	const links = [
-		{id:'6',src:'/images/2D2A8708-B2FC-418D-967C-F21EC6D2E020_1_102_o.jpeg' },
-		{id:'',src:'/images/2DECD1CC-399D-4A2F-B33A-EE4D3A77E553_4_5005_c.jpeg'},
-		{id:'',src:'/images/3A2FC855-6E30-4443-8D61-B047C7F560B7_4_5005_c.jpeg'},
-		{id:'',src:'/images/3C72843E-F6EA-4D56-8CF1-57B1908D6AF3_4_5005_c.jpeg'},
-		{id:'',src:'/images/3DDFB72A-4A72-4CE3-8C0F-B49A706288A7_4_5005_c.jpeg'},
+		{id:'48',src:'/images/2D2A8708-B2FC-418D-967C-F21EC6D2E020_1_102_o.jpeg' },
+		{id:'16',src:'/images/2DECD1CC-399D-4A2F-B33A-EE4D3A77E553_4_5005_c.jpeg'},
+		{id:'8',src:'/images/3A2FC855-6E30-4443-8D61-B047C7F560B7_4_5005_c.jpeg'},
+		{id:'79',src:'/images/3C72843E-F6EA-4D56-8CF1-57B1908D6AF3_4_5005_c.jpeg'},
+		{id:'24',src:'/images/3DDFB72A-4A72-4CE3-8C0F-B49A706288A7_4_5005_c.jpeg'},
 		{id:'',src:'/images/3F855E52-F25D-4F60-8E87-A19164C4AE69_4_5005_c.jpeg'},
-		{id:'',src:'/images/4B7D6382-E2DD-4B8C-BACF-1CEF66F9A80F_4_5005_c.jpeg'},
-		{id:'',src:'/images/5AFFC06D-5A19-42E3-8365-869AD6D12A29_4_5005_c.jpeg'},
+		{id:'75',src:'/images/4B7D6382-E2DD-4B8C-BACF-1CEF66F9A80F_4_5005_c.jpeg'},
+		{id:'44',src:'/images/5AFFC06D-5A19-42E3-8365-869AD6D12A29_4_5005_c.jpeg'},
 		{id:'',src:'/images/6BED93D6-F18D-43B2-81E8-882FEB74D5F9_4_5005_c.jpeg'},
 		{id:'40',src:'/images/9D49B09C-E99B-4530-B236-B339662E239E_4_5005_c.jpeg'},
-		{id:'',src:'/images/39A2EE91-BCC8-4BC4-A7EE-E112140351ED_4_5005_c.jpeg'},
-		{id:'',src:'/images/52BE9285-B979-4425-9788-D715D008B7CA_4_5005_c.jpeg'},
+		{id:'55',src:'/images/39A2EE91-BCC8-4BC4-A7EE-E112140351ED_4_5005_c.jpeg'},
+		{id:'80',src:'/images/52BE9285-B979-4425-9788-D715D008B7CA_4_5005_c.jpeg'},
 		{id:'',src:'/images/61DD70EC-D800-4785-A1BD-ACC9275B65C6_4_5005_c.jpeg'},
 		{id:'',src:'/images/62BF8916-682D-460D-A5DD-A97E5678D070_4_5005_c.jpeg'},
 		{id:'',src:'/images/075AE7C0-642D-4BFD-AF7D-44E479F9E164_4_5005_c.jpeg'},
@@ -79,6 +79,8 @@
 		alt: `image ${index + 1}`,
 		id: link.id
 	}))
+
+	
 
 	let imgArr = images.map(function(each){
 		return each.src
@@ -205,7 +207,9 @@
 
 				{#each [...people] as person,i}
 					<div>
-						{person.avatar} {person.name} {person.id} 
+						<img src="{person.avatar}" alt="" width="100">
+						
+						{person.name} {person.id} 
 					</div>
 				{/each}
 				
