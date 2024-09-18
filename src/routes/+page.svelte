@@ -5,6 +5,7 @@
 
 	import '../styles/global.css';
 	import '../styles/intro-section.css';
+	import '../styles/meet-our-team.css'
 	import '../styles/fonts.css';
 	import '../styles/animation.css';
 
@@ -118,6 +119,28 @@
 			<div class="our-team-cards">
 				<!--Our team card components 6x-->
 			</div>
+		</section>
+
+		<!--Workspace Ellenoor-->
+		<section class="meet-our-team">
+			<div class="about-us">
+				<!--H3-->
+				<h3>Meet the team</h3>
+			</div>
+			<section class="our-team-cards">
+				<div class="card1 all-cards">
+				</div>
+				<div class="card2 all-cards">
+				</div>
+				<div class="card3 all-cards">
+				</div>
+				<div class="card4 all-cards">
+				</div>
+				<div class="card5 all-cards">
+				</div>
+				<div class="card6 all-cards">
+				</div>
+			</section>
 		</section>
 
 		<!--Workspace Tristan-->
