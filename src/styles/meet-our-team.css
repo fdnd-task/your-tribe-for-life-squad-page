@@ -1,0 +1,180 @@
+* {
+    transition: .5s;
+}
+
+.meet-our-team {
+    position: relative;
+    display: flex;
+    background-color: rgba(71, 71, 71, 0.319);
+    width: 100%;
+    height: 450px;
+    margin: 4em;
+}
+
+.our-team-cards {
+    display: flex;
+    padding-block: .5em;
+    perspective: 3000px;
+    margin-block: 3%;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-right: .5em;
+}
+
+.all-cards {
+    width: 150px;
+    height: 200px;
+    object-fit: fill;
+    transform: rotateY(-40deg);
+    background-size: cover;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 1);
+}
+
+.all-cards:not(:nth-of-type(1)) {
+    margin-inline-start: -6%;
+}
+
+.card1 {
+    background-image: url(./images/christopher.jpeg);
+}
+
+.card2 {
+    background-image: url(./images/daan.jpeg);
+    z-index: -1;
+}
+
+.card3 {
+    background-image: url(./images/jason.jpeg);
+    z-index: -2;
+}
+
+.card4 {
+    background-image: url(./images/ellenoor.jpeg);
+    z-index: -3;
+}
+
+.card5 {
+    background-image: url(./images/tristan.jpeg);
+    z-index: -4;
+}
+
+.card6 {
+    background-image: url(./images/annelinde.jpg);
+    z-index: -5;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50vw;
+    flex: 0 1 50vw;
+}
+
+
+@media only screen and (width > 900px) {
+
+    .all-cards {
+        width: 240px;
+        height: 240px;
+
+    }
+
+
+}
+
+
+
+@media screen and (width < 700px) {
+
+    .about-us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        flex: 0 1 50vw;
+    }
+
+    .our-team-cards {
+        display: flex;
+        padding-block: .5em;
+        perspective: 3000px;
+        height: fit-content;
+        width: 100%;
+        margin-block: 3%;
+        justify-content: center;
+    }
+
+
+    .meet-our-team {
+        width: 100%;
+        flex-direction: column;
+        height: 480px;
+    }
+
+
+    .all-cards {
+        width: 130px;
+        height: 200px;
+    }
+
+
+
+    .about-us {
+        width: 100%;
+    }
+
+    .all-cards:not(:nth-of-type(1)) {
+        margin-inline-start: -5%;
+    }
+
+}
+
+@media screen and (width < 500px) {
+    .about-us {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        flex: 0 1 50vw;
+    }
+
+    .our-team-cards {
+        display: block;
+        padding-block: .5em;
+        perspective: 3000px;
+        height: fit-content;
+        width: fit-content;
+        margin-block: 3%;
+        justify-content: center;
+    }
+
+    .meet-our-team {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all-cards {
+        width: 230px;
+        height: 250px;
+        object-fit: fill;
+        transform: rotateY(0deg);
+        background-size: cover;
+        top: 0;
+        left: 0;
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 1);
+        margin-bottom: 1em;
+    }
+
+    .all-cards:not(:nth-of-type(1)) {
+        margin-inline-start: 0;
+    }
+}
