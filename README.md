@@ -15,7 +15,7 @@ De opdracht was om een pagina te bouwen waarin alle klasgenoten (squadmembers zo
 ## 💻 Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 ### User story
-Als leerling wil ik informatie over mijn klasgenoten kunnen ophalen, en kunnen bekijken.
+Als leerling wil ik informatie over mijn klasgenoten kunnen ophalen, en kunnen bekijken met behulp van Svelte en Directus.
 
 ### Gebruik van de week planner
 Door op een leerling te klikken op de home pagina kun je zijn of haar gegevens zien.
