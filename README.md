@@ -1,38 +1,68 @@
-# create-svelte
+# Squadpage
+<img width="1800" alt="Scherm­afbeelding 2024-09-18 om 15 00 52" src="https://github.com/user-attachments/assets/df046e81-4800-4db1-970d-146bb4fb0c24">
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Inhoudsopgave
+  * [✏️ Beschrijving](#beschrijving)
+  * [💻 Gebruik](#gebruik)
+  * [🔎 Kenmerken](#kenmerken)
+  * [🔧 Installatie](#installatie)
+  * [🗝️ Licentie](#licentie)
 
-## Creating a project
+## ✏️ Beschrijving
+De opdracht was om een pagina te bouwen waarin alle klasgenoten (squadmembers zoals wij dat noemen) elkaar kunnen zien op de pagina en zo met elkaar contact kunnen houden. 
+<!-- Voeg een mooie poster visual toe 📸 -->
+<a href="https://your-tribe-for-life-squad-page-lake.vercel.app/" alt="link naar squad page">Bekijk hier de website</a>
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 💻 Gebruik
+<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+### User story
+Als leerling wil ik informatie over mijn klasgenoten kunnen ophalen, en kunnen bekijken.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Gebruik van de week planner
+Door op een leerling te klikken op de home pagina kun je zijn of haar gegevens zien.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## 🔎 Kenmerken
 
-## Developing
+### Ontwerp
+We hebben een rustig en overzichtelijk design gemaakt die ook compatibel is met mobile.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Features
 
-```bash
-npm run dev
+#### Responsive page
+Doormiddel van media queries is de pagina responsive en te gebruiken op elk scherm formaat!
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+#### Image optimalisatie (layout shifting)
+Ik heb de images een standaard width en height gegeven zodat dit layout shifting voorkomt.
 
-## Building
+### Random card component
+Aan het begin van de pagina is een component die elke keer als de site opnieuw ingeladen wordt 5 verschillende mensen laat zien.
 
-To create a production version of your app:
+#### Masonry grid
+De profiel kaarten worden weergegeven doormiddel van een masonry grid om de pagina zo een iets meer speels uiterlijk te geven, maar toch het simpele en strakke design aan te houden.
 
-```bash
-npm run build
-```
+#### Zwart wit naar kleur animatie
+Het ontwerp is zwart wit maar wanneer er over een kaart gehoverd wordt krijgt deze kleur.
 
-You can preview the production build with `npm run preview`.
+#### Stacked card component
+De makers van de site worden getoond via profiel kaarten die de ilusie wekken alsof ze op een stapel liggen.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+### Technieken
+- HTML
+- CSS
+- JS
+- EJS
+- Svelte
+
+### Tools
+- Visual studio code (code editor)
+- Vercel (hosting)
+- Figma (Design tool)
+
+## 🔧 Installatie
+<!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+1. Clone deze repository
+2. Open de repository met een code editor naar keuze
+3. Open het terminal in de code editor
+4. Typ **npm install** in om alle benodigdheden voor het project te installeren
+5. Gebruik de link <a href="http://localhost:5173/">http://localhost:8001/</a> om het project lokaal te bekijken
+6. Mocht je het project online bekijken dan kan dat via <a href="https://proof-of-concept-eqsl.onrender.com/" alt="ANWB Weekplanner Website">deze link.</a>
