@@ -1,19 +1,20 @@
-
 <script>
-// Stylesheets
+	// Stylesheets
 	import '../styles/grid.css';
   	import '../styles/random-card-component.css';
 	import '../styles/deail.css';
 
-	import '../styles/global.css'
-	import '../styles/intro-section.css'
-	import '../styles/fonts.css'
+	import '../styles/global.css';
+	import '../styles/intro-section.css';
+	import '../styles/meet-our-team.css'
+	import '../styles/fonts.css';
+	import '../styles/animation.css';
 
 	// Components
 	import CardComponent from "$lib/card-component.svelte";
 	import Details from '$lib/Details.svelte';
 
-// Variables
+	// Variables
 	/** @type {import('./$types').PageData} */
 	export let data;
 
@@ -119,35 +120,37 @@
   
 	// Functie om 5 willekeurige unieke links te kiezen
 	function getRandomLinks(arr, count) {
-    // Maak een lege array om de geselecteerde links in op te slaan
-    const selectedLinks = [];
-    
-    // Blijf doorgaan totdat we het gewenste aantal links hebben
-    while (selectedLinks.length < count) {
-        // Kies een willekeurige index uit de array
-        const randomIndex = Math.floor(Math.random() * arr.length);
-        // Haal de link op die bij die willekeurige index hoort
-        const selectedLink = arr[randomIndex];
+		// Maak een lege array om de geselecteerde links in op te slaan
+		const selectedLinks = [];
 
-        // Voeg de link toe aan de geselecteerde links als deze nog niet is toegevoegd
-        if (!selectedLinks.includes(selectedLink)) {
-            selectedLinks.push(selectedLink);
-        }
-    }
-    // Geef de array met geselecteerde links terug
-    return selectedLinks;
-	}	
+		// Blijf doorgaan totdat we het gewenste aantal links hebben
+		while (selectedLinks.length < count) {
+			// Kies een willekeurige index uit de array
+			const randomIndex = Math.floor(Math.random() * arr.length);
+			// Haal de link op die bij die willekeurige index hoort
+			const selectedLink = arr[randomIndex];
+
+			// Voeg de link toe aan de geselecteerde links als deze nog niet is toegevoegd
+			if (!selectedLinks.includes(selectedLink)) {
+				selectedLinks.push(selectedLink);
+			}
+		}
+		// Geef de array met geselecteerde links terug
+		return selectedLinks;
+	}
 
 	// Roep de functie aan om 5 willekeurige links te kiezen uit de 'links' array
 	const imgSrcs = getRandomLinks(imgArr, 5);
-
-</script> 
+</script>
 
 <main>
 	<section class="intro-section">
 		<div class="intro-text">
 			<h1>Welcome to our Squadpage</h1>
-			<p>We are a group of students passionate about front-end development, exploring ways to broaden our skills and deepen our understanding of webdesign.</p>
+			<p>
+				We are a group of students passionate about front-end development, exploring ways to broaden
+				our skills and deepen our understanding of webdesign.
+			</p>
 		</div>
 		<section class="card-section-layout">
 			{#each imgSrcs as imgSrc}
@@ -163,6 +166,28 @@
 		<div class="our-team-cards">
 			<!--Our team card components 6x-->
 		</div>
+	</section>
+
+	<!--Workspace Ellenoor-->
+	<section class="meet-our-team">
+		<div class="about-us">
+			<!--H3-->
+			<h3>Meet the team</h3>
+		</div>
+		<section class="our-team-cards">
+			<div class="card1 all-cards">
+			</div>
+			<div class="card2 all-cards">
+			</div>
+			<div class="card3 all-cards">
+			</div>
+			<div class="card4 all-cards">
+			</div>
+			<div class="card5 all-cards">
+			</div>
+			<div class="card6 all-cards">
+			</div>
+		</section>
 	</section>
     
       <!--Workspace Tristan-->
@@ -208,3 +233,4 @@
 	</section>
  </main>
 
+		
