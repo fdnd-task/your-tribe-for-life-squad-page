@@ -1,121 +1,232 @@
- <body> 
-	<!-- <a href="/">back</a>  -->
+<main>
+    <section class="card">
+        <a class="card__back" href="/">back</a>
+        <section class="title-section">
+            <div class="achtergrondblokje"></div>
+            <div class="div-title"><h1>Akiko Schermer</h1></div>
+        </section>
+  
+        <!-- Image -->
+        <img class="squad-img" src="https://avatars.githubusercontent.com/u/144008863?v=4" alt="Akiko Schermer" />
 
-	<div class="achtergrondblokje"></div>
-	<div><h1>AKIKO SCHERMER</h1></div>
+        <!-- About Me -->
+        <article>
+            <h2>About Me</h2>
+            <p>
+                Hi ik ben Akiko Schermer, 
+                ik woon in Amstelveen. Momenteel volg ik de studie is Front-end Development & Design. 
+            </p>
+        </article>
+  
+        <!-- Socials Section -->
+        <section class="card__container-socials">
+            <input type="checkbox" id="toggle" class="toggle-checkbox">
+            <div class="card__icons">
+                <label for="toggle" class="card__button-socials">Socials</label>
+                <a href="https://github.com/Akikosophia?tab=repositories">
+                    <img class="card__github-icon" src="/Github_icon.svg" alt="github icon">
+                </a>
+                <a href="/">
+                    <img class="card__mail-icon" src="/mail_icon.svg" alt="mail icon">
+                </a>
+            </div>
+        </section>
 
-	<!-- <img src="/favicon.png" class="student" alt="Akiko" /> -->
-
-	<!-- <article>
-		<h2>About me</h2>
-		<p class="text">
-			Hi, Ik ben Akiko Schermer, Ik woon in Amstelveen. Momenteel volg ik de studie Frontend-end
-			Development & Design
-		</p>
-	</article> -->
-<!-- 
-	<a href="/" class="socials"> Socials</a> -->
-</body>
+        <!-- Visit Card Link -->
+        <a class="card__visite-kaartjes" href="https://watch.wave.video/agAeeATkifLIS3Ff">Bekijk visite kaartjes</a>
+    </section>
+</main>
 
 <style>
-	:root {
-		--color-main-bg: #050542;
-		--color-main-text: #66e5bf;
-		--color-bg-block: #53b8a6;
-	}
-/* 
-	a {
-		color: var(--color-main-text);
-		text-decoration: none;
-		margin-top: 20px;
-        margin-left: 10px;
-	} */
+    :root {
+        --color-main-bg: #050542;
+        --color-main-text: #66e5bf;
+        --color-bg-block: #53b8a6;
+        --default-border-radius: 10px;
+    }
 
-	h1 {
-        font-family:'Koulen', sans-serif ;
-        font-weight: 500;
-        font-size: 1.5em;
-		text-align: center;
-        max-width: 100%;
-        word-wrap: break-word;
-        margin-top: 30px;
-	}
+    /* Main card layout */
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        border: 1px solid var(--color-main-text);
+        width: 450px;
+        height: 680px;
+        border-radius: 1em;
+        position: relative;
+        padding-top: 1rem;
+        gap: 1em;
+    }
 
-	div {
-		background-color: var(--color-main-text);
-		color: var(--color-main-bg);
-		width: 220px;
-		height: 48px;
-		position: relative;
-		z-index: 2;
-        margin-left: 40px;
-        margin-right: 40px;
+    /* Back link styling */
+    .card__back {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        text-decoration: none;
+        color: var(--color-bg-block);
+        font-size: 1rem;
+    }
+
+    /* Flexbox and layout for main content */
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;   
+        height: 100vh;          
+    }
+
+    /* Squad image */
+    .squad-img {
+        border-radius: 50%;
+        width: 30%;
+    }
+
+    /* Title section styles */
+    .title-section {
+        margin-top: 2rem; 
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Styling for the rotating background block */
+    .div-title {
+        background-color: var(--color-main-text);
+        color: var(--color-main-bg);
+        width: 220px;
+        height: 48px;
+        position: relative;
+        z-index: 2;
+        text-align: center;
         border-radius: 3px;
-	}
+    }
 
-	div.achtergrondblokje {
-		background-color: var(--color-bg-block);
-		color: var(--color-main-text);
-		width: 220px;
-		height: 45px;
-		position: absolute;
-		transform: rotate(-8deg);
-		z-index: 1;
-		top: 30px;/* top: 58px;   */
-        margin-left: 40px;
-        margin-right: 40px;
+    div.achtergrondblokje {
+        background-color: var(--color-bg-block);
+        width: 220px;
+        height: 55px;
+        position: absolute;
+        transform: rotate(-6deg);
+        z-index: 1;
+        top: 5px;
         border-radius: 3px;
-	}
-/* 
-	h2 {
-        font-family:'Koulen', sans-serif ;
+    }
+
+    h1 {
+        font-family: 'Koulen', sans-serif;
         font-weight: 500;
-		padding-left: 5px;
-		border-radius: 5px;
-		background-color: var(--color-main-text);
-		color: var(--color-main-bg);
-	}
+        text-align: center;
+        margin: 0;
+    }
 
-	article {
-		background: white;
-		border-radius: 5px;
-		height: 350px;
-        width: 280px;
-        margin-left: auto;
-		margin-right: auto;
-	}
+    /* Article styling */
+    article {
+        background-color: white;
+        font-size: 14px;
+        width: 300px;
+        height: auto;
+        border-radius: var(--default-border-radius);
+        padding-top: 0;
+        box-sizing: border-box;
+        margin-top: 0.5rem;
+        box-shadow: 3px -11px 0px 0px var(--blueberry);
+    }
 
-	p.text {
-        font-family:'Open Sans', sans-serif ;
-        font-weight: 600;
-        font-size: 1em;
-		color: var(--color-main-bg);
-		margin-left: 20px;
-		margin-right: 20px;
-	}
+    h2 {
+        padding-top: 0.25em;
+        background: var(--color-main-text);
+        margin: 0;
+        padding-left: 0.5em;
+        border-top-left-radius: var(--default-border-radius);
+        border-top-right-radius: var(--default-border-radius);
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
+    }
 
-	a.socials {
-		background-color: var(--color-main-text);
-		color: var(--color-main-bg);
-		width: 100px;
-		height: 25px;
-		border-radius: 5px;
-		text-align: center;
-	}
+    p {
+        margin: 1em;
+        padding-bottom: 0.5rem;
+    }
 
-	img {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
+    /* Socials container */
+    .card__container-socials {
+        display: flex;
+        margin: 1rem 0;
+        position: relative;
+        right: 4.1rem;
+    }
 
-	.student {
-		width: 100px;
-		height: 100px;
-		object-fit: cover;
-		border-radius: 50%;
-		margin-top: 1em;
-		margin-bottom: 1em;
-	} */
+    /* Button styling */
+    .card__button-socials {
+        border-radius: 0.4rem;
+        padding: 0 0.4rem;
+        background-color: #66E5BF;
+        border: none;
+        margin-right: 0.5rem;
+        cursor: pointer;
+        font-family: 'Koulen', sans-serif;
+    }
 
+    .card__button-socials:hover {
+        background-color: #4aa389;
+    }
+
+    /* Hidden checkbox for toggling social icons */
+    .toggle-checkbox {
+        display: none;
+    }
+
+    /* Grid for the social icons layout */
+    .card__icons {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+            "button-socials github-icon mail-icon";
+        align-items: center;
+        width: 100%;
+        position: relative;
+        gap: 1em;
+        left: 4.5rem;
+    }
+
+    .card__button-socials {
+        grid-area: button-socials;
+        margin-right: 120px; 
+    }
+
+    /* Icon placement */
+    .card__github-icon {
+        grid-area: github-icon;
+        width: 24px;
+        height: 24px;
+    }
+
+    .card__mail-icon {
+        grid-area: mail-icon;
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Visit Card Link */
+    .card__visite-kaartjes {
+        border-radius: 0.4rem;
+        padding: 0.4rem 0.8rem; /* Padding zodat het de button matched */
+        background-color: #66E5BF;
+        color: var(--color-main-bg);
+        text-decoration: none; /* verwijderen van underline */
+        font-family: 'Koulen', sans-serif;
+        display: inline-block; /* zorgt ervoor dat het als een button gedraagd */
+        transition: background-color 0.3s; /* Smooth transition */
+        width: 270px;
+        text-align: center;
+    }
+
+    .card__visite-kaartjes:hover {
+        background-color: #4aa389; /* donkere hover */
+    }
 </style>
