@@ -49,7 +49,6 @@ De makers van de site worden getoond via profiel kaarten die de ilusie wekken al
 - HTML
 - CSS
 - JS
-- EJS
 - Svelte
 
 ### Tools
