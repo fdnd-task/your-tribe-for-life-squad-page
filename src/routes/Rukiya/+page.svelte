@@ -1,181 +1,210 @@
-<script>
-    // export let data; 
-
-</script>
-
-<a href="/"> back </a>
 <main>
-    <section class="title-section">
+    <section class="card">
+        <a class="card__back" href="/">back</a>
+      <section class="title-section">
         <div class="achtergrondblokje"></div>
-        <div class="div-title"><h1>Akiko Schermer</h1></div>
-    </section>
-    <img class="img-card" src="/#" alt="Avatar image">
-    
-    <article>
-        <h2> about me</h2>
-        <p>
-            Hoi! Ik ben Zainab, 20 jaar en kom uit Amsterdam. 
-            Ik studeer momenteel Frontend Design & Development @ HvA.
-            In mijn vrije tijd speel ik voetbal, game ik en lees ik graag!
-        </p>
-
-    </article>
-
-
-
-<section class="container_socials">
-    <!-- Verborgen checkbox  -->
-    <input type="checkbox" id="toggle" class="toggle-checkbox">
-    
-    <label for="toggle" class="button-socials">Socials</label>
-    
-    <!-- De content die verborgen/zichtbaar moet worden -->
-    <div class="icons">
-        <a href="/">
-            <img src="/Github_icon.svg" alt="github icon">
-        </a>
-       <a href="/">
-        <img src="/mail_icon.svg" alt="mail icon">
-       </a>
-    </div>
-</section>
-</main>
-<style>
-    :root {
-		--color-main-bg: #050542;
-		--color-main-text: #66e5bf;
-		--color-bg-block: #53b8a6;
-
-        --default-border-radius:10px;
-	}
-
-/* TITLE */
-a {
-    text-decoration: none;
-    color: var(--color-bg-block);
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        <div class="div-title"><h1>Lesley Reynolds</h1></div>
+        
+      </section>
   
-}
+      <!-- Image -->
+      <img class="squad-img" src="https://avatars.githubusercontent.com/u/144009897?v=4" alt="Lesley Reynolds" />
 
-h1 {
-    font-family: 'Koulen', sans-serif;
-    font-weight: 500;
-    /* font-size: 28px; */
-    text-align: center;
-    max-width: 100%;
-    word-wrap: break-word;
-    margin:0;
-	}
+      <!-- About Me -->
+      <article>
+        <h2>About Me</h2>
+        <p>
+            Hoi! Ik ben Lesley, en ik kom uit Amsterdam. 
+            Ik studeer momenteel Frontend Design & Development @ HvA. 
+            Mijn hobbies zijn gamen, american football en experimenteren met code.
+        </p>
+      </article>
+  
+      <!-- Socials Section -->
+      <section class="card__container-socials">
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <div class="card__icons">
+        <label for="toggle" class="card__button-socials">Socials</label>
+          <a href="/">
+            <img class="card__github-icon" src="/Github_icon.svg" alt="github icon">
+          </a>
+          <a href="/">
+            <img class="card__mail-icon" src="/mail_icon.svg" alt="mail icon">
+          </a>
+        </div>
+      </section>
+    </section>
+  </main>
 
-    .title-section {
-        margin-bottom: 1rem;
+<!-- CSS -->
+<style>
+        :root {
+        --color-main-bg: #050542;
+        --color-main-text: #66e5bf;
+        --color-bg-block: #53b8a6;
+        --default-border-radius: 10px;
     }
 
-	.div-title {
-		background-color: var(--color-main-text);
-		color: var(--color-main-bg);
-		width: 220px;
-		height: 48px;
-		position: relative;
-		z-index: 2;
-        margin-left: 40px;
-        margin-right: 40px;
-        border-radius: 3px;
-	}
+    /* Main card layout */
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var(--color-main-text);
+        width: 450px;
+        border-radius: 1em;
+        position: relative;
+        padding-top: 1rem;
+        gap: 1em;
+    }
 
-	div.achtergrondblokje {
-		background-color: var(--color-bg-block);
-		color: var(--color-main-text);
-		width: 220px;
-		height: 55px;
-		position: absolute;
-		transform: rotate(-6deg);
-		z-index: 1;
-		top: 30px;/* top: 58px;   */
-        margin-left: 40px;
-        margin-right: 40px;
-        border-radius: 3px;
-	}
+    /* Back link styling */
+    .card__back {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        text-decoration: none;
+        color: var(--color-bg-block);
+        font-size: 1rem;
+    }
 
-    /* Image */
-    .img-card {
+    /* Flexbox and layout for main content */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Squad image */
+    .squad-img {
         border-radius: 50%;
+        width: 30%;
     }
 
-    /* ABOUT ME */
+    /* Title section styles */
+    .title-section {
+        margin-top: 2rem; 
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-article {
-  background-color: white;
-  font-size: 14px;
-  width: 300px; 
-  height: auto; 
-  border-radius: var(--default-border-radius);
-  padding-top: 0;
-  box-sizing: border-box; 
-  margin-top: 0.5rem;
-  box-shadow: 3px -11px 0px 0px var(--blueberry);
-}
+    /* Styling for the rotating background block */
+    .div-title {
+        background-color: var(--color-main-text);
+        color: var(--color-main-bg);
+        width: 220px;
+        height: 48px;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        border-radius: 3px;
+    }
 
-h2 {
-    padding-top: 0.25em;
-    background: var(--color-main-text);
-    margin: 0;
-    padding-left: 0.5em;
-    /* border-radius */
-    border-top-left-radius: var(--default-border-radius);
-    border-top-right-radius: var(--default-border-radius);
-    /* font */
-    font-family:'Koulen', sans-serif ;
-    font-weight: 400;
-}
+    div.achtergrondblokje {
+        background-color: var(--color-bg-block);
+        width: 220px;
+        height: 55px;
+        position: absolute;
+        transform: rotate(-6deg);
+        z-index: 1;
+        top: 5px;
+        border-radius: 3px;
+    }
 
-p {
-    margin: 1em;
-    padding-bottom: 0.5rem;
-    
-}
-    /* SOCIALS BUTTON */
+    h1 {
+        font-family: 'Koulen', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        margin: 0;
+    }
 
-    .container_socials {
+    /* Article styling */
+    article {
+        background-color: white;
+        font-size: 14px;
+        width: 300px;
+        height: auto;
+        border-radius: var(--default-border-radius);
+        padding-top: 0;
+        box-sizing: border-box;
+        margin-top: 0.5rem;
+        box-shadow: 3px -11px 0px 0px var(--blueberry);
+    }
+
+    h2 {
+        padding-top: 0.25em;
+        background: var(--color-main-text);
+        margin: 0;
+        padding-left: 0.5em;
+        border-top-left-radius: var(--default-border-radius);
+        border-top-right-radius: var(--default-border-radius);
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
+    }
+
+    p {
+        margin: 1em;
+        padding-bottom: 0.5rem;
+    }
+
+    /* Socials container */
+    .card__container-socials {
         display: flex;
         margin: 1rem 0;
         position: relative;
         right: 4.1rem;
-       
     }
 
-    .button-socials {
+    /* Button styling */
+    .card__button-socials {
         border-radius: 0.4rem;
-        padding:0 0.4rem;
+        padding: 0 0.4rem;
         background-color: #66E5BF;
         border: none;
         margin-right: 0.5rem;
-        display: inline;
         cursor: pointer;
-        font-family:'Koulen', sans-serif ;
+        font-family: 'Koulen', sans-serif;
     }
 
-    .button-socials:hover {
+    .card__button-socials:hover {
         background-color: #4aa389;
     }
-    
-    /* Verberg de checkbox zelf */
+
+    /* Hidden checkbox for toggling social icons */
     .toggle-checkbox {
         display: none;
     }
 
-    /* Verberg standaard de icons */
-    .icons {
-        display: none;
+    /* Grid for the social icons layout */
+    .card__icons {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+            "button-socials github-icon mail-icon";
+        align-items: center;
+        width: 100%;
+        position: relative;
+        gap: 1em;
+        left: 4rem;
     }
 
-    /* laat de icons zien wanneer de button (checkbox)is gelkikt  */
-    .toggle-checkbox:checked + .button-socials + .icons {
-        display: block;
+    .card__button-socials {
+        grid-area: button-socials;
+        margin-right: 120px; 
+    }
+
+    /* Icon placement */
+    .card__github-icon {
+        grid-area: github-icon;
+        width: 24px;
+        height: 24px;
+    }
+
+    .card__mail-icon {
+        grid-area: mail-icon;
+        width: 24px;
+        height: 24px;
     }
 </style>

@@ -1,167 +1,212 @@
-<svelte:head>
-    <link rel="stylesheet" href="/css/global.css">
-</svelte:head>
-
-<script>
-    export let data;
-
-    let lesley = '/assets/Lesley.JPG';
-    let zainab = '/assets/Zainab.JPG';
-    let rukiya = '/assets/Rukiya.JPG';
-    let eva = '/assets/Eva.JPG';
-    let akiko = '/assets/Akiko.JPG';
-</script>
-
 <main>
     <section class="card">
-        <article>
-            <h1>Our team of experts</h1>  
-            <p>Wij zijn enthousiaste studenten die de opleiding FDND 
-                (Front-end Design & Development) volgen aan de HvA 
-                (Hogeschool van Amsterdam).</p>
-        </article>
-
-        <section class="squad">
-            <img class="squad__lesley" src={lesley} alt="foto van lesley."/>
-            <p class="squad__F">D</p>
-            <img class="squad__zainab" src={zainab} alt="foto van zainab."/>
-            <p class="squad__D">F</p>
-            <img class="squad__rukiya" src={rukiya} alt="foto van rukiya."/>
-            <p class="squad__N">N</p>
-            <img class="squad__eva" src={eva} alt="foto van eva."/>
-            <p class="squad__D">D</p>
-            <img class="squad__akiko" src={akiko} alt="foto van akiko."/>
+        <a class="card__back" href="/">back</a>
+        <section class="border"></section>
+        <section class="title-section">
+            <div class="achtergrondblokje"></div>
+            <div class="div-title"><h1>Lesley Reynolds</h1></div>
         </section>
+  
+        <!-- Image -->
+        <img class="squad-img" src="https://avatars.githubusercontent.com/u/144009897?v=4" alt="Lesley Reynolds" />
 
-        <footer>
-            <p>© Lesley, Akiko, Rukiya, Zainab & Eef</p>
-        </footer>
+        <!-- About Me -->
+        <article>
+            <h2>About Me</h2>
+            <p>
+                Hoi! Ik ben Lesley, en ik kom uit Amsterdam. 
+                Ik studeer momenteel Frontend Design & Development @ HvA. 
+                Mijn hobbies zijn gamen, american football en experimenteren met code.
+            </p>
+        </article>
+  
+        <!-- Socials Section -->
+        <section class="card__container-socials">
+            <input type="checkbox" id="toggle" class="toggle-checkbox">
+            <div class="card__icons">
+                <label for="toggle" class="card__button-socials">Socials</label>
+                <a href="/">
+                    <img class="card__github-icon" src="/Github_icon.svg" alt="github icon">
+                </a>
+                <a href="/">
+                    <img class="card__mail-icon" src="/mail_icon.svg" alt="mail icon">
+                </a>
+            </div>
+        </section>
+    </section>
 </main>
 
-
-<ul>
-    {#each data.persons as person}
-      <li>
-        <strong>{person.name} {person.prefix} {person.surname}</strong>
-        
-        <!-- Check if avatar exists, else use a placeholder -->
-        <img
-          class="main__card--background"
-          src={person.avatar && person.avatar !== '' ? person.avatar : 'assets/placeholder.jpg'}
-          on:error="{() => this.src = 'assets/placeholder.jpg'}"
-          alt="{person.name}"
-        />
-      </li>
-    {/each}
-  </ul>
-
-
-
 <style>
-    /*mobile first Small Devices (Phones, Portrait Tablets)
-    30em = 480px */
-    main {
-        display: flex;
-        justify-content: center; 
-        align-items: center;     
-        height: 100vh;     
+    :root {
+        --color-main-bg: #050542;
+        --color-main-text: #66e5bf;
+        --color-bg-block: #53b8a6;
+        --default-border-radius: 10px;
     }
 
+    /* Main card layout */
     .card {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center; 
+        align-items: center; 
         border: 1px solid var(--color-main-text);
-        width: 500px;
+        width: 450px;
         border-radius: 1em;
+        position: relative;
+        padding-top: 1rem;
+        gap: 1em;
     }
 
-    article {
-        line-height: 1.2;
-        width: 450px;
+    /* Back link styling */
+    .card__back {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        text-decoration: none;
+        color: var(--color-bg-block);
+        font-size: 1rem;
+    }
+
+    /* Flexbox and layout for main content */
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;   
+        height: 100vh;          
+    }
+
+    /* Squad image */
+    .squad-img {
+        border-radius: 50%;
+        width: 30%;
+    }
+
+    /* Title section styles */
+    .title-section {
+        margin-top: 2rem; 
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Styling for the rotating background block */
+    .div-title {
+        background-color: var(--color-main-text);
+        color: var(--color-main-bg);
+        width: 220px;
+        height: 48px;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        border-radius: 3px;
+    }
+
+    div.achtergrondblokje {
+        background-color: var(--color-bg-block);
+        width: 220px;
+        height: 55px;
+        position: absolute;
+        transform: rotate(-6deg);
+        z-index: 1;
+        top: 5px;
+        border-radius: 3px;
     }
 
     h1 {
-        color: var(--color-main-bg);
-        background-color: var(--color-main-text);
-        border-radius: 0.2em;
-        width: 250px;
+        font-family: 'Koulen', sans-serif;
+        font-weight: 500;
         text-align: center;
-        padding: 2px;
+        margin: 0;
+    }
+
+    /* Article styling */
+    article {
+        background-color: white;
+        font-size: 14px;
+        width: 300px;
+        height: auto;
+        border-radius: var(--default-border-radius);
+        padding-top: 0;
+        box-sizing: border-box;
+        margin-top: 0.5rem;
+        box-shadow: 3px -11px 0px 0px var(--blueberry);
+    }
+
+    h2 {
+        padding-top: 0.25em;
+        background: var(--color-main-text);
+        margin: 0;
+        padding-left: 0.5em;
+        border-top-left-radius: var(--default-border-radius);
+        border-top-right-radius: var(--default-border-radius);
+        font-family: 'Koulen', sans-serif;
+        font-weight: 400;
     }
 
     p {
-        color: var(--color-main-text); 
+        margin: 1em;
+        padding-bottom: 0.5rem;
     }
 
-    .squad	{
-        /* padding: 10px; */
+    /* Socials container */
+    .card__container-socials {
+        display: flex;
+        margin: 1rem 0;
+        position: relative;
+        right: 4.1rem;
+    }
+
+    /* Button styling */
+    .card__button-socials {
+        border-radius: 0.4rem;
+        padding: 0 0.4rem;
+        background-color: #66E5BF;
+        border: none;
+        margin-right: 0.5rem;
+        cursor: pointer;
+        font-family: 'Koulen', sans-serif;
+    }
+
+    .card__button-socials:hover {
+        background-color: #4aa389;
+    }
+
+    /* Hidden checkbox for toggling social icons */
+    .toggle-checkbox {
+        display: none;
+    }
+
+    /* Grid for the social icons layout */
+    .card__icons {
         display: grid;
-        grid-template-columns: repeat(3, 0.5fr);
-        grid-template-rows: repeat(3, 170px);
+        grid-template-columns: auto auto auto;
         grid-template-areas: 
-        "squad__lesley squad__F squad__zainab"
-        "squad__D squad__rukiya squad__N"
-        "squad__eva squad__D squad__akiko"
-        ;
-        justify-content: space-between;
+            "button-socials github-icon mail-icon";
         align-items: center;
-        justify-items: center;
-        font-size: 1.5rem;
-        font-family: "Nerko One", cursive;
-        font-weight: bold;
-        font-style: normal;
-        width: 450px;
-        border: 1px var(--color-main-text) solid;
-    }
-
-    img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        position: relative;
+        gap: 1em;
+        left: 4rem;
     }
 
-    footer {
-        width: 450px;
+    .card__button-socials {
+        grid-area: button-socials;
+        margin-right: 120px; 
     }
 
-    /* Medium Devices (Tablets, Small Desktops) 48em = 992px */
-    @media (min-width: 48em) {
-        section	{
-        display: grid;
-        grid-template-columns: repeat(3, 0.5fr);
-        grid-template-rows: repeat(3, 170px);
-        grid-template-areas: 
-        "squad__lesley squad__F squad__zainab"
-        "squad__D squad__rukiya squad__N"
-        "squad__eva squad__D squad__akiko"
-        ;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-    }
+    /* Icon placement */
+    .card__github-icon {
+        grid-area: github-icon;
+        width: 24px;
+        height: 24px;
     }
 
-    /* Extra Large Devices (Large Desktops, Monitors) 75em = 1200px*/
-    @media (min-width: 75em) {
-        section	{
-        display: grid;
-        grid-template-columns: repeat(3, 0.5fr);
-        grid-template-rows: repeat(3, 170px);
-        grid-template-areas: 
-        "squad__lesley squad__F squad__zainab"
-        "squad__D squad__rukiya squad__N"
-        "squad__eva squad__D squad__akiko"
-        ;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
+    .card__mail-icon {
+        grid-area: mail-icon;
+        width: 24px;
+        height: 24px;
     }
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
-    }
-
-    </style>
+</style>
