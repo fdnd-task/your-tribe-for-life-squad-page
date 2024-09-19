@@ -6,7 +6,6 @@
   * [💻 Gebruik](#gebruik)
   * [🔎 Kenmerken](#kenmerken)
   * [🔧 Installatie](#installatie)
-  * [🗝️ Licentie](#licentie)
 
 ## ✏️ Beschrijving
 De opdracht was om een pagina te bouwen waarin alle klasgenoten (squadmembers zoals wij dat noemen) elkaar kunnen zien op de pagina en zo met elkaar contact kunnen houden. 
