@@ -3,7 +3,18 @@
 	position: fixed;
 	inset: 0;
 	color: rgb(169, 44, 44);
-	background-color: beige;
+	background-color: rgba(245, 245, 220, 0.229);
+	backdrop-filter: blur(10px);
 	
 }
+
+.modal{
+	/* position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: black; */
+	/* padding-inline: 10%;
+	padding-block: 10%; */
+}
+
 
