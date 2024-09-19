@@ -1,7 +1,6 @@
 <main>
     <section class="card">
         <a class="card__back" href="/">back</a>
-        <section class="border"></section>
         <section class="title-section">
             <div class="achtergrondblokje"></div>
             <div class="div-title"><h1>Lesley Reynolds</h1></div>
@@ -33,6 +32,9 @@
                 </a>
             </div>
         </section>
+
+        <!-- Visit Card Link -->
+        <a class="card__visite-kaartjes" href="">Bekijk visite kaartjes</a>
     </section>
 </main>
 
@@ -52,6 +54,7 @@
         align-items: center; 
         border: 1px solid var(--color-main-text);
         width: 450px;
+        height: 680px;
         border-radius: 1em;
         position: relative;
         padding-top: 1rem;
@@ -182,14 +185,14 @@
     /* Grid for the social icons layout */
     .card__icons {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto auto;
         grid-template-areas: 
             "button-socials github-icon mail-icon";
         align-items: center;
         width: 100%;
         position: relative;
         gap: 1em;
-        left: 4rem;
+        left: 4.5rem;
     }
 
     .card__button-socials {
@@ -208,5 +211,23 @@
         grid-area: mail-icon;
         width: 24px;
         height: 24px;
+    }
+
+    /* Visit Card Link */
+    .card__visite-kaartjes {
+        border-radius: 0.4rem;
+        padding: 0.4rem 0.8rem; /* Padding zodat het de button matched */
+        background-color: #66E5BF;
+        color: var(--color-main-bg);
+        text-decoration: none; /* verwijderen van underline */
+        font-family: 'Koulen', sans-serif;
+        display: inline-block; /* zorgt ervoor dat het als een button gedraagd */
+        transition: background-color 0.3s; /* Smooth transition */
+        width: 270px;
+        text-align: center;
+    }
+
+    .card__visite-kaartjes:hover {
+        background-color: #4aa389; /* donkere hover */
     }
 </style>
