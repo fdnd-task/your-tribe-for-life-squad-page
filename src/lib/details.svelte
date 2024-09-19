@@ -4,37 +4,33 @@
 
 export	let selectedPerson
 export	let close
-export let person;
 	
 </script>
 
 <div class="modal" >
-	<p>{selectedPerson.alt}</p>
-	<p>{selectedPerson.id}</p>
-
 
 	<button on:click={close}>Close</button>
 
 	<section>
-		<article class="p_info">
-			<ul>
-				<!-- <li class="name">{person.name} {person.surname}</li>
-				<li>squad_id :{person.squad_id}</li>
-				<li>fun fact {person.bio}</li> -->
-			</ul>
-		</article>
 		<article class="p_img">
 			<!-- <h1>Details img</h1> -->
 			<img src="{selectedPerson.src}" alt="{selectedPerson.alt}-{selectedPerson.id}">
 
 		</article>
-		<article class="p_frame">
-			<div>
-				<!-- <p>iframe github or other</p> -->
-				<!-- <a href={person.website}>
+
+		<article >
+			<ul class="p_info">
+				<li class="name">{selectedPerson.name} {selectedPerson.surname}</li>
+				<li>squad_id :{selectedPerson.squad_id}</li>
+				<li>fun fact {selectedPerson.bio}</li>
+			</ul>
+
+			<div class="p_frame">
+				<p>iframe github or other</p>
+				<a href={selectedPerson.website}>
 					website
-					<iframe src={person.website}  frameborder="0"></iframe>
-				</a> -->
+					<iframe src={selectedPerson.website}  frameborder="0"></iframe>
+				</a>
 
 			</div>
 		</article>
@@ -52,7 +48,7 @@ section{
 	
 		article{
 			flex: 1;
-			/* outline: solid; */
+			outline: solid;
 		}
 	
 		.p_info ul{
