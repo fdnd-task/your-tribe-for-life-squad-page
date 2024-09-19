@@ -7,12 +7,33 @@
       'Rukiya': '/Rukiya',
       'Akiko': '/Akiko',
       'Zainab': '/Zainab',
-      'lesley': '/Lesley'
+      'Lesley': '/Lesley'
     };
-
-    //This was a debug to see in the terminal if the routes where beeing correctly passed through
-    // console.log(`Person Name: ${person.name}, Route: ${personRoutes[person.name]}`);
     return personRoutes[person.name] || '/';
+  }
+
+  function handleClick(person, event) {
+    event.preventDefault(); // Prevent default link navigation
+
+    const allImages = document.querySelectorAll('.squad__img');
+    
+    // Fade out all images
+    allImages.forEach(img => {
+      img.style.opacity = 0;
+    });
+
+    // Wait for the fade out to complete (500ms), then change image source and fade in
+    setTimeout(() => {
+      allImages.forEach(img => {
+        img.src = person.avatar ? person.avatar : '/placeholder.jpg'; // Set all images to clicked person's avatar
+        img.style.opacity = 1; // Fade them back in
+      });
+    }, 500);
+
+    // Wait longer before navigating to the person's page
+    setTimeout(() => {
+      window.location.href = getPersonLink(person);
+    }, 1000); // 1000ms total for the full effect
   }
 </script>
 
@@ -28,9 +49,8 @@
     <!-- grid section -->
     <section class="squad">
       {#each data.persons as person, index}
-        <a href={getPersonLink(person)} class="squad__link">
+        <a href={getPersonLink(person)} class="squad__link" on:click={(event) => handleClick(person, event)}>
           <img class="squad__img squad__img--{index}" src={person.avatar ? person.avatar : '/placeholder.jpg'} alt={`foto van ${person.name}`} />
-          <!-- <span>{getPersonLink(person)}</span>  "This was to debug to see what the link is that is beeing used"-->
         </a>
         {#if index === 0}<p class="squad__F">D</p>{/if}
         {#if index === 1}<p class="squad__D">F</p>{/if}
@@ -69,12 +89,12 @@
 
   h1 {
     color: var(--color-main-bg);
-      background-color: var(--color-main-text);
-      border-radius: 0.2em;
-      width: 300px;
-      height: 40px;
-      text-align: center;
-      padding: 2px;
+    background-color: var(--color-main-text);
+    border-radius: 0.2em;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    padding: 2px;
   }
 
   p {
@@ -100,19 +120,19 @@
     border: 1px var(--color-main-text) solid;
   }
 
-  /* Ensure the anchor tag behaves like a block element and spans the full grid area */
   .squad__link {
     display: block;
     width: 100%;
     height: 100%;
   }
 
-  /* Ensure the image fits the anchor without breaking the layout */
   .squad__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block; /* Ensures the image takes up the space */
+    display: block;
+    transition: opacity 500ms ease-in-out;
+    opacity: 1;
   }
 
   footer {
