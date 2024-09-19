@@ -24,7 +24,7 @@
             <input type="checkbox" id="toggle" class="toggle-checkbox">
             <div class="card__icons">
                 <label for="toggle" class="card__button-socials">Socials</label>
-                <a href="/">
+                <a href="https://github.com/OniWithTheHoodie">
                     <img class="card__github-icon" src="/Github_icon.svg" alt="github icon">
                 </a>
                 <a href="/">
@@ -34,7 +34,7 @@
         </section>
 
         <!-- Visit Card Link -->
-        <a class="card__visite-kaartjes" href="">Bekijk visite kaartjes</a>
+        <a class="card__visite-kaartjes" href="/overzichtProfile">Bekijk visite kaartjes</a>
     </section>
 </main>
 
