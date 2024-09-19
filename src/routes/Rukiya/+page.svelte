@@ -3,20 +3,20 @@
         <a class="card__back" href="/">back</a>
       <section class="title-section">
         <div class="achtergrondblokje"></div>
-        <div class="div-title"><h1>Lesley Reynolds</h1></div>
+        <div class="div-title"><h1> Rukiya Tossou </h1></div>
         
       </section>
   
       <!-- Image -->
-      <img class="squad-img" src="https://avatars.githubusercontent.com/u/144009897?v=4" alt="Lesley Reynolds" />
+      <img class="squad-img" src="https://avatars.githubusercontent.com/u/114156045?v=4" alt="Rukiya Tossou" />
 
       <!-- About Me -->
       <article>
         <h2>About Me</h2>
         <p>
-            Hoi! Ik ben Lesley, en ik kom uit Amsterdam. 
-            Ik studeer momenteel Frontend Design & Development @ HvA. 
-            Mijn hobbies zijn gamen, american football en experimenteren met code.
+            Hi ik ben Rukiya(21), ik woon in Amsterdam. 
+            Mijn studie is momenteel Front-end Development & Design.
+             Verder  luister ik vaak naar muziek en speel ik graag piano.  
         </p>
       </article>
   
@@ -25,7 +25,7 @@
         <input type="checkbox" id="toggle" class="toggle-checkbox">
         <div class="card__icons">
         <label for="toggle" class="card__button-socials">Socials</label>
-          <a href="/">
+          <a href="https://github.com/RukiyaTossou">
             <img class="card__github-icon" src="/Github_icon.svg" alt="github icon">
           </a>
           <a href="/">
@@ -33,6 +33,9 @@
           </a>
         </div>
       </section>
+      
+        <!-- Visit Card Link -->
+        <a class="card__visite-kaartjes" href="/#">Bekijk visite kaartjes</a>
     </section>
   </main>
 
@@ -206,5 +209,23 @@
         grid-area: mail-icon;
         width: 24px;
         height: 24px;
+    }
+    /* Visit Card Link */
+    .card__visite-kaartjes {
+        border-radius: 0.4rem;
+        padding: 0.4rem 0.8rem; /* Padding zodat het de button matched */
+        background-color: #66E5BF;
+        color: var(--color-main-bg);
+        text-decoration: none; /* verwijderen van underline */
+        font-family: 'Koulen', sans-serif;
+        display: inline-block; /* zorgt ervoor dat het als een button gedraagd */
+        transition: background-color 0.3s; /* Smooth transition */
+        width: 270px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .card__visite-kaartjes:hover {
+        background-color: #4aa389; /* donkere hover */
     }
 </style>
