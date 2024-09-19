@@ -3,13 +3,15 @@
 
   function getPersonLink(person) {
     const personRoutes = {
-      'Eva': '/Eva',
+      'Eef': '/Eva',
       'Rukiya': '/Rukiya',
       'Akiko': '/Akiko',
       'Zainab': '/Zainab',
-      'Lesley': '/Lesley'
+      'lesley': '/Lesley'
     };
 
+    //This was a debug to see in the terminal if the routes where beeing correctly passed through
+    // console.log(`Person Name: ${person.name}, Route: ${personRoutes[person.name]}`);
     return personRoutes[person.name] || '/';
   }
 </script>
@@ -28,6 +30,7 @@
       {#each data.persons as person, index}
         <a href={getPersonLink(person)} class="squad__link">
           <img class="squad__img squad__img--{index}" src={person.avatar ? person.avatar : '/placeholder.jpg'} alt={`foto van ${person.name}`} />
+          <!-- <span>{getPersonLink(person)}</span>  "This was to debug to see what the link is that is beeing used"-->
         </a>
         {#if index === 0}<p class="squad__F">D</p>{/if}
         {#if index === 1}<p class="squad__D">F</p>{/if}
