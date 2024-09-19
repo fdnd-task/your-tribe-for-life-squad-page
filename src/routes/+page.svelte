@@ -13,7 +13,7 @@
   }
 
   function handleClick(person, event) {
-    event.preventDefault(); // Prevent default link navigation
+    event.preventDefault(); // Prevent default link navigatie hehe
 
     const allImages = document.querySelectorAll('.squad__img');
     
@@ -22,18 +22,18 @@
       img.style.opacity = 0;
     });
 
-    // Wait for the fade out to complete (500ms), then change image source and fade in
+    // Wacht voor de fadeout om te completen, en fade dan de nieuwe image in
     setTimeout(() => {
       allImages.forEach(img => {
         img.src = person.avatar ? person.avatar : '/placeholder.jpg'; // Set all images to clicked person's avatar
-        img.style.opacity = 1; // Fade them back in
+        img.style.opacity = 1;
       });
     }, 500);
 
-    // Wait longer before navigating to the person's page
+    // Wacht met het doornavigeren
     setTimeout(() => {
       window.location.href = getPersonLink(person);
-    }, 1000); // 1000ms total for the full effect
+    }, 2000); // 2000ms totaal voor het effect
   }
 </script>
 
