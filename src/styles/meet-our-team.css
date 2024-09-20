@@ -2,12 +2,19 @@
     transition: .5s;
 }
 
+@property --name {
+    syntax: '<string>';
+    default: 'default_name';
+    inherits: false;
+    transition: 1s;
+}
+
 .meet-our-team {
     position: relative;
     display: flex;
     background-color: rgba(71, 71, 71, 0.319);
     width: 100%;
-    height: 450px;
+    height: 80vh;
     margin: 4em;
 }
 
@@ -19,10 +26,12 @@
     justify-content: center;
     align-items: center;
     width: 60%;
-    margin-right: .5em;
+    margin-right: 4rem;
+    /* outline: solid; */
 }
 
 .all-cards {
+    --index:1;
     width: 150px;
     height: 200px;
     object-fit: fill;
@@ -32,39 +41,53 @@
     left: 0;
     border-radius: 5px;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 1);
+    /* z-index: 0; */
+}
+
+.all-cards:hover{
+    transform: rotateY(0deg) translateY(-100px);
+    transition: .3s;
+    z-index: calc(var(--index) + 1);
+    z-index: 7;
+}
+
+.all-cards:not(:hover){
+    transition: .9s ease .1s;
+    transform: rotateY(-30deg) rotateX(5deg);
 }
 
 .all-cards:not(:nth-of-type(1)) {
-    margin-inline-start: -6%;
+    margin-inline-start: -10%;
 }
 
 .card1 {
+    --name:chris;
     background-image: url(./images/christopher.jpeg);
 }
 
 .card2 {
     background-image: url(./images/daan.jpeg);
-    z-index: -1;
+    z-index: calc(var(--index) * -1);
 }
 
 .card3 {
     background-image: url(./images/jason.jpeg);
-    z-index: -2;
+    z-index: calc(var(--index) * -2);
 }
 
 .card4 {
     background-image: url(./images/ellenoor.jpeg);
-    z-index: -3;
+    z-index: calc(var(--index) * -3);
 }
 
 .card5 {
     background-image: url(./images/tristan.jpeg);
-    z-index: -4;
+    z-index: calc(var(--index) * -4);
 }
 
 .card6 {
     background-image: url(./images/annelinde.jpg);
-    z-index: -5;
+    z-index: calc(var(--index) * -5);
 }
 
 .about-us {
@@ -73,6 +96,36 @@
     align-items: center;
     max-width: 50vw;
     flex: 0 1 50vw;
+}
+
+.about-us h3{
+    transition: 1s;
+}
+
+.about-us h3::after{
+    content: 'meet the team';
+    font-size: clamp(1rem, 1.912vw + 0.388rem, 3rem);
+   
+
+}
+
+section.meet-our-team:has(.card1:hover)  .about-us h3::after{
+    content: 'Chris';
+}
+section.meet-our-team:has(.card2:hover)  .about-us h3::after{
+    content: 'Daan';
+}
+section.meet-our-team:has(.card3:hover)  .about-us h3::after{
+    content: 'Jason';
+}
+section.meet-our-team:has(.card4:hover)  .about-us h3::after{
+    content: 'Ellenoor';
+}
+section.meet-our-team:has(.card5:hover)  .about-us h3::after{
+    content: 'Tristan';
+}
+section.meet-our-team:has(.card6:hover)  .about-us h3::after{
+    content: 'Annelinde';
 }
 
 
@@ -111,6 +164,7 @@
 
 
     .meet-our-team {
+       
         width: 100%;
         flex-direction: column;
         height: 480px;
@@ -150,6 +204,8 @@
         height: fit-content;
         width: fit-content;
         margin-block: 3%;
+        margin-right: 0;
+
         justify-content: center;
     }
 
@@ -158,9 +214,11 @@
         height: 100%;
         flex-direction: column;
         align-items: center;
+        perspective: 3000px;
     }
 
     .all-cards {
+        --index: -1;
         width: 230px;
         height: 250px;
         object-fit: fill;
@@ -174,7 +232,14 @@
         margin-bottom: 1em;
     }
 
+    .all-cards:not(:hover){
+        transition: .9s ease .1s;
+        transform: rotateY(0deg) rotateX(-30deg);
+    }
+    
+
     .all-cards:not(:nth-of-type(1)) {
         margin-inline-start: 0;
+        margin-block-start: -100px;
     }
 }
