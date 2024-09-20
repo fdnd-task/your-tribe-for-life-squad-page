@@ -1,38 +1,74 @@
 <script>
 	import '../styles/deail.css';
+	import { onMount } from 'svelte';
+	export	let sPerson
+	export	let close
 
-
-export	let selectedPerson
-export	let close
+	function isloaded(url){
+		fetch(url)
+  .then(response => {
+    if (response.ok) {
+      console.log('Link is valid and accessible.');
+    } else {
+      console.log('Link exists, but not accessible. Status:', response.status);
+    }
+  })
+  .catch(error => {
+    console.log('Failed to fetch the link:', error);
+  });
+	}
 	
 </script>
 
 <div class="modal" >
 
-	<button on:click={close}>Close</button>
-
 	<section>
-		<article class="p_img">
-			<!-- <h1>Details img</h1> -->
-			<img src="{selectedPerson.src}" alt="{selectedPerson.alt}-{selectedPerson.id}">
-
-		</article>
-
-		<article >
-			<ul class="p_info">
-				<li class="name">{selectedPerson.name} {selectedPerson.surname}</li>
-				<li>squad_id :{selectedPerson.squad_id}</li>
-				<li>fun fact {selectedPerson.bio}</li>
+		<article class="info">
+			<ul>
+				<h1>{sPerson.name} {sPerson.surname}</h1>
+				<li> <span>{sPerson.bio}</span></li>
+				<li><span>squad:</span> <span>{sPerson.squad_id}</span></li>
+				<li> <span>{sPerson.role}</span></li>
+				<li><span>{sPerson.custom}</span></li>
 			</ul>
-
-			<div class="p_frame">
-				<p>iframe github or other</p>
-				<a href={selectedPerson.website}>
-					website
-					<iframe src={selectedPerson.website}  frameborder="0"></iframe>
+		</article>
+		<article class="profile">
+			<div>
+				<img src={sPerson.src} alt="{sPerson.alt}{sPerson.name}" >
+			</div>
+		</article>
+		<article class="web-content">
+			{#if sPerson.website}
+			<iframe src={sPerson.website} frameborder="0"></iframe>
+			<div>
+				<a href={sPerson.website}>
+					<span> <img src={sPerson.avatar} alt="websit{sPerson.name}"></span>
+					<span><p>web link</p></span>
 				</a>
 
 			</div>
+
+			{:else if sPerson.github_handle}
+
+			<div class="nWeb">
+				<a href={sPerson.github_handle}>
+					<img src={sPerson.avatar} alt="{sPerson.name}">
+					 <p>github link</p>
+				</a>
+				
+	   		</div>
+
+			{:else}
+			
+			<div class="nWeb">
+					 <img src={sPerson.avatar} alt="{sPerson.name}">
+			</div>
+			{/if}
+		</article>
+
+		<article class="exit">
+			<button on:click={close}>Terug</button>
+
 		</article>
 	</section>
 
@@ -40,72 +76,6 @@ export	let close
 </div>
 
 <style>
-section{
-			display: flex;
-			gap: 3%;
-			padding-top: 3%;
-		}
-	
-		article{
-			flex: 1;
-			outline: solid;
-		}
-	
-		.p_info ul{
-			margin-left: 9%;
-		}
-	
-		.p_info li:nth-of-type(1){
-			font-size: 200%;
-		}
-		
-	
-		img{
-			width: 100%;
-		}
-	
-		.p_frame{
-			display: flex;
-			flex-direction: column;
-			justify-content:end;
-		}
-	
-		.p_frame div{
-			width: 100%;
-			height: 100%;
-			
-		}
-	
-		.p_frame a{
-			display: flex;
-			aspect-ratio: 1/1;
-			justify-content: flex-end;
-			/* outline: solid red; */
-			
-			
-			& iframe{
-				position: relative;
-				border-radius: 50%;
-				width: 50%;
-				aspect-ratio: 1/1;
-				place-self: end;
-				z-index: -1;
-				/* outline: solid; */
-	
-			}
-	
-			& iframe::after{
-				content: '';
-				position: absolute;
-				inset: 0;
-				z-index: 2;
-				color: aqua;
-			}
-	
-		}
-	
-		.p_frame:has(:hover) iframe::after{
-			content: 'website';
-		}
+
 
 </style>
