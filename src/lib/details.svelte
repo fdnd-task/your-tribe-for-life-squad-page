@@ -29,7 +29,7 @@
 				<li> <span>{sPerson.bio}</span></li>
 				<li><span>squad:</span> <span>{sPerson.squad_id}</span></li>
 				<li> <span>{sPerson.role}</span></li>
-				<li><span>{sPerson.custom}</span></li>
+				<li class="custom"><span>{sPerson.custom}</span></li>
 			</ul>
 		</article>
 		<article class="profile">

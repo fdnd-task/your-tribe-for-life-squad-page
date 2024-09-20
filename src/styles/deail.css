@@ -1,6 +1,8 @@
 
-*{
+*,a{
 	--side-line:  none;
+	--rad: 50px;
+	text-decoration: none;
 }
 
 .modal{
@@ -18,12 +20,10 @@
 	grid-template-rows: 3fr 1fr;
 	/* width: 100%; */
 	/* height: 100%; */
-	/* outline: solid black; */
 }
 
 .modal section article{
 	position: relative;
-	/* outline: solid; */
 	height: 100%;
 	width: 100%;
 }
@@ -56,12 +56,19 @@
 	}
 }
 
+.custom{
+	max-width: 20vw;
+	overflow-wrap: break-word;
+}
+
 /* profile block */
 
 .profile{
 	grid-column: 2/3;
 	grid-row: 1/2;
 	overflow: hidden;
+
+	border-radius: var(--rad) var(--rad) var(--rad) 0 ;
 }
 
 .profile div:has(img){
@@ -90,6 +97,8 @@
 	grid-row: 2/3;
 	background-color: rgba(0, 0, 0, 0.418);
 	overflow: hidden;
+	border-radius: var(--rad) 0 var(--rad) var(--rad)  ;
+
 
 }
 .web-content iframe{
@@ -100,7 +109,7 @@
 	position: absolute;
 	inset: 0;
 	pointer-events: none;
-	filter: blur(3px);
+	filter: blur(1.5px);
 	opacity: 0.5;
 	/* display: none; */
 }
@@ -199,6 +208,7 @@
 	inset:0;
 	color: white;
 	border: none;
+	border-radius:  0 var(--rad);
 	font-size: clamp(2rem, 1.912vw + 0.388rem, 4rem);
 	
 	
