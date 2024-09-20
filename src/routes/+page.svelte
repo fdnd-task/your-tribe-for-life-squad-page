@@ -207,6 +207,7 @@
 		<div class="about-us">
 			<!--H3-->
 			<h3></h3>
+			<p>Our team of frontend developers is a group of enthusiastic individuals focused on creating websites that are both user-friendly and visually appealing. We work well together to ensure everything runs smoothly, looks great, and is easy for users to understand.</p>
 		</div>
 		<section class="our-team-cards">
 			<div class="card1 all-cards">
