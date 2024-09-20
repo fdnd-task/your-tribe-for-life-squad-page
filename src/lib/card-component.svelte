@@ -17,6 +17,9 @@
         scale: 1.02; /* Beetje vergroten bij hover */
     }
 
+
+
+   
 </style>
 
     <img class='image-card' src={imgSrc} alt="">
