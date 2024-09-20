@@ -1,0 +1,11 @@
+/* Custom fonts */
+
+@font-face {
+    font-family: ArialMT-rounded;
+    src: url(./fonts/ARIALROUNDEDMT.TTF);
+}
+
+@font-face {
+    font-family: ArialMT-EB-ROUNDED;
+    src: url(./fonts/ARIALROUNDEDMTEXTRABOLD.TTF);
+}
