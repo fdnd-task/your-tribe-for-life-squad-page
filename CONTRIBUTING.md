@@ -1,38 +1,28 @@
-# Afspraken over samenwerking 
+# 🤝 Afspraken over samenwerking
 
-## Communicatie
+## 📢 Communicatie
+- Overleg vindt plaats via **WhatsApp** of **Microsoft Teams**.  
+- Iedereen reageert binnen **24 uur**.  
+- Feedback verloopt via **GitHub Issues** (alleen bij hoge urgentie via WhatsApp).  
 
-- We overleggen via WhatsApp/Teams.
+## 👥 Samenwerking
+- Iedereen is verantwoordelijk voor zijn eigen rol.  
+- We helpen elkaar waar nodig om het gezamenlijke doel te bereiken.  
 
-- Iedereen reageert binnen 24 uur.
+## 🗳️ Besluitvorming
+- Belangrijke keuzes nemen we **samen**.  
+- Wanneer er geen consensus is, hakt de **projectleider** de knoop door.  
 
-- Feedback verloopt via Github issues ( contact via whatsapp als het echt nodig is )
+## ⏱️ Kwaliteit & Deadlines
+- Werk wordt **op tijd** opgeleverd.  
+- We controleren elkaars werk op **kwaliteit** voordat het wordt ingeleverd.  
 
-## Samenwerking
+## 🌱 Respect & Betrokkenheid
+- We luisteren naar ieders mening en ideeën.  
+- Iedereen krijgt de kans om actief bij te dragen.  
+- We respecteren elkaars minder sterke kanten en gaan daar op een constructieve manier mee om.  
 
-- Iedereen neemt verantwoordelijkheid voor zijn rol.
+---
 
-- We helpen elkaar waar nodig.
-
-## Besluitvorming
-
-- Belangrijke keuzes maken we samen.
-
-- Als er geen consensus is, beslist de projectleider.
-
-## Kwaliteit & Deadlines
-
-- We leveren werk op tijd in.
-
-- We controleren elkaars werk voor kwaliteit.
-
-## Respect & Betrokkenheid
-
-- We luisteren naar ieders mening.
-
-- We zorgen dat iedereen een bijdrage kan leveren.
-
-- We respecteren elkaars minder sterke kanten en gaan daar op een goede manier mee om.
-
-## Team Canvas
-<img width="1092" height="774" alt="image" src="https://github.com/user-attachments/assets/84f0fa9c-dad3-45f4-9c62-6c0d83b9cd7e" />
+## 📌 Team Canvas
+<img width="1092" height="774" alt="Team Canvas" src="https://github.com/user-attachments/assets/84f0fa9c-dad3-45f4-9c62-6c0d83b9cd7e" />
