@@ -3,6 +3,10 @@
 ## Commit conventies
 Wij gebruiken [code conventies](https://www.conventionalcommits.org/nl/v1.0.0/) deze heeft Saif ooit gebruikt en willen wij nastreven voor github commits. 
 
+## Tijd afspraken
+
+We willen zo veel mogelijk op school werken omdat we allemaal niet hebbeng gewerkt met dit nieuwe framework. Dit is zodat we elkaar kunnen helpen. We komen alle vaste dagen op school en naast deze vaste dagen, willen we om 12:00 elke dag op school zijn. 
+
 ## Code Conventies:
 - **Naamgeving**: camelCase voor onze naamgeving.
 - **Comments**: Als je iets nieuws doet wat je niet persee snapt, en hieraan heb gewerkt, leg in een comment uit wat dit ongeveer zou doen. Plaats deze altijd boven het gewerkte component, zonder witregels
