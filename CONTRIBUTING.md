@@ -21,4 +21,5 @@ Wij gebruiken [code conventies](https://www.conventionalcommits.org/nl/v1.0.0/) 
 - - -
 </header>
 ```
+- **Issues**: Binnen de site gebruiken wij componenten. Elk deze component word een issue, met de bijbehorende code. Stel je gaat werken in de homepage en het component is 'header', dan wordt dit dus een 'header issue'. De header zal echter wel meer bevinden dan alleen dit component dus maak dan in de 'header' issue weer sub issues aan. 
 Echter kan je beter de FDND Code conventies [hier](https://github.com/fdnd-agency/.github/wiki/Code-conventions) bekijken, dit is ook wat wij volgen.
