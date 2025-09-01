@@ -6,6 +6,8 @@
 
 - Iedereen reageert binnen 24 uur.
 
+- Feedback verloopt via Github issues ( contact via whatsapp als het echt nodig is )
+
 ## Samenwerking
 
 - Iedereen neemt verantwoordelijkheid voor zijn rol.
