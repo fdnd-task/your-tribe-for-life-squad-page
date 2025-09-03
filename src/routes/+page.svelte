@@ -11,7 +11,7 @@
         <details class="person">
            <summary>
             <h2>{member.name}</h2>
-            <p class="birthdate">{member.age} Jaar</p>
+            <p class="birthdate">{member.age ? member.age + " Jaar" : "Leeftijd onbekend"}</p>
             <a class="cross" href="https://github.com/{member.github_handle}" aria-label="Github link">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g class="plus-outline"><g fill="#666" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M12 3a1 1 0 0 1 1 1v16a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1"/><path d="M21 12a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h16a1 1 0 0 1 1 1"/></g></g></svg>
             </a>

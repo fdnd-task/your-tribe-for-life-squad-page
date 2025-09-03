@@ -6,21 +6,29 @@ export async function load({ url }) {
   const { data: membersData } = await members.json();
 
   function calculateAge(dateString) {
+    if (!dateString) {
+      return null; // or any default value you prefer
+    }
+  
     const today = new Date();
     const birthDate = new Date(dateString);
-
+  
+    if (isNaN(birthDate.getTime())) {
+      return null; // or any default value you prefer
+    }
+  
     let age = today.getFullYear() - birthDate.getFullYear();
-
+  
     const monthDiff = today.getMonth() - birthDate.getMonth();
     const dayDiff = today.getDate() - birthDate.getDate();
-
+  
     const birthdayHasPassed =
       monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0);
-
+  
     if (!birthdayHasPassed) {
       age--;
     }
-
+  
     return age;
   }
 
@@ -45,7 +53,6 @@ export async function load({ url }) {
 
       // Bereken de leeftijd
       member.age = calculateAge(member.birthdate);
-      console.log(member.age);
     })
   );
 
