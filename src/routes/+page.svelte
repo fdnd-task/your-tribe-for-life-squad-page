@@ -3,7 +3,6 @@
 
   
   const members = data.membersData
-  console.log(members);
 </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -13,8 +12,13 @@
   documentation
 </p>
 
-{#each members as member }
+{#each members as member, index }
     <a href="/{member.id}">{member.name}</a>
+    <picture>
+        <source srcset={`${member.mugshot.src}&format=avif`} type="image/avif">
+        <source srcset={`${member.mugshot.src}&format=webp`} type="image/webp">
+        <img src={`${member.mugshot.src}&format=jpg`} alt="Mugshot van {member.name}" loading={index >= 5 ? "lazy" : "eager"}>
+    </picture>
 {/each}
 
 <style>
