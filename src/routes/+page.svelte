@@ -33,7 +33,7 @@
     <!-- Branco -->
   </header>
   
-  <section>
+  <section class="person-container">
     
       {#each members as member }
         <article class="person">
@@ -58,7 +58,7 @@
     margin: 0;
   }
 
-  section {
+  .person-container {
     display: flex;
     flex-direction: column;
   }
