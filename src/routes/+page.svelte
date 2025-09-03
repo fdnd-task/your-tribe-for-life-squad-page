@@ -49,3 +49,65 @@
   </section>
   
 </main>
+
+<style>
+
+  :global(html, body) {
+    height: 100%;
+    background: black;
+    margin: 0;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .person {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 2.25em;
+    position: relative;
+
+    @media (min-width: 1000px) {
+      grid-template-columns: 1fr 1fr 2.5fr;
+    }
+
+    p {
+      font-size: 24px;
+      color: white;
+      margin: 0;
+
+      @media (min-width: 600px) {
+        font-size: 32px;
+      }
+
+      &.birthdate {
+        font-size: 20px;
+        text-align: right;
+      }
+    }
+
+    .cross {
+      justify-self: end;
+      display: flex;
+      justify-items: center;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 2.25em;
+      right: 2.25em;
+      bottom: 0;
+      height: 1px;
+      background: rgb(37, 37, 37);
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+</style>
