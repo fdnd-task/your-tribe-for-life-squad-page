@@ -5,11 +5,30 @@ export async function load({ url }) {
 
   const { data: membersData } = await members.json();
 
+  function calculateAge(dateString) {
+    const today = new Date();
+    const birthDate = new Date(dateString);
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    const dayDiff = today.getDate() - birthDate.getDate();
+
+    const birthdayHasPassed =
+      monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0);
+
+    if (!birthdayHasPassed) {
+      age--;
+    }
+
+    return age;
+  }
+
   // Loop om mugshot data te verkrijgen & aan de bestaande (membersData) te koppelen
   // Wacht tot alle mugshot data verkregen is voordat we verdergaan
   await Promise.all(
     membersData.map(async (member) => {
-        // Fetch mugshot data
+      // Fetch mugshot data
       const mugshotResponse = await fetch(
         `https://fdnd.directus.app/files/${member.mugshot}`
       );
@@ -23,6 +42,10 @@ export async function load({ url }) {
         width: mugshotData?.width ?? null,
         height: mugshotData?.height ?? null,
       };
+
+      // Bereken de leeftijd
+      member.age = calculateAge(member.birthdate);
+      console.log(member.age);
     })
   );
 
