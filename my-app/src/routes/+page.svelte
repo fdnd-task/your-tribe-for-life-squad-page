@@ -8,4 +8,4 @@
     <a href="/{member.id}">{member.name}</a>
 {/each}
 
-<h1>test</h1>
+<h1>Overzicht</h1>
