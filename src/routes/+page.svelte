@@ -16,3 +16,7 @@
 {#each members as member }
     <a href="/{member.id}">{member.name}</a>
 {/each}
+
+<style>
+    @import './App.css';
+</style>
