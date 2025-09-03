@@ -3,54 +3,34 @@
 
   
   const members = data.membersData
-  console.log(members);
-
-  function calculateAge(dateString) {
-    const today = new Date();
-    const birthDate = new Date(dateString);
-
-    let age = today.getFullYear() - birthDate.getFullYear();
-
-    const monthDiff = today.getMonth() - birthDate.getMonth();
-    const dayDiff = today.getDate() - birthDate.getDate();
-
-    // If birthday hasn't happened yet this year, subtract one
-    const birthdayHasPassed =
-      monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0);
-
-    if (!birthdayHasPassed) {
-      age--;
-    }
-
-    return age;
-  }
-  
 </script>
 
-<main>
-
-  <header>
-    <!-- Branco -->
-  </header>
   
-  <section class="person-container">
-    
-      {#each members as member }
-        <article class="person">
-          <!-- <a href="/{member.id}">{member.name} </a> -->
-          <p>{member.name}</p>
-          <p class="birthdate">{calculateAge(member.birthdate)} Jaar</p>
-          <a class="cross" href="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g class="plus-outline"><g fill="#666" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M12 3a1 1 0 0 1 1 1v16a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1"/><path d="M21 12a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h16a1 1 0 0 1 1 1"/></g></g></svg>
-          </a>
+  <main class="person-container">
+      {#each members as member, index }
+        <details class="person">
+           <summary>
+            <h2>{member.name}</h2>
+            <p class="birthdate">{calculateAge(member.birthdate)} Jaar</p>
+            <a class="cross" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g class="plus-outline"><g fill="#666" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M12 3a1 1 0 0 1 1 1v16a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1"/><path d="M21 12a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h16a1 1 0 0 1 1 1"/></g></g></svg>
+            </a>
+          </summary>
+          <article>
+            <picture>
+                <source srcset={`${member.mugshot.src}&format=avif`} type="image/avif">
+                <source srcset={`${member.mugshot.src}&format=webp`} type="image/webp">
+                <img src={`${member.mugshot.src}&format=jpg`} alt="Mugshot van {member.name}" loading={index >= 5 ? "lazy" : "eager"}>
+            </picture>
+            <p>{member.bio}</p>
           </article>
+        </details>
       {/each}
     
-  </section>
-  
-</main>
+  </main>
 
 <style>
+    @import './App.css';
 
   :global(html, body) {
     height: 100%;
@@ -109,5 +89,4 @@
       display: none;
     }
   }
-
 </style>
