@@ -44,13 +44,16 @@ export async function load({ url }) {
       // Verwerk de mugshot data
       const { data: mugshotData } = await mugshotResponse.json();
 
+      const customHeight = 320;
+
       // Koppel de mugshot data aan de bestaande (membersData) als een object
       member.mugshot = {
-        src: `https://fdnd.directus.app/assets/${member.mugshot}?height=320&quality=80`,
-        width: mugshotData?.width ?? null,
-        height: mugshotData?.height ?? null,
+        src: `https://fdnd.directus.app/assets/${member.mugshot}?height=${customHeight}&quality=80`,
+        // Bereken de breedte op basis van de hoogte
+        width: mugshotData?.width ? (customHeight * mugshotData.width) / mugshotData.height : null,
+        height: customHeight,
       };
-
+      
       // Bereken de leeftijd
       member.age = calculateAge(member.birthdate);
     })
