@@ -5,7 +5,9 @@
     const student = data.student;
 </script>
 
-<a href="/">Back to flipbook</a>
+<div id="back">
+    <a href="/">Back to flipbook</a>
+</div>
 
 <section id="polaroid">
     <article id="photo_n_name">
