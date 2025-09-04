@@ -18,3 +18,18 @@
         <span>{member.fav_emoji}</span>
 </main>
 
+<style>
+    main {
+        background-image: linear-gradient(to bottom, var(--dark-color-gradient), var(--medium-color-gradient));
+        height: 100vh;
+    }
+
+
+
+    img {
+        width: 80%;
+    }
+
+
+</style>
+    
