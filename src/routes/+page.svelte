@@ -31,7 +31,8 @@
   </main>
 
 <style>
-
+  @import "./App.css";
+  
   :global(html, body) {
     height: 100%;
     background: black;
