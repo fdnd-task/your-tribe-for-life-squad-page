@@ -32,10 +32,10 @@
 
 <style>
   @import "./App.css";
-  
+
   :global(html, body) {
     height: 100%;
-    background: black;
+    background: var(--bg);
     margin: 0;
     font-family: sans-serif;
     font-size: 16px;
