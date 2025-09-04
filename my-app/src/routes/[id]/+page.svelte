@@ -25,3 +25,13 @@
     </article>
 </section>
 
+<style>
+    section {
+        margin: 0;
+    }
+
+    article {
+        background-color: white;
+        width: 300px;
+    }
+</style>
