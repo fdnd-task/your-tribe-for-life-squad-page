@@ -1,7 +1,8 @@
 <script>
-
     let { data } = $props();
+
     const members = data.members;
+    // console.log(members);
 
     import ClassCarousel from '$lib/components/classCarousel.svelte';
 
@@ -17,8 +18,8 @@
 </section>
 
 
+
 <style>
-    
     * {
         margin: 0;
         padding: 0;
@@ -40,7 +41,7 @@
         scroll-snap-type: x mandatory;
     }
 
-    /* .carousel-mugshot-container::-webkit-scrollbar {
+    .carousel-mugshot-container::-webkit-scrollbar {
         display: none;
     }
 
@@ -68,6 +69,7 @@
         translate: -70%;
         transform: translateY(-50%);
         cursor: pointer;
-    } */
+    }
+
 
 </style>
