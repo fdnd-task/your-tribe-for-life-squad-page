@@ -44,19 +44,16 @@
     }
   }
 
-  .person-container {
-  }
-
   .person {
     align-items: center;
-
-    padding-block: 0.63rem;
     margin-inline: 0.63rem;
-    
     border-bottom: 1px solid #252525;
 
+    &:open {
+      border-bottom: none;
+    }
+
     @media (min-width: 800px) {
-      padding-block: 2.25rem;
       margin-inline: 2.25rem;
     }
 
@@ -69,6 +66,11 @@
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+      padding-block: 0.63rem;
+
+      @media (min-width: 800px) {
+        padding-block: 2.25rem;
+      }
 
       h2 {
         margin: 0;
@@ -91,6 +93,9 @@
     
     article {
       margin-top: 2.25rem;
+      border-top: 1px solid #252525;
+      margin-top: 0rem;
+      padding-top: 1rem;
       
       picture {
         display: inline-block;
