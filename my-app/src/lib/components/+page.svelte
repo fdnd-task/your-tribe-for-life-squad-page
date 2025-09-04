@@ -24,7 +24,9 @@
     });
 </script>
 
-<h1>Overzicht</h1>
+{#each members as member}
+    <a href="/{member.id}">{member.name}</a>
+{/each}
 
 <div class="book">
     <div class="page">
@@ -33,28 +35,101 @@
             <p>2025.<br />First edition</p>
         </div>
         <div class="back">
-            <h2>Welcome</h2>
-            <p>Click on the pages to flip through!</p>
+            <h2>Sebastiaan</h2>
+            <img
+                src="https://avatars.githubusercontent.com/u/180168321?v=4"
+                alt="Img 1"
+            />
+            <p>Bing Bong <code>perspective</code> Bong Bing</p>
         </div>
     </div>
 
-    {#each members as member}
-        <div class="page">
-            <div class="front">
-                <h2>{member.name}</h2>
-                <img src={member.avatar} alt="{member.name}'s avatar" />
-                <p>Cohort: {member.squads[0]?.squad_id.cohort}</p>
-                <p>Tribe: {member.squads[0]?.squad_id.tribe.name}</p>
-            </div>
-            <div class="back"></div>
+    <div class="page">
+        <div class="front">
+            <p>
+                Even more, the book height is dicated by the amount of content
+                in the tallest page. The only thing you need to take care of is
+                how much text you put into a page.
+            </p>
         </div>
-    {/each}
+        <div class="back"></div>
+    </div>
 
     <div class="page">
-        <div class="front cover"></div>
+        <div class="front">
+            <h2>JS at its minimum</h2>
+            <p>
+                JavaScript is at its minimum. Basically it's only used to set
+                the initial page index and assign click listeners to the pages.
+                Modifies the CSS <b>Var</b>
+                for the <i>current</i> page, and the rest is handled entirely by
+                CSS.
+            </p>
+        </div>
+        <div class="back">
+            <p>
+                Additionally JavaScript allows you to click on an anchor link in
+                your text — without turning the page. You can also have multiple
+                independent flip books in a single document. You're all covered.
+            </p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="front">
+            <h2>Crafting CSS magic</h2>
+            <p>
+                The opened (<i>viewing</i>) pages of the flip book are always
+                kept at the same elevation. This is necessary if your book has
+                no inclination (is top-down-view). Have you noticed that you can
+                also click on the pages edge? CSS will nicely animate the group
+                of pages to skip with a staggered animation.
+            </p>
+        </div>
+        <div class="back">
+            <p>
+                Like in this demo, you can change the perspective of the parent
+                container and change the X axis rotation of the book for extra
+                effect.
+            </p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="front">
+            <p>
+                The necessary FlipBook's CSS is barely 30 lines, there is no
+                swipe, natural page flip angling, complex shadows, etc. in order
+                to keep it as simple as possible.
+            </p>
+        </div>
+        <div class="back">
+            <p>
+                Feel free to use and abuse this code. Drop me a line if you find
+                it cool or useful, or just want to say <i>hi</i>.
+            </p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="front">
+            <img src="https://picsum.photos/id/1073/600/600" alt="Img 2" />
+        </div>
         <div class="back cover">
             <h3>That's all, folks</h3>
-            <p>End of the flipbook.</p>
+            <p>
+                FlipBook code and content:<br /><a
+                    href="https://stackoverflow.com/users/383904/roko-c-buljan"
+                    target="_blank"
+                    rel="nofollow">Roko C. Buljan</a
+                >
+                <br />Original idea:<br /><a
+                    href="https://stackoverflow.com/a/76978444/383904"
+                    target="_blank"
+                    rel="nofollow">Stack Overflow answer</a
+                >
+                <br />Images by: picsum.photos
+            </p>
         </div>
     </div>
 </div>
