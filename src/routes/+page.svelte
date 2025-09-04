@@ -13,7 +13,7 @@
                 <h2>{member.name}</h2>
                 <p class="birthdate">{member.age ? member.age + " Jaar" : "Leeftijd onbekend"}</p>
               </div>
-            <a class="cross" href="https://github.com/{member.github_handle}" aria-label="Github link">
+            <a class="cross" href="">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g class="plus-outline"><g fill="#666" fill-rule="evenodd" class="Vector" clip-rule="evenodd"><path d="M12 3a1 1 0 0 1 1 1v16a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1"/><path d="M21 12a1 1 0 0 1-1 1H4a1 1 0 1 1 0-2h16a1 1 0 0 1 1 1"/></g></g></svg>
             </a>
           </summary>
@@ -24,6 +24,9 @@
                 <img src={`${member.mugshot.src}&format=jpg`} alt="Mugshot van {member.name}" width="{member.mugshot.width}" height="{member.mugshot.height}" loading={index >= 5 ? "lazy" : "eager"}>
             </picture>
             <p>{member.bio}</p>
+            <a class="githubhandle" href="https://github.com/{member.github_handle}" aria-label="Github link">
+              <p>Github</p>
+            </a>
           </article>
         </details>
       {/each}
@@ -125,11 +128,16 @@
       flex: 0 0 66%;
       gap: 2rem;
     }
+  }
 
-    h2 {
-    }
+  .githubhandle {
+    all: unset;
+    cursor: pointer;
 
     p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
   }
 
