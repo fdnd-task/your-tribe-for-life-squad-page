@@ -50,14 +50,14 @@
   .person {
     align-items: center;
 
-    padding-block: 0.63em;
+    padding-block: 0.63rem;
     margin-inline: 0.63rem;
     
     border-bottom: 1px solid #252525;
 
     @media (min-width: 800px) {
-      padding-block: 2.25em;
-      margin-inline: 2.25em;
+      padding-block: 2.25rem;
+      margin-inline: 2.25rem;
     }
 
     &:last-child {
@@ -96,6 +96,7 @@
         display: inline-block;
         width: 100%;
         max-width: 32rem;
+        object-fit: cover;
 
         img {
           width: 100%;
@@ -112,6 +113,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
+      flex: 0 0 66%;
+      gap: 2rem;
     }
 
     h2 {
