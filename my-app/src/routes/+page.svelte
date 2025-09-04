@@ -36,28 +36,38 @@
     <div class="page">
         <div class="front cover">
             <h1>FlipBook FDND</h1>
-            <p>2025-2026.<br />First edition</p>
+            <p>2025.<br />First edition</p>
         </div>
         <div class="back">
             <h2>Welcome</h2>
             <p>Click on the pages to flip through!</p>
         </div>
     </div>
+    <div class="page">
+        <div class="front">
+            <h2>Meet squad 2E</h2>
+        </div>
+        <div class="back">
+            <img src={members[0].avatar} alt="{members[0].name}'s avatar" />
+        </div>
+    </div>
 
-    {#each members as member}
+    {#each members.slice(1) as member, index}
         <div class="page">
             <div class="front">
-                <h2>{member.name}</h2>
-                <img src={member.avatar} alt="{member.name}'s avatar" />
-                <p>Cohort: {member.squads[0]?.squad_id.cohort}</p>
-                <p>Tribe: {member.squads[0]?.squad_id.tribe.name}</p>
+                <h2>{members[index].name}</h2>
+                 <p>{members[index].bio}</p>
             </div>
-            <div class="back"></div>
+            <div class="back">
+                <img src={member.avatar} alt="{member.name}'s avatar" />
+            </div>
         </div>
     {/each}
-
     <div class="page">
-        <div class="front cover"></div>
+        <div class="front">
+            <h2>{members[members.length - 1].name}</h2>
+             <p>{members[members.length - 1].bio}</p>
+        </div>
         <div class="back cover">
             <h3>That's all, folks</h3>
             <p>End of the flipbook.</p>
