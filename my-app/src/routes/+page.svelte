@@ -24,13 +24,19 @@
     });
 </script>
 
-<h1>Overzicht</h1>
+<nav>
+    <ul>
+        <li>Hier</li>
+        <li>komen</li>
+        <li>filters</li>
+    </ul>
+</nav>
 
 <div class="book">
     <div class="page">
         <div class="front cover">
             <h1>FlipBook FDND</h1>
-            <p>2025.<br />First edition</p>
+            <p>2025-2026.<br />First edition</p>
         </div>
         <div class="back">
             <h2>Welcome</h2>
@@ -64,6 +70,27 @@
         box-sizing: border-box;
     }
 
+    /* nav */
+    nav {
+        background-color: var(--color-azure);
+        width: 100%;
+        height: 4em;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    li {
+        margin: .5em;
+    }
+
     /* FlipBook */
 
     body {
@@ -82,6 +109,7 @@
 
     .book {
         position: relative;
+        top: 5em;
         display: flex;
         margin: auto;
         width: 40cqmin;
