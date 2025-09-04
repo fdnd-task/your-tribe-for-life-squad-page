@@ -1,0 +1,20 @@
+main {
+    --light-color-gradient: #D3FFE5;
+    --medium-color-gradient: #289797;
+    --dark-color-gradient: #144545;
+
+    --text-color: #E0FFF5;
+}
+
+h1 {
+    font-size: clamp(4rem, 6vw, 3.5rem);
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    border: 2px solid var(--dark-color-gradient);
+    border-radius: 1em;
+}
