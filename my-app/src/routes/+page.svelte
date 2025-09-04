@@ -203,7 +203,7 @@
                 hsl(170 60% 10% / 0.1) 100%
             ),
             hsl(231, 32%, 29%)
-                url("https://s3-alpha.figma.com/hub/file/6585374256/3846baca-e383-46f4-b15f-75c5416fcaf7-cover.png")
+                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Za9HMxEMB1un_s-8MZ-aCnyr3tOTB-GpfHHZSJ7FLqRbBrbDOyY3zTbdaN3bdqDbfDc&usqp=CAU")
                 50% / cover;
         color: hsl(200 30% 98%);
     }
