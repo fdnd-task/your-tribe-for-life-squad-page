@@ -24,7 +24,8 @@
 
 
 <style>
-    body {
+    /* body {
         background-image: linear-gradient(180deg, #0D3131, #289797);
-    }
+        height: 100vh;
+    } */
 </style>
