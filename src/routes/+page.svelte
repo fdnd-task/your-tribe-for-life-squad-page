@@ -21,7 +21,7 @@
             <picture>
                 <source srcset={`${member.mugshot.src}&format=avif`} type="image/avif">
                 <source srcset={`${member.mugshot.src}&format=webp`} type="image/webp">
-                <img src={`${member.mugshot.src}&format=jpg`} alt="Mugshot van {member.name}" loading={index >= 5 ? "lazy" : "eager"}>
+                <img src={`${member.mugshot.src}&format=jpg`} alt="Mugshot van {member.name}" width="{member.mugshot.width}" height="{member.mugshot.height}" loading={index >= 5 ? "lazy" : "eager"}>
             </picture>
             <p>{member.bio}</p>
           </article>
@@ -31,10 +31,11 @@
   </main>
 
 <style>
+  @import "./App.css";
 
   :global(html, body) {
     height: 100%;
-    background: black;
+    background: var(--bg);
     margin: 0;
     font-family: sans-serif;
     font-size: 16px;
@@ -101,10 +102,10 @@
         display: inline-block;
         width: 100%;
         max-width: 32rem;
-        object-fit: cover;
 
         img {
           width: 100%;
+          object-fit: cover;
         }
       }
     }
