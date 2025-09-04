@@ -35,12 +35,13 @@
 
 <style>
   @import "./App.css";
+  @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
 
   :global(html, body) {
     height: 100%;
     background: var(--bg);
     margin: 0;
-    font-family: sans-serif;
+     font-family: "Lexend Deca", sans-serif;
     font-size: 16px;
 
     @media (min-width: 62.5rem) {
@@ -80,7 +81,6 @@
         margin: 0;
         color: var(--text);
         font-size: 2rem;
-        overflow: hidden;
       }
 
       .birthdate {
@@ -142,4 +142,39 @@
   }
 
 
+.person-container {
+  padding-block: 10vh;
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+
+    .person {
+      opacity: 0;
+      transform: translateY(100%);
+      animation: animate-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 100%;
+    }
+  }
+}
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
 </style>
