@@ -1,0 +1,32 @@
+:root{
+
+    /* colors */
+    --background-color: #E7E7E7;
+    --button-background-color: #050542;
+    --button-text-color: #ffffff;
+    --button-border-color: #66E5BF;
+    --main-text-color: #000000;
+    --dot-color: #DFDFDF; 
+
+    /* font */
+    --h1-font-size: 48px;
+    --h2-font-size: 36px;
+    --h3-font-size: 24px;
+    --h4-font-size: 18px;
+
+}
+
+.button-styling{
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: .5em;
+    padding-inline: 2em;
+    padding-block: 1em;
+    cursor: pointer;
+    transition: .15s;
+
+        &:hover{
+            border: 2px solid var(--button-border-color);
+        }
+}
