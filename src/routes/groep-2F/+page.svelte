@@ -40,7 +40,7 @@
         scroll-snap-type: x mandatory;
     }
 
-    /* .carousel-mugshot-container::-webkit-scrollbar {
+    .carousel-mugshot-container::-webkit-scrollbar {
         display: none;
     }
 
@@ -68,6 +68,6 @@
         translate: -70%;
         transform: translateY(-50%);
         cursor: pointer;
-    } */
+    }
 
 </style>
