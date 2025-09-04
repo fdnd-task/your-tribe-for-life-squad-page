@@ -56,16 +56,52 @@
         height: 2em;
         border-radius: 25px;
         background-color: #66E5BF;
+        border: solid #050542;
+        margin-bottom: 20px;
+
+        a{
+            text-decoration: none;
+            color: #050542;
+        };
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #polaroid {
         margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
+        
+        h1{
+            font-size: x-large;
+        }
     }
 
-    article {
+    #photo_n_name {
         background-color: white;
         width: 300px;
         height: 400px;
 
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    #details {
+        background-color: white;
+        width: 300px;
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+    }
+
+    #photo_n_name, #details {
+        box-shadow: 10px 10px 5px grey;
     }
 </style>
