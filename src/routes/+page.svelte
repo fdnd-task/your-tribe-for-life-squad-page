@@ -97,10 +97,10 @@
         display: inline-block;
         width: 100%;
         max-width: 32rem;
-        object-fit: cover;
 
         img {
           width: 100%;
+          object-fit: cover;
         }
       }
     }
