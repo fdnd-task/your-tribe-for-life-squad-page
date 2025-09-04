@@ -8,6 +8,15 @@
     --main-text-color: #000000;
     --dot-color: #DFDFDF; 
 
+    @media(prefers-color-scheme: dark){
+        --background-color: #0E0E0E;
+        --button-background-color: #66E5BF;
+        --button-text-color: #050542;
+        --button-border-color: #050542;
+        --main-text-color: #ffffff;
+        --dot-color: #6E757A;
+    }
+
     /* font */
     --h1-font-size: 48px;
     --h2-font-size: 36px;
