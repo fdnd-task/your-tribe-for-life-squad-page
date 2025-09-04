@@ -2,6 +2,7 @@
     let { data } = $props(); // rune die data doorgeeft tussen page.server.js en page.svelte ("magische property")
 
     const members = data.members; 
+    const members2 = data.members2; 
 </script>
 
 <main>
@@ -74,6 +75,5 @@
             padding: 2em;
         }
     }
-        
 </style>
     
