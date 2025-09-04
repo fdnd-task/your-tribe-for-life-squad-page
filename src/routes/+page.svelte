@@ -43,8 +43,8 @@
     font-family: sans-serif;
     font-size: 16px;
 
-    @media (min-width: 1000px) {
-      font-size: 18px;
+    @media (min-width: 62.5rem) {
+      font-size: 1.1rem;
     }
   }
 
@@ -57,7 +57,7 @@
       border-bottom: none;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: 50rem) {
       margin-inline: 2.25rem;
     }
 
@@ -72,7 +72,7 @@
       cursor: pointer;
       padding-block: 0.63rem;
 
-      @media (min-width: 800px) {
+      @media (min-width: 50rem) {
         padding-block: 2.25rem;
       }
 
@@ -121,7 +121,7 @@
     flex-grow: 1;
     display: block;
 
-    @media (min-width: 800px) {
+    @media (min-width: 50rem) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
