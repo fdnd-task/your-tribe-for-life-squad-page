@@ -48,7 +48,7 @@
   .person {
     align-items: center;
     margin-inline: 0.63rem;
-    border-bottom: 1px solid #252525;
+    border-bottom: 1px solid var(--accent);
 
     &:open {
       border-bottom: none;
@@ -75,7 +75,7 @@
 
       h2 {
         margin: 0;
-        color: white;
+        color: var(--text);
         font-size: 2rem;
         overflow: hidden;
       }
@@ -83,7 +83,7 @@
       .birthdate {
         margin: 0;
         font-size: 1.25rem;
-        color: white;
+        color: var(--text);
       }
 
       .cross {
@@ -94,7 +94,7 @@
     
     article {
       margin-top: 2.25rem;
-      border-top: 1px solid #252525;
+      border-top: 1px solid var(--accent);
       margin-top: 0rem;
       padding-top: 1rem;
       
@@ -105,7 +105,10 @@
 
         img {
           width: 100%;
+          max-width: 100%;
+          height: auto;
           object-fit: cover;
+          display: block;
         }
       }
     }
