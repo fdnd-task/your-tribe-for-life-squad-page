@@ -10,15 +10,22 @@
 
     <ul>
     {#each members as member}
-        <li><a href="/{member.id}">{member.name}</a></li>
+        <li>
+            <img src="https://fdnd.directus.app/assets/{member.mugshot}" alt="portret {member.name}">
+            <a href="/{member.id}">{member.name}</a>
+        </li>
+        
     {/each}
     </ul>
 
     <h1>SQUADPAGE</h1>
 
     <ul>
-    {#each members as member}
-        <li><a href="/{member.id}">{member.name}</a></li>
+    {#each members2 as member2}
+        <li>
+            <img src="https://fdnd.directus.app/assets/{member2.mugshot}" alt="portret {member2.name}">
+            <a href="/{member2.id}">{member2.name}</a>
+        </li>
     {/each} 
     </ul>
         
@@ -33,8 +40,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         background-image: linear-gradient(to right bottom, #D3FFE5, #257070 );
+        overflow-y: hidden;
     }
 
     h1 {
@@ -51,7 +58,7 @@
     h2:nth-of-type(1) {
         position: absolute;
         left: 50%;
-        top: 10%;
+        top: 5%;
         transform: translateX(-50%);
         text-align: center;
     }
@@ -59,20 +66,40 @@
     h2:nth-of-type(2) {
         position: absolute;
         left: 50%;
-        bottom: 10%;
+        bottom: 5%;
         transform: translateX(-50%);
         text-align: center;
     }
     
+    /* https://css-tricks.com/css-only-carousel/ */
     ul {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2em;
         list-style: none;
         padding: 0;
         margin: 0;
-        display: flex;
-        gap: 2em;
+
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; /* zorgt dat de als je scrollt ze echt snappen in place */
+        scroll-behavior: smooth; 
+        margin-left: 1em;
         & li {
+            flex: 0 0 auto; /* zorgt dat de li'tjes hun eigen breedte houden */
+            scroll-snap-align: start;
             background-color: white;
-            padding: 2em;
+            width: 125px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-bottom: 0;
+                display: block;
+            }
         }
     }
 </style>
