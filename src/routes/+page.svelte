@@ -18,6 +18,8 @@
                     <img
                         src={`https://fdnd.directus.app/assets/${member.mugshot}`}
                         alt={`portret ${member.name}`}
+                        height="50"
+                        width="50"
                         onerror={(e) => (e.currentTarget.src = "/noname.jpg")}
                     />
                     <p>{member.name}</p>
@@ -26,7 +28,7 @@
         {/each}
     </ul>
 
-    <h1>SQUADPAGE</h1>
+    <h1 class="text-gradient">SQUADPAGE</h1>
 
     <ul>
         <!-- voor elke member2 in members2 maak een li -->
@@ -71,7 +73,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-image: linear-gradient(to right bottom, #d3ffe5, #257070);
+        background-image: url("/background-image.png");
+        background-size: cover;
         overflow-y: hidden;
     }
 
@@ -81,15 +84,22 @@
         text-align: center;
         font-family: "Monomaniac One", sans-serif;
         letter-spacing: 0.05em;
-        color: #0d3131;
-        font-size: 2.5em;
+        font-size: clamp(3em, 5vw, 5.5em);
+    }
+
+    .text-gradient {
+        background-image: linear-gradient(to top, var(--dark-color-gradient), var(--light-color-gradient));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(2px 2px #FFFFFF);
+        
     }
 
     h2 {
         margin: 0;
         padding: 0;
         font-family: "Exo 2", sans-serif;
-        color: #0d3131;
+        color: var(--text-color);
         font-size: 2em;
     }
 
