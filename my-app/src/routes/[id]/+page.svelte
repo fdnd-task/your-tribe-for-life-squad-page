@@ -16,7 +16,7 @@
             <li><span class="bold">favoriete property:</span> {member.fav_property}</li>
         </ul>
         
-        <span><p>{member.fav_emoji}</p></span>
+        <span class="emoji"><p>{member.fav_emoji}</p></span>
     </div>
 </main>
 
@@ -39,6 +39,38 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
     } */
+        @media (width > 670px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: min-content 1fr 1fr 1fr;
+
+            a {
+                padding-top: 2em;
+                grid-row: 1;
+            }
+            h1 {
+                grid-row: 2;
+                padding: .5em;
+            }
+
+            img {
+                width: 80%;
+                margin: 0 auto;
+                grid-row: 3;
+            }
+            ul {
+                margin: 0;
+                grid-row: 3;
+                grid-column: 2;
+            }
+            .emoji {
+                grid-row: 4;
+            }
+            a, h1, .emoji {
+                grid-column: 1/3;
+                margin: 0 auto;
+            }
+        }
 
     }
 
@@ -55,7 +87,11 @@
     }
 
     img {
-        width: 80%;
+        width: 18em;
+
+        @media (width > 460px) {
+            width: 24em;
+        }
     }
     ul {
         padding: 0;
@@ -74,7 +110,9 @@
         color: var(--text-color);
     }
 
-
+    li {
+        font-size: clamp(1rem, 3.5vw, 1.5rem)
+    }
 
 </style>
     
