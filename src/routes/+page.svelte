@@ -139,6 +139,7 @@
                 height: 100%;
                 background-color: white;
                 text-decoration: none;
+                /* border-radius: 1em; */
             }
             & a img {
                 width: 100%;
@@ -147,6 +148,7 @@
                 margin-bottom: 0;
                 display: block;
                 transition: filter 0.2s;
+                border-radius: 1em 1em 0 0;
             }
             & a p {
                 position: absolute;
