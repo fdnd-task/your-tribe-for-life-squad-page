@@ -1,12 +1,7 @@
-export async function load({url}) {
-    const membersResposnse = await fetch('https://fdnd.directus.app/items/squad?sort=name&fields=persons.*,persons.person_id.*&filter[cohort][_eq]=2526')
-    const membersData = await membersResposnse.json();
-
-    const members = membersData.data.flatMap(squad =>
-        squad.persons.map(p => p.person_id)
-    );
-
-    return {
-        members
-    };
+export async function load({ url }) {
+    const members = await fetch("https://fdnd.directus.app/items/person?fields=*,squads.squad_id.name,squads.squad_id.cohort,squads.squad_id.tribe.name&filter[squads][squad_id][cohort][_eq]=2526&filter[squads][squad_id][tribe][name][_eq]=FDND%20Jaar%202");
+    const membersData = await members.json();
+    console.log(membersData)
+ 
+    return { members: membersData.data };
 }

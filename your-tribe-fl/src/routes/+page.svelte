@@ -10,7 +10,11 @@
 
 {#each members as member}
     <div class="profile-card">
-        <img class="profile-pic" src="{member.avatar}" alt="profile-pic-{member.id}" width="150">
+        <img class="profile-pic"
+        src={`https://fdnd.directus.app/assets/${member.mugshot}`}
+        alt={member.name}
+        width=200
+      />
         <br>
         <a class="profile-name" href="/{member.id}">{member.name}</a>
     </div>
