@@ -38,7 +38,7 @@ hou je html clean geen inline code css of js
 - In Css tussen elke component witruimte tussen dus als je bijv. klaar bent met de header en je gaat over naar de main houden we ons aan een x aantal witruimte 
 
 
-### Animatie namen
+### Animatie conventies
 
 1. Alle animatie clases beginnen we met animation
 2. Indien van toepassing, geef aan hoe de animatie zichtbaar of ontzichtbaar wordt. Bijvoorbeeld fade-in of clip-in.
