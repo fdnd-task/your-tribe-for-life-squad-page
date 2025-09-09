@@ -16,10 +16,10 @@
                 <a href="/{member.id}">
                     <!-- als iemand geen mugshot heeft word die vervangen door noname.jpg -->
                     <img
-                        src={`https://fdnd.directus.app/assets/${member.mugshot}`}
+                        src={`https://fdnd.directus.app/assets/${member.mugshot}?width=140&height=200`}
                         alt={`portret ${member.name}`}
-                        height="50"
-                        width="50"
+                        height="200"
+                        width="140"
                         onerror={(e) => (e.currentTarget.src = "/noname.jpg")}
                     />
                     <p>{member.name}</p>
@@ -37,7 +37,9 @@
                 <a href="/{member2.id}">
                     <!-- als iemand geen mugshot heeft word die vervangen door noname.jpg -->
                     <img
-                        src={`https://fdnd.directus.app/assets/${member2.mugshot}`}
+                        src={`https://fdnd.directus.app/assets/${member2.mugshot}?width=140&height=200`}
+                        height="200"
+                        width="140"
                         alt={`portret ${member2.name}`}
                         onerror={(e) => (e.currentTarget.src = "/noname.jpg")}
                     />
