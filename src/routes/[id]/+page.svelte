@@ -7,7 +7,7 @@
     <div class="content">
     <a href="/">Terug naar home</a>
         <h1 class="text-gradient">{member.name.split(' ')[0]}</h1>
-        <img src="https://fdnd.directus.app/assets/{member.mugshot}" alt="portret {member.name}">
+        <img src="https://fdnd.directus.app/assets/{member.mugshot}?width=576&height=384" alt="portret {member.name}">
 
         <ul>
             <li><span class="bold">geboortedatum:</span> {member.birthdate}</li>
