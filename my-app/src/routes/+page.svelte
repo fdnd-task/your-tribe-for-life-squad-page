@@ -35,8 +35,8 @@
 <div class="book">
     <div class="page">
         <div class="front cover">
-            <h1>FlipBook FDND</h1>
-            <p>2025.<br />First edition</p>
+            <h1 class="textLarge">FDND 2E</h1>
+            <p>2025 - 2026.<br />First edition</p>
         </div>
         <div class="back">
             <h2>Welcome</h2>
@@ -69,7 +69,7 @@
              <p>{members[members.length - 1].bio}</p>
         </div>
         <div class="back cover">
-            <h3>That's all, folks</h3>
+            <h3 class="textLarge">That's all, folks</h3>
             <p>End of the flipbook.</p>
         </div>
     </div>
@@ -234,15 +234,17 @@
     }
 
     .cover {
+        color: #050542;
+        font-family: sans-serif;
         background:
             radial-gradient(
                 circle farthest-corner at 80% 20%,
                 hsl(150 80% 20% / 0.3) 0%,
                 hsl(170 60% 10% / 0.1) 100%
             ),
-            hsl(231, 32%, 29%)
-                url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Za9HMxEMB1un_s-8MZ-aCnyr3tOTB-GpfHHZSJ7FLqRbBrbDOyY3zTbdaN3bdqDbfDc&usqp=CAU")
-                50% / cover;
-        color: hsl(200 30% 98%);
+            #66E5BF 50% / cover;
+        .textLarge {
+            font-size: 3em;
+        }
     }
 </style>
