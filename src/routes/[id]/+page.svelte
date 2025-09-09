@@ -5,7 +5,7 @@
 </script>
 <main>
     <div class="content">
-    <a href="/">Terug naar home</a>
+    <a href="/">← Terug naar home</a>
         <h1 class="text-gradient">{member.name.split(' ')[0]}</h1>
         <img src="https://fdnd.directus.app/assets/{member.mugshot}" alt="portret {member.name}">
 
@@ -27,6 +27,8 @@
         background-size: cover;
     }
 
+    
+
     .content {
         height: 100vh;
         display: flex;
@@ -47,7 +49,9 @@
             a {
                 padding-top: 2em;
                 grid-row: 1;
+                margin-left: 3rem;
             }
+
             h1 {
                 grid-row: 2;
                 padding: .5em;
@@ -66,7 +70,7 @@
             .emoji {
                 grid-row: 4;
             }
-            a, h1, .emoji {
+            h1, .emoji {
                 grid-column: 1/3;
                 margin: 0 auto;
             }
@@ -108,6 +112,9 @@
     }
     a {
         color: var(--text-color);
+    }
+    a:hover {
+        color: var(--light-color-gradient);
     }
 
     li {

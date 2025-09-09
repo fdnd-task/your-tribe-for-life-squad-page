@@ -20,7 +20,13 @@ main {
 
     --text-color: #F0FFFA;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
+    cursor: url(https://fdnd.directus.app/assets/{member.mugshot});
+}
 h1 {
     font-family: "Monomaniac One";
     font-size: clamp(4rem, 4vw, 10rem);
