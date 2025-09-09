@@ -23,7 +23,7 @@
 <style>
     main {
         height: 100vh; 
-        background-image: url("/background-image.png");
+        background-image: url("/background-image.webp");
         background-size: cover;
     }
 

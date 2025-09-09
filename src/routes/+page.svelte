@@ -14,13 +14,13 @@
         {#each members as member}
             <li>
                 <a href="/{member.id}">
-                    <!-- als iemand geen mugshot heeft word die vervangen door noname.jpg -->
+                    <!-- als iemand geen mugshot heeft word die vervangen door noname.webp -->
                     <img
                         src={`https://fdnd.directus.app/assets/${member.mugshot}?width=140&height=200`}
                         alt={`portret ${member.name}`}
                         height="200"
                         width="140"
-                        onerror={(e) => (e.currentTarget.src = "/noname.jpg")}
+                        onerror={(e) => (e.currentTarget.src = "/noname.webp")}
                     />
                     <p>{member.name}</p>
                 </a>
@@ -35,13 +35,13 @@
         {#each members2 as member2}
             <li>
                 <a href="/{member2.id}">
-                    <!-- als iemand geen mugshot heeft word die vervangen door noname.jpg -->
+                    <!-- als iemand geen mugshot heeft word die vervangen door noname.webp -->
                     <img
                         src={`https://fdnd.directus.app/assets/${member2.mugshot}?width=140&height=200`}
                         height="200"
                         width="140"
                         alt={`portret ${member2.name}`}
-                        onerror={(e) => (e.currentTarget.src = "/noname.jpg")}
+                        onerror={(e) => (e.currentTarget.src = "/noname.webp")}
                     />
                     <p>{member2.name}</p>
                 </a>
@@ -75,7 +75,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-image: url("/background-image.png");
+        background-image: url("/background-image.webp");
         background-size: cover;
         overflow-y: hidden;
     }
