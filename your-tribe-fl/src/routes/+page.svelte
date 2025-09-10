@@ -1,6 +1,6 @@
 <script>
     let { data } = $props();
-
+    import '../lib/styleguide.css';
     const members = data.members;
 
 </script>
@@ -62,6 +62,6 @@
             transform: scale(1.1) rotate(10deg);
         }
     }
-
 </style>
+
 
