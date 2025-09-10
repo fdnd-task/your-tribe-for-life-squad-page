@@ -219,4 +219,16 @@
         ul::-webkit-scrollbar {
             display: none; /* Chrome, Safari, Edge (Blink/WebKit) */
         }
+
+
+        a:hover p,
+        a:focus-visible p {                      
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        a:focus-visible img {
+            border: 2px solid rgb(222, 255, 122);
+        }
     </style>
