@@ -100,7 +100,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(2px 2px #FFFFFF);
-            
         }
 
         h2 {
@@ -147,7 +146,7 @@
                 flex: 0 0 auto; /* zorgt dat de li'tjs hun eigen breedte houden */
                 width: 140px;
                 height: 200px;
-                border-radius: 1em 1em 0 0;
+                border-radius: 1em;
                 overflow: hidden;
                 scroll-snap-align: center;
                 scroll-margin-inline: 50%;
@@ -160,7 +159,9 @@
                     height: 100%;
                     background-color: white;
                     text-decoration: none;
-                    /* border-radius: 1em; */
+                    :hover {
+                        filter: brightness(1.1);
+                    }
                 }
                 & a img {
                     width: 100%;
@@ -169,7 +170,7 @@
                     margin-bottom: 0;
                     display: block;
                     transition: filter 0.2s;
-                    border-radius: 1em 1em 0 0;
+                    border-radius: 1em;
                 }
                 & a p {
                     position: absolute;
@@ -191,18 +192,10 @@
                         transform 0.2s;
                     pointer-events: none;
                 }
-                & a:hover img,
-                & a:focus img {
-                    filter: brightness(0.7);
-                }
-                & a:hover p,
-                & a:focus p {
-                    opacity: 1;
-                    visibility: visible;
-                    transform: translateY(0);
-                    pointer-events: auto;
-                }
+            :hover {
+                filter: brightness(1.05);
             }
+        }
         }
         ul:nth-of-type(1) {
             grid-area: list2e;
@@ -225,5 +218,17 @@
 
         ul::-webkit-scrollbar {
             display: none; /* Chrome, Safari, Edge (Blink/WebKit) */
+        }
+
+
+        a:hover p,
+        a:focus-visible p {                      
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        a:focus-visible img {
+            border: 2px solid rgb(222, 255, 122);
         }
     </style>
