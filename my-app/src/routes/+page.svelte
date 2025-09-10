@@ -35,8 +35,11 @@
 <div class="book">
     <div class="page">
         <div class="front cover">
-            <h1 class="textLarge">FDND 2E</h1>
-            <p>2025 - 2026.<br />First edition</p>
+            <div>
+                <h1 class="textLarge">FDND 2E</h1>
+                <p>Frontend Design & Development</p>
+            </div>
+            <p><strong>2025 - 2026.</strong><br />First edition</p>
         </div>
         <div class="back">
             <h2>Welcome</h2>
@@ -242,9 +245,12 @@
                 hsl(150 80% 20% / 0.3) 0%,
                 hsl(170 60% 10% / 0.1) 100%
             ),
-            #66E5BF 50% / cover;
+            /* var(--color-salmon) 50% / cover; */
+            var(--color-storm) 50% / cover;
+
         .textLarge {
             font-size: 3em;
+            margin-bottom: 0;
         }
     }
 </style>
