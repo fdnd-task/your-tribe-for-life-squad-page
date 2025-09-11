@@ -104,3 +104,24 @@
       height: auto;
       margin: 0 auto;
     }
+  
+    .students-grid {
+      width: 100%;
+      max-width: 1100px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: clamp(1rem, 2.5vw, 2rem);
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      display: grid;
+      gap: .75rem;
+    }
