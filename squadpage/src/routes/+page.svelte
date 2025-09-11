@@ -56,3 +56,22 @@
       font-family: 'Jacques Francois';
       src: url('src/lib/fonts/JacquesFrancois-Regular.ttf') format('truetype');
     }
+  
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .squadpage {
+      position: relative; /* nodig voor absolute positioning van menu-button */
+      min-height: 100vh;
+      padding: clamp(1rem, 4vw, 2rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(1rem, 2vw, 2rem);
+      background-color: var(--background-color);
+    }
