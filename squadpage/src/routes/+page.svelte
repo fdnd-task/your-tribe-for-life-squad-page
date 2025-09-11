@@ -1,55 +1,40 @@
 <script>
+    import squadpageSvg from '$lib/assets/squadpage.svg';
+    import menuSvg from '$lib/assets/menu.svg'; // menu icon
+    import Header from '$lib/components/Header.svelte';
+    import avatar from '$lib/assets/default-avatar.png';
+
     // Data uit +page.server.js
     let { data } = $props();
     const members = data.members;
-  
-    function assetUrl(member) {
-      if (member?.avatar?.id) {
-        return `https://fdnd.directus.app/assets/${member.avatar.id}?fit=cover&width=600&height=800`;
-      }
-      return "/default-avatar.jpg";
-    }
-  
-    import squadpageSvg from '$lib/assets/squadpage.svg';
-    import menuSvg from '$lib/assets/menu.svg'; // menu icon
-  </script>
-  
-  <main class="squadpage">
-    <!-- menu button rechtsboven -->
-    <button class="menu-button">
-      <img src={menuSvg} alt="Menu" />
-    </button>
-  
-    <header class="header">
-      <img src={squadpageSvg} alt="Squadpage logo" class="logo" />
-    </header>
-  
-    <ul class="students-grid">
+</script>
+
+<Header />
+<main class="squadpage">
+  <ul class="students-grid">
       {#each members as member}
         <li>
           <article class="card">
             <div class="avatar">
-              <img
-                src={assetUrl(member)}
-                alt={"Foto van " + member.name}
-                loading="lazy"
-                decoding="async"
-              />
+              <img src={member.avatar ? member.avatar : avatar } alt={`Mugshot of ${member.name}`} width="130" height="auto" /> <!--standaard avatar als er geen avatar is --> 
             </div>
-            <h3 class="name">{member.name}</h3>
+              <a class="name" href={`/members/${member.id}`}>{member.name}</a>
           </article>
-        </li>
+        </li> 
       {/each}
     </ul>
-  </main>
-  
+</main>
+
   <style>
     :root {
       --background-color: #EDE9FE;
       --card-color: #ffffff;
       --text-color: black;
       --font-regular: 'Jacques Francois', sans-serif;
+      --font-size-xsmall: 1em;
       --font-size-small: 1.25em;
+      --font-size-medium: 1.75em;
+      --font-size-large: 3em;
       background-color: var(--background-color);
     
     }
@@ -65,6 +50,11 @@
       scroll-behavior: smooth;
       padding: 0;
       margin: 0;
+    }
+
+    a{
+      text-decoration: none;
+      color: var(--text-color);
     }
   
     .squadpage {
@@ -126,7 +116,7 @@
       text-align: center;
       display: grid;
       gap: .75rem;
-    }
+       }
   
     .avatar img {
       display: block;
