@@ -75,3 +75,20 @@
       gap: clamp(1rem, 2vw, 2rem);
       background-color: var(--background-color);
     }
+  
+    /* menu button helemaal rechtsboven */
+    .menu-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+  
+    .menu-button img {
+      /* width: 50px;
+      height: 50px;
+      display: block; */
+    }
