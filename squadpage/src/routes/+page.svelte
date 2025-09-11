@@ -9,3 +9,7 @@
       }
       return "/default-avatar.jpg";
     }
+  
+    import squadpageSvg from '$lib/assets/squadpage.svg';
+    import menuSvg from '$lib/assets/menu.svg'; // menu icon
+  </script>
