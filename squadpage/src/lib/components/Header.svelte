@@ -55,3 +55,69 @@
             </ul>
     </nav>
 </header>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+
+    }
+
+    .menu,
+    .button-close-menu  {
+        display: flex;
+        align-items: center;
+        gap: .3em;
+        flex-direction: column;
+        position: absolute;
+        top: 3em;
+        right: 1em;
+        cursor: pointer;    
+    }
+
+    span   {
+        font-size: 0.75em;
+        text-transform: uppercase;
+        padding-right: 1em;
+    }
+
+    .navigation {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        translate: -100% 0%; /* verberg menu buiten scherm */
+        transition: translate .3s;
+        background-color: var(--background-color);
+        z-index: 1;
+        list-style: none;
+    }
+
+    .navigation.open {
+        translate: 0% 0%; /* toon menu */
+    }
+
+    .menu-image {
+        display: block;
+        margin: 2em auto 0 auto;
+    }
+   
+   li {
+        position: relative;
+   }
+
+   li a{
+        position: absolute;
+        inset: 0; /* maakt de link klikbaar over het hele li element */
+        z-index: 2;
+        display: block;
+   }
+</style>
