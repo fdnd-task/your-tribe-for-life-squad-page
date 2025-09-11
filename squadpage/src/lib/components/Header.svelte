@@ -11,10 +11,13 @@
 
 <header>
     <nav>
-        <img src={squadpage} alt="squadpage sketch">
+
+        <a href="/">
+            <img src={squadpage} alt="squadpage sketch"  width="600" height="auto">
+        </a>
 
         <button class="menu" on:click={() => menuOpen = true}> <!-- open menu button -->
-            <img src={menuIcon} alt="menu icon" width="75" height="75">
+            <img src={menuIcon} alt="menu icon" width="60" height="60">
             <span>Menu</span>
         </button>
 
@@ -27,30 +30,20 @@
 
                 <img class="menu-image" src={menu} alt="svg of a menu text" width="400" height="auto">
 
-                <img class="flower-image" src={flowers} alt="svg of a flowers" width="100" height="auto">
+                <img class="flower-image" src={flowers} alt="svg of a flowers" width="350" height="auto">
 
 
                 <li>
-                    <a href="/">
-                        <img src={wolkzwart} alt="wolkzwart icon" width="75" height="75">
-                        <span>Home </span>
-                    </a> 
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/squad2E">Squad 2E
-                        <img src={wolkzwart} alt="wolkzwart icon" width="75" height="75">
-                    </a>
-                    
+                    <a href="/squad2E">Squad 2E</a>
                 </li>
                 <li>
-                    <a href="/squad2F">Squad 2F
-                        <img src={wolkzwart} alt="wolkzwart icon" width="75" height="75">
-                    </a>
+                    <a href="/squad2F">Squad 2F</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact
-                        <img src={wolkwit} alt="wolkwit icon" width="75" height="75">
-                    </a>
+                    <a href="/contact">Contact</a>
                 </li>
             </ul>
     </nav>
@@ -77,22 +70,17 @@
         gap: .3em;
         flex-direction: column;
         position: absolute;
-        top: 3em;
-        right: 1em;
+        top: 1.5em;
+        right: 1.5em;
         cursor: pointer;    
     }
 
-    span   {
-        font-size: 0.75em;
-        text-transform: uppercase;
-        padding-right: 1em;
-    }
 
     .navigation {
         position: fixed;
         left: 0;
         right: 0;
-        top: 0;
+        top: -2em;
         bottom: 0;
         translate: -100% 0%; /* verberg menu buiten scherm */
         transition: translate .3s;
@@ -110,14 +98,26 @@
         margin: 2em auto 0 auto;
     }
    
-   li {
-        position: relative;
-   }
-
-   li a{
+   .flower-image {
         position: absolute;
-        inset: 0; /* maakt de link klikbaar over het hele li element */
-        z-index: 2;
-        display: block;
-   }
+        top: .7em;
+        left: 0;
+    }
+
+    .navigation li {
+        text-align: center;
+        margin: 2em;
+        font-size: var(--font-size-medium);
+        font-family: var(--font-regular);
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .navigation a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    
 </style>
