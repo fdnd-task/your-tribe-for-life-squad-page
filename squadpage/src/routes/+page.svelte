@@ -42,3 +42,17 @@
       {/each}
     </ul>
   </main>
+  
+  <style>
+    :root {
+      --background-color: #EDE9FE;
+      --text-color: black;
+      --font-regular: 'Jacques Francois', sans-serif;
+      --font-size-small: 1.25em;
+      background-color: var(--background-color);
+    }
+  
+    @font-face {
+      font-family: 'Jacques Francois';
+      src: url('src/lib/fonts/JacquesFrancois-Regular.ttf') format('truetype');
+    }
