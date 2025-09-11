@@ -24,7 +24,7 @@
             <ul class="navigation" class:open={menuOpen}> <!-- navigation menu, class 'open' toegevoegd als menuOpen true is -->
 
                 <button class="button-close-menu" on:click={() => menuOpen = false}> <!-- close menu button -->
-                    <img src={menuIcon} alt="close menu icon" width="75" height="75">
+                    <img src={menuIcon} alt="close menu icon" width="60" height="60">
                     <span>Sluit</span>
                 </button>
 
@@ -63,8 +63,7 @@
 
     }
 
-    .menu,
-    .button-close-menu  {
+    .menu{
         display: flex;
         align-items: center;
         gap: .3em;
@@ -72,9 +71,25 @@
         position: absolute;
         top: 1.5em;
         right: 1.5em;
-        cursor: pointer;    
+        cursor: pointer;
+        
     }
 
+    .button-close-menu {
+        display: flex;
+        align-items: center;
+        gap: .3em;
+        flex-direction: column;
+        position: absolute;
+        top: 3em;
+        right: 1.5em;
+        cursor: pointer;
+        }
+
+    span{
+        font-family: var(--font-regular);
+        font-size: var(--font-size-xsmall);
+    }
 
     .navigation {
         position: fixed;
