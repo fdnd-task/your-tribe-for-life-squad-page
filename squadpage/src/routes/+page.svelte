@@ -46,10 +46,12 @@
   <style>
     :root {
       --background-color: #EDE9FE;
+      --card-color: #ffffff;
       --text-color: black;
       --font-regular: 'Jacques Francois', sans-serif;
       --font-size-small: 1.25em;
       background-color: var(--background-color);
+    
     }
   
     @font-face {
@@ -117,7 +119,7 @@
     }
   
     .card {
-      background: #fff;
+      background: var(--card-color);
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 1rem;
@@ -136,7 +138,7 @@
   
     .name {
       margin: 0;
-      font-size: 1.1rem;
+      font-size: var(--font-size-small);
       font-family: var(--font-regular);
     }
   </style>
