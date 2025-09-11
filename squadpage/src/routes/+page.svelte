@@ -23,3 +23,22 @@
     <header class="header">
       <img src={squadpageSvg} alt="Squadpage logo" class="logo" />
     </header>
+  
+    <ul class="students-grid">
+      {#each members as member}
+        <li>
+          <article class="card">
+            <div class="avatar">
+              <img
+                src={assetUrl(member)}
+                alt={"Foto van " + member.name}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <h3 class="name">{member.name}</h3>
+          </article>
+        </li>
+      {/each}
+    </ul>
+  </main>
