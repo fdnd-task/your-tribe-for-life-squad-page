@@ -13,3 +13,13 @@
     import squadpageSvg from '$lib/assets/squadpage.svg';
     import menuSvg from '$lib/assets/menu.svg'; // menu icon
   </script>
+  
+  <main class="squadpage">
+    <!-- menu button rechtsboven -->
+    <button class="menu-button">
+      <img src={menuSvg} alt="Menu" />
+    </button>
+  
+    <header class="header">
+      <img src={squadpageSvg} alt="Squadpage logo" class="logo" />
+    </header>
