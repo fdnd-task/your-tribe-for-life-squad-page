@@ -1,12 +1,11 @@
-<script>
-    let { data } = $props();
-    import '../lib/styleguide.css';
-    const members = data.members;
-
-</script>
 
 <!-- <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p> -->
+
+<script>
+  export let data; // SvelteKit load() data
+  const members = data.members;
+</script>
 
 {#each members as member}
     <div class="profile-card">
@@ -19,6 +18,9 @@
         <a class="profile-name" href="/{member.id}">{member.name}</a>
     </div>
 {/each}
+
+ <button class="btn">Click Me</button>
+
 
 <style>
     .profile-card {
