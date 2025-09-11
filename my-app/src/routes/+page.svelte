@@ -106,9 +106,9 @@
 
     /* FlipBook */
 
-    body {
+    /* body { */
         /* or any other parent wrapper */
-        margin: 0;
+        /* margin: 0;
         display: flex;
         min-height: 100dvh;
         perspective: 1600px;
@@ -116,9 +116,9 @@
             1em/1.4 "Poppins",
             sans-serif;
         overflow: hidden;
-        color: hsl(180 68% 5%);
+        color: hsl(180 68% 5%); */
         /*   background-image: radial-gradient(circle farthest-corner at 50% 50%, hsl(187 20% 88%) 30%, hsl(149 20% 94%) 100%); */
-    }
+    /* } */
 
     .book {
         position: relative;
