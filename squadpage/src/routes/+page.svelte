@@ -92,3 +92,15 @@
       height: 50px;
       display: block; */
     }
+  
+    .header {
+      text-align: center;
+    }
+  
+    .logo {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
