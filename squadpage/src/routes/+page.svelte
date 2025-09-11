@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    // Data uit +page.server.js
+    let { data } = $props();
+    const members = data.members;
+  
+    function assetUrl(member) {
+      if (member?.avatar?.id) {
+        return `https://fdnd.directus.app/assets/${member.avatar.id}?fit=cover&width=600&height=800`;
+      }
+      return "/default-avatar.jpg";
+    }
