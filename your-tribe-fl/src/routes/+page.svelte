@@ -1,12 +1,11 @@
-<script>
-    let { data } = $props();
-
-    const members = data.members;
-
-</script>
 
 <!-- <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p> -->
+
+<script>
+  let { data } = $props();
+  const members = data.members;
+</script>
 
 {#each members as member}
     <div class="profile-card">
@@ -19,6 +18,7 @@
         <a class="profile-name" href="/{member.id}">{member.name}</a>
     </div>
 {/each}
+
 
 <style>
     .profile-card {
@@ -62,6 +62,6 @@
             transform: scale(1.1) rotate(10deg);
         }
     }
-
 </style>
+
 
