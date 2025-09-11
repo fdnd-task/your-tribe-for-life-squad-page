@@ -1,10 +1,11 @@
 <script>
     import squadpage from '$lib/assets/squadpage.svg';
     import menuIcon from '$lib/assets/menu-icon.svg';
-    import wolkzwart from '$lib/assets/wolkzwart.svg';
-    import wolkwit from '$lib/assets/wolkwit.svg';
+    // import wolkzwart from '$lib/assets/wolkzwart.svg';
+    // import wolkwit from '$lib/assets/wolkwit.svg';
     import menu from '$lib/assets/menu.svg';
     import flowers from '$lib/assets/flower.svg';
+
 
     let menuOpen = false; //menu is standaard gesloten (false)
 </script>
@@ -20,6 +21,8 @@
             <img src={menuIcon} alt="menu icon" width="60" height="60">
             <span>Menu</span>
         </button>
+
+        
 
             <ul class="navigation" class:open={menuOpen}> <!-- navigation menu, class 'open' toegevoegd als menuOpen true is -->
 
