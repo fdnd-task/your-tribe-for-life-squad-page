@@ -3,7 +3,7 @@
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p> -->
 
 <script>
-  export let data; // SvelteKit load() data
+  let { data } = $props();
   const members = data.members;
 </script>
 
@@ -18,8 +18,6 @@
         <a class="profile-name" href="/{member.id}">{member.name}</a>
     </div>
 {/each}
-
- <button class="btn">Click Me</button>
 
 
 <style>
