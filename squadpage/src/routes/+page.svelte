@@ -125,3 +125,20 @@
       display: grid;
       gap: .75rem;
     }
+  
+    .avatar img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  
+    .name {
+      margin: 0;
+      font-size: 1.1rem;
+      font-family: var(--font-regular);
+    }
+  </style>
+  
+  
