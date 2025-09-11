@@ -99,7 +99,7 @@
         left: 0;
         right: 0;
         top: -2em;
-        bottom: 0;
+        bottom: -2em;
         translate: -100% 0%; /* verberg menu buiten scherm */
         transition: translate .3s;
         background-color: var(--background-color);
