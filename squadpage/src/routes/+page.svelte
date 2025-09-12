@@ -3,6 +3,8 @@
     import menuSvg from '$lib/assets/menu.svg'; // menu icon
     import Header from '$lib/components/Header.svelte';
     import avatar from '$lib/assets/default-avatar.png';
+    import squad2e from '$lib/assets/squad2e.svg';
+    import squad2f from '$lib/assets/squad2f.svg';
 
     // Data uit +page.server.js
     let { data } = $props();
@@ -11,6 +13,16 @@
 
 <Header />
 <main class="squadpage">
+
+  <div class="squadpage-classes">
+      <a href="/squad2e">
+          <img src={squad2e} alt="squad 2E icon" width="175" height="auto">
+      </a>
+      <a href="/squad2f">
+          <img src={squad2f} alt="squad 2F icon" width="175" height="auto">
+      </a>
+  </div>
+
   <ul class="students-grid">
       {#each members as member}
         <li>
@@ -68,34 +80,6 @@
       background-color: var(--background-color);
     }
   
-    /* menu button helemaal rechtsboven */
-    .menu-button {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: transparent;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-    }
-  
-    .menu-button img {
-      /* width: 50px;
-      height: 50px;
-      display: block; */
-    }
-  
-    .header {
-      text-align: center;
-    }
-  
-    .logo {
-      display: block;
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
-    }
   
     .students-grid {
       width: 100%;

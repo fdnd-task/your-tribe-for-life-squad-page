@@ -40,10 +40,10 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/squad2E">Squad 2E</a>
+                    <a href="/squad2e">Squad 2E</a>
                 </li>
                 <li>
-                    <a href="/squad2F">Squad 2F</a>
+                    <a href="/squad2f">Squad 2F</a>
                 </li>
                 <li>
                     <a href="/contact">Contact</a>
@@ -99,7 +99,7 @@
         left: 0;
         right: 0;
         top: -2em;
-        bottom: 0;
+        bottom: -2em;
         translate: -100% 0%; /* verberg menu buiten scherm */
         transition: translate .3s;
         background-color: var(--background-color);
