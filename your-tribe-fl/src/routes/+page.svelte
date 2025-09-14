@@ -38,7 +38,7 @@
                 {#if member.mugshot}
                 <div class="profile-card">
                     <img src="{`https://fdnd.directus.app/assets/${member.mugshot}`}" width="250" alt="student-{member.name}">
-                    <a href="/">{member.name}</a>
+                    <a href="/{member.id}">{member.name}</a>
                 </div>
                 {/if}
             {/each}
