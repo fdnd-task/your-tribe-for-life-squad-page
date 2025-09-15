@@ -1,4 +1,6 @@
     <script>
+    import Studentcard from '$lib/components/Studentcard.svelte';
+
         let { data } = $props(); // rune die data doorgeeft tussen page.server.js en page.svelte ("magische property")
 
         // Zet de members uit de data in een constante
@@ -13,19 +15,7 @@
         <ul>
             <!-- voor elke member in members maak een li -->
             {#each members as member}
-                <li>
-                    <a href="/{member.id}">
-                        <!-- als iemand geen mugshot heeft word die vervangen door noname.webp -->
-                        <img
-                            src={`https://fdnd.directus.app/assets/${member.mugshot}?width=140&height=200`}
-                            alt={`portret ${member.name}`}
-                            height="200"
-                            width="140"
-                            onerror={(e) => (e.currentTarget.src = "/noname.webp")}
-                        />
-                        <p>{member.name}</p>
-                    </a>
-                </li>
+                <Studentcard {member} />
             {/each}
         </ul>
 
@@ -33,19 +23,7 @@
         <ul>
             <!-- voor elke member2 in members2 maak een li -->
             {#each members2 as member2}
-                <li>
-                    <a href="/{member2.id}">
-                        <!-- als iemand geen mugshot heeft word die vervangen door noname.webp -->
-                        <img
-                            src={`https://fdnd.directus.app/assets/${member2.mugshot}?width=140&height=200`}
-                            height="200"
-                            width="140"
-                            alt={`portret ${member2.name}`}
-                            onerror={(e) => (e.currentTarget.src = "/noname.webp")}
-                        />
-                        <p>{member2.name}</p>
-                    </a>
-                </li>
+                <Studentcard member={member2} />
             {/each}
         </ul>
 
@@ -141,62 +119,8 @@
             overflow-x: auto;
             scroll-behavior: smooth;
             margin-left: 1.5em;
-
-            & li {
-                flex: 0 0 auto; /* zorgt dat de li'tjs hun eigen breedte houden */
-                width: 140px;
-                height: 200px;
-                border-radius: 1em;
-                overflow: hidden;
-                scroll-snap-align: center;
-                scroll-margin-inline: 50%;
-                background: none;
-                padding: 0;
-                & a {
-                    position: relative;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    background-color: white;
-                    text-decoration: none;
-                    :hover {
-                        filter: brightness(1.1);
-                    }
-                }
-                & a img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    margin-bottom: 0;
-                    display: block;
-                    transition: filter 0.2s;
-                    border-radius: 1em;
-                }
-                & a p {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 100%;
-                    margin: 0;
-                    padding: 0.5em 0;
-                    background-color: #257070;
-                    color: white;
-                    font-weight: bold;
-                    font-size: 1em;
-                    text-align: center;
-                    opacity: 0;
-                    visibility: hidden;
-                    transform: translateY(100%);
-                    transition:
-                        opacity 0.2s,
-                        transform 0.2s;
-                    pointer-events: none;
-                }
-            :hover {
-                filter: brightness(1.05);
-            }
         }
-        }
+        
         ul:nth-of-type(1) {
             grid-area: list2e;
             mask-image: linear-gradient(to left, transparent 5%, black 35%);
@@ -221,14 +145,5 @@
         }
 
 
-        a:hover p,
-        a:focus-visible p {                      
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-        }
-
-        a:focus-visible img {
-            border: 2px solid rgb(222, 255, 122);
-        }
+        
     </style>
