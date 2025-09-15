@@ -109,7 +109,7 @@
     }
     p {
         color: var(--color-white-text);
-        display: inline-flex;
+        /* display: inline-flex; */
         position: relative;
         bottom: 4rem;
         
