@@ -7,6 +7,7 @@
     --button-border-color: #66E5BF;
     --main-text-color: #000000;
     --dot-color: #DFDFDF; 
+    --header-background-color:#ffffff7e;
 
     @media(prefers-color-scheme: dark){
         --background-color: #0E0E0E;
@@ -15,6 +16,7 @@
         --button-border-color: #050542;
         --main-text-color: #ffffff;
         --dot-color: #6E757A;
+        --header-background-color:#3a3a3a7e;
     }
 
     /* font */
@@ -38,4 +40,35 @@
         &:hover{
             border: 2px solid var(--button-border-color);
         }
+}
+
+body{
+    margin: 0;
+    /* background-color: var(--background-color); */
+}
+
+header{
+    position: sticky;
+    top: 0;
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: var(--header-background-color);
+        padding-block: 1em;
+    
+        a{
+            margin-right: auto;
+            padding-left: .5em;
+        }
+    
+        button{
+            margin: .5em;
+        }
+    }
+}
+
+img{
+    max-width: 100vw;
 }
