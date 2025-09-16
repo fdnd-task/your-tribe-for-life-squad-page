@@ -29,7 +29,16 @@
         <div class="page">
             <div class="front">
                 <h2>{members2[index].name}</h2>
-                <p>{members2[index].bio}</p>
+                <p>
+                    {#if member.bio}
+                        {member.bio.slice(
+                            0,
+                            100,
+                        )}{#if member.bio.length > 100}...{/if}
+                    {:else}
+                        No bio available.
+                    {/if}
+                </p>
             </div>
             <div class="back">
                 <img src={member.avatar} alt="{member.name}'s avatar" />
