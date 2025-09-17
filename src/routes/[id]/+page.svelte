@@ -84,7 +84,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         filter: drop-shadow(2px 2px #FFFFFF);
-        
     }
     .bold {
         font-weight: bold;
