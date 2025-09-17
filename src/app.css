@@ -5,6 +5,8 @@
 
 *{
     font-family: Montserrat;
+    margin: 0;
+    padding: 0;
 }
 
 :root{
@@ -54,13 +56,42 @@
 }
 
 body{
-    margin: 0;
     background:
     radial-gradient(circle at 1px 1px,var(--dot-color) 1.2px, transparent 1.3px) 0 0 / var(--space) var(--space),
     linear-gradient(var(--background-color),var(--background-color));
     /* background-color: var(--background-color); */
     
 }
+
+.layout-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin: 0 20px;
+
+    @media (min-width:678px){
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 30px;
+    }
+
+    @media (min-width:1024px){
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    img {
+        width: 100%;
+        aspect-ratio: 9 / 16;  
+        object-fit: cover;    
+        border-radius: 1em;
+        display: block;
+    }
+
+    > img:nth-child(5n+2),
+    > img:nth-child(5n+4) {
+        transform: translateY(1em); 
+    }
+}
+
 
 header{
     position: sticky;
@@ -72,6 +103,7 @@ header{
         justify-content: flex-end;
         background-color: var(--header-background-color);
         padding-block: 1em;
+        padding: 10px 30px;
     
         a{
             margin-right: auto;
