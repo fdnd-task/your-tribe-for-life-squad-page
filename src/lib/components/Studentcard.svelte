@@ -1,17 +1,16 @@
-
 <script>
+    import avatar from '$lib/assets/noname.webp';
     let { member } = $props();
 </script>
 
 <li>
     <a href="/{member.id}">
-        <!-- als iemand geen mugshot heeft word die vervangen door noname.webp -->
+        <!-- Als de member een mugshot heeft gebruik hetgene na de ? anders gebruik de ding na de " : " -->
         <img
-            src={`https://fdnd.directus.app/assets/${member.mugshot}?width=140&height=200`}
+            src={member.mugshot ? `https://fdnd.directus.app/assets/${member.mugshot}?width=140&height=200` : avatar}
             alt={`portret ${member.name}`}
             height="200"
             width="140"
-            onerror={(e) => (e.currentTarget.src = "/noname.webp")}
         />
         <p>{member.name}</p>
     </a>
