@@ -4,7 +4,20 @@
 <script>
   export let data;
   const members = data?.members ?? [];
+
+  // darkmode
+  import { onMount } from "svelte"
+
+onMount(() => {
+  const btn = document.getElementById("dark-mode-button")
+
+  btn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode-active")
+  })
+})
 </script>
+
 
  {#each members as m}
       <img
@@ -12,3 +25,5 @@
         alt={m.name}
       />
 {/each}
+
+
