@@ -31,9 +31,41 @@ We gaan samen aan de slag met het maken van een oplever todo lijst, deze kun je 
 
 #### Oplever todo's:
 
-```
-    Hier komt de lijst
-```
+Wat moet er in de oplevering zitten?
+
+- [`README.md`](#readme)
+- [Alles moet getest zijn](#testen)
+- [Projectboard](#projectboard)
+- Live staan + live link
+- Geen open pull requests
+
+##### Projectboard
+- Moscow is toegepast
+- Issues in juiste fase
+- Issues sluiten
+- Backlog met issues die niet opgepakt worden
+
+##### Refactor
+- Structuur van je mappen
+- Netjes uitlijnen van code
+- Ongebruikte code is verwijderd
+- Ongebruikte files zijn verwijderd
+- Comments in code
+- Comments met bronnen
+- Conventies uit `CONTRIBUTING.md` zijn gehandhaafd
+
+##### README
+- Informatie voor installatie
+- Omschrijving van het project
+- Ontwerpkeuzes uitleggen
+- Functionaliteiten uitleg
+
+##### Testen
+- Performance
+- A11y, tab, kleur, screenreader
+- User test
+- Responsive + Device test
+- Html validator
 
 Maak issues aan van de onderdelen die je mist en neem ze mee op je projectboard. 
 
@@ -84,7 +116,6 @@ Geef feedback aan teamleden
 #### 3. Verwerking
 
 Verwerk de ontvangen en gegeven feedback in je `LEARNINGS.md`
-
 
 #### 4. Voorbereiding retrospect
 
