@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  /* ------------------ Background ------------------ */
+  --color-bg-dark: #180E01;
+  --color-bg-light: #CEC0AE;
+
+  /* ------------------ Text ------------------ */
+  --color-text-dark: #180E01;
+  --color-text-light: #CEC0AE;
+  --color-white-text: #fff;
+  --btn-weight: 600;
+
+  /* ------------------ Button System ------------------ */
+  --btn-radius: 999px;
+  --btn-padding: 0.75rem 1.5rem;
+  --btn-font: 'montserrat', sans-serif;
+
+  /* ------------------ Text Size ------------------ */
+  --text-size-xs: clamp(0.75rem, 1.5vw, 12px);
+  --text-size-sm: clamp(0.875rem, 1.75vw, 14px);
+  --text-size-md: clamp(1rem, 2vw, 16px);
+  --text-size-lg: clamp(1.125rem, 2.25vw, 18px);
+  --text-size-xl: clamp(1.25rem, 2.5vw, 20px);
+}
+
+body {
+  background-color: var(--color-bg-light);
+  font-family: var(--btn-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------------------ Background Classes ------------------ */
+.bg-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+/* ------------------ Text Classes ------------------ */
+.text-dark {
+  color: var(--color-text-dark);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+/* ------------------ Typography ------------------ */
+.text-h1 {
+  font-family: var(--btn-font);
+  font-size: clamp(var(--size-m), 5vw, 48px);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+ 
+.text-p {
+  font-family: var(--btn-font);
+  font-size: clamp(var(--size-xs), 2.5vw, 20px);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/* ------------------ Liquid Glass Button ------------------ */
+.btn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  font-family: var(--btn-font);
+  font-weight: var(--btn-weight);
+  text-align: center;
+  cursor: pointer;
+  /* color: var(--color-text-dark); */
+
+  /* Liquid Glass Effect */
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12),
+  0 0 0 2px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Tint overlay */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* Subtle highlights */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.5),
+  inset -1px -1px 2px rgba(255, 255, 255, 0.3);
+  z-index: 0;
+}
+
+/* Hover effect */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.03);
+}
