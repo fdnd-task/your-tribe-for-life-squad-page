@@ -16,7 +16,7 @@
             <li><span class="bold">favoriete property:</span> {member.fav_property}</li>
         </ul>
         
-        <span class="emoji"><p>{member.fav_emoji}</p></span>
+        <span class="emoji">{member.fav_emoji}</span>
     </div>
 </main>
 
