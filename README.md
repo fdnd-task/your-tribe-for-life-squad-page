@@ -46,4 +46,12 @@ De opdracht was om met Svelte en SvelteKit een squadpage te bouwen met een detai
 
 
 ## ONTWERPKEUZES
-Uitgebreid is er over het ontwerp gepraat in dit issue. We zijn begonnen met het toepassen van gradiënts. Uiteindelijk was dit voor ons nog een beetje te simpel, er ontbrak wat. Dus hebben
+Uitgebreid is er over het ontwerp gepraat in dit issue. We zijn begonnen met het toepassen van gradiënts. Uiteindelijk was dit voor ons nog een beetje te simpel, er ontbrak wat. Dus hebben we ervoor gekozen een andere achtergrond toe te passen en de gradiënts door te trekken in de teksten. Uiteraard hebben we het ook responsive gebouwd. 
+
+
+<img width="250" height="831" alt="Screenshot 2025-09-18 at 10 23 28" src="https://github.com/user-attachments/assets/a6a9eff0-6928-4668-a545-10293d9404f9" />
+<img width="750" height="831" alt="Screenshot 2025-09-18 at 10 23 00" src="https://github.com/user-attachments/assets/ec7d0ee4-7e93-47ef-b3da-1aa3885e2500" />
+
+<img width="250" height="831" alt="Screenshot 2025-09-18 at 10 23 45" src="https://github.com/user-attachments/assets/c5179d41-4e93-46d7-a9e1-70f1ec05f5ad" />
+<img width="750" height="831" alt="Screenshot 2025-09-18 at 10 23 55" src="https://github.com/user-attachments/assets/0fc78e5f-bd7e-4e5e-9a2c-783c506d89b8" />
+
