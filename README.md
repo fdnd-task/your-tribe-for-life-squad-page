@@ -101,3 +101,33 @@ export async function load({ url, params }) {
 }
 ```
 </details>
+<details>
+  <summary>For loop</summary>
+
+In de +page.svelte halen we dus die data op die we net geload hebben door middel van $props. Daarna laden we die data in via de foreach loop en in die loop laden we de component in.
+
+
+  ```
+<script>
+    import Studentcard from '$lib/components/Studentcard.svelte';
+
+        let { data } = $props(); // rune die data doorgeeft tussen page.server.js en page.svelte ("magische property")
+
+        // Zet de members uit de data in een constante
+        const members = data.members;
+        const members2 = data.members2;
+    </script>
+
+    <main>
+        <h1 class="text-gradient">SQUADPAGE</h1>
+
+        <h2>SQUAD 2E</h2>
+        <ul>
+            <!-- voor elke member in members maak een li -->
+            {#each members as member}
+                <Studentcard {member} />
+            {/each}
+        </ul>
+}
+```
+</details>
