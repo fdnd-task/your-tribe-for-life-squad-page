@@ -20,7 +20,7 @@ Vandaag staat in het teken van de squadpage en het visitekaartje tonen en bewijs
 
 1. Squadpage & Visitekaartje presenteren
 2. Bewijslast in portflow
-3. Expertgroepen
+3. Living standards
 
 
 ### 1. Squadpage & visitekaartje presenteren
@@ -37,9 +37,11 @@ De voorbereiding:
 We gaan samen de bewijslast in portflow mappen op de indicatoren. 
 
 
-### 3. Expertgroepen
+### 3. Living standards
 
 Elk team krijgt een link om uit te pluizen en te presenteren. Je leest met elkaar het artikel en probeert wat voorbeelden uit, indien dat mogelijk is. 
+
+Kom met je team bij Dorien langs voor een artikel.
 
 Voorbereiding (60 minuten):
 - Lees met elkaar het artikel goed door
