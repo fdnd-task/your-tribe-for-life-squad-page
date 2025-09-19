@@ -3,7 +3,8 @@
 ## Retrospect
 
 Vandaag sluiten we de sprint af en kijken we samen terug én vooruit. Je laat zien wat jij en je team hebben gemaakt, koppelt je bewijslast aan de indicatoren, en leert van elkaar in expertgroepen.  
-<!--
+
+
 ### Doel van de opdracht
 
 - Je hebt je squadpage laten zien
@@ -11,6 +12,7 @@ Vandaag sluiten we de sprint af en kijken we samen terug én vooruit. Je laat zi
 - Je hebt je bewijslast gemapped op indicatoren
 - Je weet in welk project je bent ingedeeld
 - Je hebt nieuwe kennis vergaard en gedeeld
+
 
 ### Werkwijze
 
@@ -34,11 +36,12 @@ De voorbereiding:
 
 We gaan samen de bewijslast in portflow mappen op de indicatoren. 
 
+
 ### 3. Expertgroepen
 
 Elk team krijgt een link om uit te pluizen en te presenteren. Je leest met elkaar het artikel en probeert wat voorbeelden uit, indien dat mogelijk is. 
 
-Voorbereiding (30 minuten):
+Voorbereiding (60 minuten):
 - Lees met elkaar het artikel goed door
 - Probeer de code uit, als dat mogelijk is
 - Bereid een voorbeeld voor, voor de presentatie
@@ -66,12 +69,10 @@ Presentatie (5 minuten):
 
 
 ### 💪 Extra uitdagingen
- Dit is optioneel voor de hardlopers die iets extra's willen. 
+- Schrijf op je i love web een samenvatting van het artikel dat je hebt uitgezocht en gepresenteerd
 
 ### ✒️ Leervragen
 
 Zet de antwoorden in je learning journal.
 1. Wat neem je mee uit deze sprint dat je direct wilt toepassen in de volgende?
 2. Wat neem je mee uit de expertgroepen presentaties?
-3. 
--->
